@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "subclassUnlocks": {
+      "specializationMinLevel": 5,
+      "masteryMinLevel": 8
+    }
+  },
+  "classes": {
+    "bard": {
+      "label": "Bard",
+      "domains": ["Grace", "Midnight"],
+      "subclasses": {
+        "troubadour": {
+          "label": "Troubadour",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        },
+        "wordsmith": {
+          "label": "Wordsmith",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        }
+      }
+    },
+
+    "druid": {
+      "label": "Druid",
+      "domains": ["Sage", "Grace"],
+      "subclasses": {
+        "warden_of_elements": {
+          "label": "Warden of the Elements",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        },
+        "warden_of_renewal": {
+          "label": "Warden of Renewal",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        }
+      }
+    },
+
+    "guardian": {
+      "label": "Guardian",
+      "domains": ["Grace", "Valor"],
+      "subclasses": {
+        "stalwart": {
+          "label": "Stalwart",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        },
+        "vengeance": {
+          "label": "Vengeance",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        }
+      }
+    },
+
+    "ranger": {
+      "label": "Ranger",
+      "domains": ["Grace", "Midnight"],
+      "subclasses": {
+        "beastbound": {
+          "label": "Beastbound",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        },
+        "wayfinder": {
+          "label": "Wayfinder",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        }
+      }
+    },
+
+    "rogue": {
+      "label": "Rogue",
+      "domains": ["Midnight", "Valor"],
+      "subclasses": {
+        "nightwalker": {
+          "label": "Nightwalker",
+          "cards": { "base": "301", "specialization": "001", "mastery": "001" }
+        },
+        "syndicate": {
+          "label": "Syndicate",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        }
+      }
+    },
+
+    "seraph": {
+      "label": "Seraph",
+      "domains": ["Grace", "Valor"],
+      "subclasses": {
+        "divine_wielder": {
+          "label": "Divine Wielder",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        },
+        "winged_sentinel": {
+          "label": "Winged Sentinel",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        }
+      }
+    },
+
+    "sorcerer": {
+      "label": "Sorcerer",
+      "domains": ["Sage", "Midnight"],
+      "subclasses": {
+        "elemental_origin": {
+          "label": "Elemental Origin",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        },
+        "primal_origin": {
+          "label": "Primal Origin",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        }
+      }
+    },
+
+    "warrior": {
+      "label": "Warrior",
+      "domains": ["Valor", "Grace"],
+      "subclasses": {
+        "call_of_the_brave": {
+          "label": "Call of the Brave",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        },
+        "call_of_the_slayer": {
+          "label": "Call of the Slayer",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        }
+      }
+    },
+
+    "wizard": {
+      "label": "Wizard",
+      "domains": ["Sage", "Midnight"],
+      "subclasses": {
+        "school_of_knowledge": {
+          "label": "School of Knowledge",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        },
+        "school_of_war": {
+          "label": "School of War",
+          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+        }
+      }
+    }
+  }
+}

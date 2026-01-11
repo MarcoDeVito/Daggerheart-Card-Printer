@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stampa Carte</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="printBody">
+  <div class="printBanner no-print">
+    <div>
+      <b>Stampa in scala 100%</b> (disattiva “Adatta alla pagina”).<br/>
+      Formato: <b>A4</b> — margini: <b>5mm</b> — layout: <b>3×3</b>
+    </div>
+    <div class="printBanner__actions">
+      <button class="btn" onclick="window.print()">Stampa</button>
+    </div>
+  </div>
+
+  <div id="printMeta" class="no-print wrap muted small"></div>
+
+  <div id="pages"></div>
+
+  <script src="js/print.js"></script>
+</body>
+</html>

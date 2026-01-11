@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daggerheart Card Printer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <div>
+        <h1>Daggerheart Card Printer</h1>
+        <p class="muted">Seleziona un personaggio, scegli carte, poi stampa in scala 100%.</p>
+      </div>
+      <div class="topbar__actions">
+        <button id="btnNewChar" class="btn">+ Nuovo personaggio</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card">
+      <div class="card__head">
+        <h2>Personaggi</h2>
+        <div class="muted small">Salvati in localStorage</div>
+      </div>
+      <div id="charList" class="list"></div>
+    </section>
+
+    <section class="card">
+      <div class="card__head">
+        <h2>Editor personaggio</h2>
+        <div id="activeHint" class="muted small"></div>
+      </div>
+
+      <div id="editorEmpty" class="empty">
+        Seleziona o crea un personaggio per iniziare.
+      </div>
+
+      <form id="editor" class="form hidden" autocomplete="off">
+        <div class="row">
+          <label>
+            <span>Nome</span>
+            <input id="chName" type="text" required />
+          </label>
+
+          <label>
+            <span>Livello</span>
+            <input id="chLevel" type="number" min="1" max="20" required />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            <span>Classe</span>
+            <select id="chClass" required></select>
+          </label>
+
+          <label>
+            <span>Sottoclasse</span>
+            <select id="chSubclass" required></select>
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            <span>Community (obbligatoria)</span>
+            <select id="chCommunity" required></select>
+          </label>
+
+          <label>
+            <span>Ancestry (obbligatoria)</span>
+            <select id="chAncestry" required></select>
+          </label>
+        </div>
+
+        <div class="subcard">
+          <h3>Carte Sottoclasse</h3>
+          <div id="subclassCards" class="subclassCards"></div>
+        </div>
+
+        <div class="subcard">
+          <h3>Impostazioni stampa (globali)</h3>
+          <div class="row row--3">
+            <label class="check">
+              <input id="optBleed" type="checkbox" />
+              <span>Bleed 3 mm</span>
+            </label>
+            <label class="check">
+              <input id="optCrop" type="checkbox" />
+              <span>Crop marks</span>
+            </label>
+            <label class="check">
+              <input id="optBack" type="checkbox" />
+              <span>Aggiungi fogli retro</span>
+            </label>
+          </div>
+          <p class="muted small">
+            In stampa: imposta <b>Scala 100%</b> e disattiva <b>Adatta alla pagina</b>.
+          </p>
+        </div>
+
+        <div class="row actions">
+          <button id="btnDeleteChar" type="button" class="btn btn--danger">Elimina</button>
+          <div class="spacer"></div>
+          <button id="btnSaveChar" type="submit" class="btn btn--primary">Salva</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card card--full">
+      <div class="card__head">
+        <div>
+          <h2>Carte Dominio</h2>
+          <div id="domainHint" class="muted small"></div>
+        </div>
+
+        <div class="toolbar">
+          <input id="search" class="input" placeholder="Cerca per nome…" />
+          <select id="filterDomain" class="input" title="Filtro dominio">
+            <option value="">Tutti i domini</option>
+          </select>
+          <button id="btnSelectAllVisible" class="btn">Seleziona visibili</button>
+          <button id="btnClearSelected" class="btn">Deseleziona tutto</button>
+          <a id="btnPrint" class="btn btn--primary disabled" href="#" target="_blank" rel="noopener">Stampa</a>
+        </div>
+      </div>
+
+      <div id="domainEmpty" class="empty">
+        Seleziona un personaggio e imposta classe/sottoclasse per vedere le carte di dominio disponibili.
+      </div>
+
+      <div id="domainGrid" class="cards hidden"></div>
+
+      <div class="footerbar">
+        <div class="muted small">
+          Selezionate: <b id="selCount">0</b> — Fogli (fronti): <b id="sheetCount">0</b>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

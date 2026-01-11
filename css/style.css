@@ -1,0 +1,242 @@
+:root{
+  --bg:#0b0f14;
+  --card:#121823;
+  --card2:#0f1520;
+  --text:#e7eefc;
+  --muted:#9fb0cc;
+  --border:#223149;
+
+  --a4w: 210mm;
+  --a4h: 297mm;
+  --sheetPad: 8mm;
+
+  --cutW:63mm;
+  --cutH:88mm;
+
+  --bleedMm:3mm;
+  --bleedOn:0; /* 0 or 1 set by JS in print.html */
+  --outerW: calc(var(--cutW) + (var(--bleedOn) * var(--bleedMm) * 2));
+  --outerH: calc(var(--cutH) + (var(--bleedOn) * var(--bleedMm) * 2));
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #070a0f 0%, #0b0f14 100%);
+  color:var(--text);
+}
+
+.wrap{max-width:1200px;margin:0 auto;padding:16px}
+.grid{display:grid;grid-template-columns: 1fr 1fr; gap:16px}
+.card{background:rgba(18,24,35,.92); border:1px solid var(--border); border-radius:14px; overflow:hidden}
+.card--full{grid-column:1 / -1}
+.card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:rgba(15,21,32,.65)}
+h1{margin:0;font-size:18px}
+h2{margin:0;font-size:16px}
+h3{margin:0 0 8px 0;font-size:14px}
+p{margin:6px 0 0 0}
+.muted{color:var(--muted)}
+.small{font-size:12px}
+
+.topbar{position:sticky;top:0;z-index:10;backdrop-filter: blur(10px); border-bottom:1px solid var(--border); background: rgba(7,10,15,.75)}
+.topbar__inner{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.topbar__actions{display:flex;gap:10px}
+
+.btn{
+  border:1px solid var(--border);
+  background:#0f1520;
+  color:var(--text);
+  padding:9px 12px;
+  border-radius:10px;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight:600;
+}
+.btn:hover{filter:brightness(1.08)}
+.btn:active{transform: translateY(1px)}
+.btn--primary{background:#1b2a4a;border-color:#2c3f66}
+.btn--danger{background:#3a1320;border-color:#5a2235}
+.disabled{opacity:.5; pointer-events:none}
+
+.list{padding:10px; display:flex; flex-direction:column; gap:8px}
+.listItem{
+  display:flex; align-items:center; gap:10px;
+  background: rgba(15,21,32,.6);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:10px;
+}
+.listItem.active{outline:2px solid #2c3f66}
+.listItem__main{flex:1; min-width:0}
+.listItem__title{font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.listItem__sub{font-size:12px; color:var(--muted)}
+.listItem__actions{display:flex; gap:8px}
+
+.empty{padding:16px;color:var(--muted)}
+.hidden{display:none !important}
+
+.form{padding:14px 16px}
+.row{display:grid;grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px}
+.row--3{grid-template-columns: 1fr 1fr 1fr}
+label span{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
+input,select{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:#0f1520;
+  color:var(--text);
+}
+.actions{align-items:center}
+.spacer{flex:1}
+.row.actions{display:flex}
+.check{display:flex;gap:10px;align-items:center}
+.check input{width:auto}
+
+.subcard{
+  background: rgba(15,21,32,.6);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px;
+  margin-bottom:12px;
+}
+.subclassCards{display:grid; grid-template-columns: 1fr; gap:8px}
+.subline{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:8px; border:1px dashed rgba(159,176,204,.25); border-radius:10px}
+.subline b{font-size:13px}
+.subline .muted{font-size:12px}
+.subline .right{display:flex; gap:10px; align-items:center}
+.subline.disabled{opacity:.6}
+.subThumb{width:44px;height:44px;border-radius:8px;background:#0b0f14;border:1px solid var(--border);object-fit:cover}
+
+.toolbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.input{min-width:180px}
+
+.cards{padding:12px; display:grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap:10px}
+.cardTile{
+  border:1px solid var(--border);
+  background: rgba(15,21,32,.6);
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+.cardTile__img{
+  height:180px;
+  background:#0b0f14;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.cardTile__img img{width:100%;height:100%;object-fit:cover;display:block}
+.cardTile__body{padding:10px; display:flex; gap:10px; align-items:flex-start}
+.cardTile__body input{margin-top:3px}
+.cardTile__text{min-width:0}
+.cardTile__name{font-weight:700; font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.cardTile__meta{font-size:12px; color:var(--muted); margin-top:3px}
+
+.footerbar{padding:10px 12px;border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center}
+
+/* ===========================
+   PRINT
+   =========================== */
+
+.printBody{
+  background:#fff;
+  color:#000;
+}
+
+.printBanner{
+  padding:12px 16px;
+  background:#f2f4f8;
+  border-bottom:1px solid #cfd6e4;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+@page{
+  size: A4;
+  margin: 0mm;
+}
+
+@media print{
+  .no-print{display:none !important}
+  body{background:#fff}
+ 
+  .sheet{ overflow: visible !important; }
+  .marks, .m{
+    display:block !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+ 
+
+
+  .m {
+    display: block !important;
+    background: #000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Page sheet */
+.sheet{
+  width: var(--a4w);
+  min-height: var(--a4h);
+  box-sizing: border-box;
+  padding: var(--sheetPad);
+  display: grid;
+  grid-template-columns: repeat(3, var(--outerW));
+  grid-template-rows: repeat(3, var(--outerH));
+  gap: 0;
+  align-content: start;
+  justify-content: start;
+  page-break-after: always;
+  position: relative;
+}
+
+
+/* Card in print */
+.pcard{
+  position:relative;
+  width: var(--outerW);
+  height: var(--outerH);
+  background:#fff;
+  overflow:hidden;
+}
+
+.pcard img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+/* Cut box overlay (shows final trim area when bleed on) */
+.pcard .cutbox{
+  position:absolute;
+  left: calc(var(--bleedOn) * var(--bleedMm));
+  top:  calc(var(--bleedOn) * var(--bleedMm));
+  width: var(--cutW);
+  height: var(--cutH);
+  border: 0.25mm solid rgba(0,0,0,.25);
+  pointer-events:none;
+}
+
+/* Crop marks */
+.pcard .marks{position:absolute; inset:0; pointer-events:none}
+.pcard .m{position:absolute; background:#000}
+
+/* each mark is a thin line. we place them around cutbox corners */
+.pcard.crop .m{
+  opacity:.9;
+}
+
+/* Helper classes for marks (positions set inline via JS) */

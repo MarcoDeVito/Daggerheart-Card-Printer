@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "cardSizeMm": { "w": 63, "h": 88 },
+    "bleedMmDefault": 0,
+    "backImage": "assets/back/back.webp"
+  },
+  "cards": [
+    { "id": "001", "name": "Human", "kind": "ancestry", "front": "assets/front/001.webp", "thumb": "assets/thumbs/001.webp", "tags": [] },
+    { "id": "002", "name": "Elf", "kind": "ancestry", "front": "assets/front/002.webp", "thumb": "assets/thumbs/002.webp", "tags": [] },
+
+    { "id": "101", "name": "Seaborne", "kind": "community", "front": "assets/front/101.webp", "thumb": "assets/thumbs/101.webp", "tags": [] },
+    { "id": "102", "name": "Highborne", "kind": "community", "front": "assets/front/102.webp", "thumb": "assets/thumbs/102.webp", "tags": [] },
+
+    { "id": "201", "name": "Grace L1 A", "kind": "domain", "domain": "Grace", "level": 1, "front": "assets/front/201.webp", "thumb": "assets/thumbs/201.webp", "tags": [] },
+    { "id": "202", "name": "Grace L2 B", "kind": "domain", "domain": "Grace", "level": 2, "front": "assets/front/202.webp", "thumb": "assets/thumbs/202.webp", "tags": [] },
+
+    { "id": "211", "name": "Midnight L1 A", "kind": "domain", "domain": "Midnight", "level": 1, "front": "assets/front/211.webp", "thumb": "assets/thumbs/211.webp", "tags": [] },
+    { "id": "212", "name": "Midnight L3 B", "kind": "domain", "domain": "Midnight", "level": 3, "front": "assets/front/212.webp", "thumb": "assets/thumbs/212.webp", "tags": [] },
+
+    { "id": "221", "name": "Valor L1 A", "kind": "domain", "domain": "Valor", "level": 1, "front": "assets/front/221.webp", "thumb": "assets/thumbs/221.webp", "tags": [] },
+
+    { "id": "301", "name": "Stalker — Base", "kind": "subclass", "front": "assets/front/301.webp", "thumb": "assets/thumbs/301.webp", "tags": [] },
+    { "id": "302", "name": "Stalker — Specializzazione", "kind": "subclass", "front": "assets/front/302.webp", "thumb": "assets/thumbs/302.webp", "tags": [] },
+    { "id": "303", "name": "Stalker — Maestria", "kind": "subclass", "front": "assets/front/303.webp", "thumb": "assets/thumbs/303.webp", "tags": [] },
+
+    { "id": "311", "name": "Warden — Base", "kind": "subclass", "front": "assets/front/311.webp", "thumb": "assets/thumbs/311.webp", "tags": [] },
+    { "id": "312", "name": "Warden — Specializzazione", "kind": "subclass", "front": "assets/front/312.webp", "thumb": "assets/thumbs/312.webp", "tags": [] },
+    { "id": "313", "name": "Warden — Maestria", "kind": "subclass", "front": "assets/front/313.webp", "thumb": "assets/thumbs/313.webp", "tags": [] }
+  ]
+}
