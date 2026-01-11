@@ -12,11 +12,11 @@
       "subclasses": {
         "troubadour": {
           "label": "Troubadour",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "001", "specialization": "002", "mastery": "003" }
         },
         "wordsmith": {
           "label": "Wordsmith",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "004", "specialization": "005", "mastery": "006" }
         }
       }
     },
@@ -27,11 +27,11 @@
       "subclasses": {
         "warden_of_elements": {
           "label": "Warden of the Elements",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "007", "specialization": "008", "mastery": "009" }
         },
         "warden_of_renewal": {
           "label": "Warden of Renewal",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "010", "specialization": "011", "mastery": "012" }
         }
       }
     },
@@ -42,11 +42,11 @@
       "subclasses": {
         "stalwart": {
           "label": "Stalwart",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "013", "specialization": "014", "mastery": "015" }
         },
         "vengeance": {
           "label": "Vengeance",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "016", "specialization": "017", "mastery": "018" }
         }
       }
     },
@@ -57,11 +57,11 @@
       "subclasses": {
         "beastbound": {
           "label": "Beastbound",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "019", "specialization": "020", "mastery": "021" }
         },
         "wayfinder": {
           "label": "Wayfinder",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "022", "specialization": "023", "mastery": "024" }
         }
       }
     },
@@ -72,11 +72,11 @@
       "subclasses": {
         "nightwalker": {
           "label": "Nightwalker",
-          "cards": { "base": "301", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "025", "specialization": "026", "mastery": "027" }
         },
         "syndicate": {
           "label": "Syndicate",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "028", "specialization": "029", "mastery": "030" }
         }
       }
     },
@@ -87,11 +87,11 @@
       "subclasses": {
         "divine_wielder": {
           "label": "Divine Wielder",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "031", "specialization": "032", "mastery": "033" }
         },
         "winged_sentinel": {
           "label": "Winged Sentinel",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "034", "specialization": "035", "mastery": "036" }
         }
       }
     },
@@ -102,11 +102,11 @@
       "subclasses": {
         "elemental_origin": {
           "label": "Elemental Origin",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "037", "specialization": "038", "mastery": "039" }
         },
         "primal_origin": {
           "label": "Primal Origin",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "040", "specialization": "041", "mastery": "042" }
         }
       }
     },
@@ -117,11 +117,11 @@
       "subclasses": {
         "call_of_the_brave": {
           "label": "Call of the Brave",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "043", "specialization": "044", "mastery": "045" }
         },
         "call_of_the_slayer": {
           "label": "Call of the Slayer",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "046", "specialization": "047", "mastery": "048" }
         }
       }
     },
@@ -132,11 +132,11 @@
       "subclasses": {
         "school_of_knowledge": {
           "label": "School of Knowledge",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "049", "specialization": "050", "mastery": "051" }
         },
         "school_of_war": {
           "label": "School of War",
-          "cards": { "base": "001", "specialization": "001", "mastery": "001" }
+          "cards": { "base": "052", "specialization": "053", "mastery": "054" }
         }
       }
     }
