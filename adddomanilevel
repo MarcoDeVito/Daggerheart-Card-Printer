@@ -1,0 +1,51 @@
+import json
+from pathlib import Path
+
+INPUT_PATH = Path("data/cards.json")
+BACKUP_PATH = Path("data/cards.json.bak")
+
+PLACEHOLDER_DOMAIN = "unknown"
+PLACEHOLDER_LEVEL = 1
+
+def main():
+    if not INPUT_PATH.exists():
+        raise SystemExit(f"File non trovato: {INPUT_PATH.resolve()}")
+
+    data = json.loads(INPUT_PATH.read_text(encoding="utf-8"))
+
+    if "cards" not in data or not isinstance(data["cards"], list):
+        raise SystemExit("Formato non valido: manca 'cards' o non è una lista.")
+
+    changed_cards = 0
+
+    for card in data["cards"]:
+        if not isinstance(card, dict):
+            continue
+
+        if card.get("kind") == "unknown":
+            # cambia kind
+            card["kind"] = "domain"
+
+            # aggiungi placeholder solo se mancano
+            card.setdefault("domain", PLACEHOLDER_DOMAIN)
+            card.setdefault("level", PLACEHOLDER_LEVEL)
+
+            changed_cards += 1
+
+    # backup
+    BACKUP_PATH.write_text(
+        INPUT_PATH.read_text(encoding="utf-8"),
+        encoding="utf-8"
+    )
+
+    # sovrascrive cards.json
+    INPUT_PATH.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8"
+    )
+
+    print(f"OK: convertite {changed_cards} carte da kind=unknown a kind=domain")
+    print(f"Backup creato: {BACKUP_PATH}")
+
+if __name__ == "__main__":
+    main()

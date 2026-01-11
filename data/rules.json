@@ -8,7 +8,7 @@
   "classes": {
     "bard": {
       "label": "Bard",
-      "domains": ["Grace", "Midnight"],
+      "domains": ["Grace", "Codex"],
       "subclasses": {
         "troubadour": {
           "label": "Troubadour",
@@ -23,7 +23,7 @@
 
     "druid": {
       "label": "Druid",
-      "domains": ["Sage", "Grace"],
+      "domains": ["Sage", "Arcana"],
       "subclasses": {
         "warden_of_elements": {
           "label": "Warden of the Elements",
@@ -38,7 +38,7 @@
 
     "guardian": {
       "label": "Guardian",
-      "domains": ["Grace", "Valor"],
+      "domains": ["Blade", "Valor"],
       "subclasses": {
         "stalwart": {
           "label": "Stalwart",
@@ -53,7 +53,7 @@
 
     "ranger": {
       "label": "Ranger",
-      "domains": ["Grace", "Midnight"],
+      "domains": ["Bone", "Sage"],
       "subclasses": {
         "beastbound": {
           "label": "Beastbound",
@@ -68,7 +68,7 @@
 
     "rogue": {
       "label": "Rogue",
-      "domains": ["Midnight", "Valor"],
+      "domains": ["Midnight", "Grace"],
       "subclasses": {
         "nightwalker": {
           "label": "Nightwalker",
@@ -83,7 +83,7 @@
 
     "seraph": {
       "label": "Seraph",
-      "domains": ["Grace", "Valor"],
+      "domains": ["Splendor", "Valor"],
       "subclasses": {
         "divine_wielder": {
           "label": "Divine Wielder",
@@ -98,7 +98,7 @@
 
     "sorcerer": {
       "label": "Sorcerer",
-      "domains": ["Sage", "Midnight"],
+      "domains": ["Arcana", "Midnight"],
       "subclasses": {
         "elemental_origin": {
           "label": "Elemental Origin",
@@ -113,7 +113,7 @@
 
     "warrior": {
       "label": "Warrior",
-      "domains": ["Valor", "Grace"],
+      "domains": ["Blade", "Bone"],
       "subclasses": {
         "call_of_the_brave": {
           "label": "Call of the Brave",
@@ -128,7 +128,7 @@
 
     "wizard": {
       "label": "Wizard",
-      "domains": ["Sage", "Midnight"],
+      "domains": ["Codex", "Splendor"],
       "subclasses": {
         "school_of_knowledge": {
           "label": "School of Knowledge",

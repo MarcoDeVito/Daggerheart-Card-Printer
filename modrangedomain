@@ -1,0 +1,84 @@
+import json
+from pathlib import Path
+
+CARDS_PATH = Path("data/cards.json")
+BACKUP_PATH = Path("data/cards.json.bak")
+
+RANGES = [
+    ("Arcana",   82, 102),
+    ("Blade",   103, 123),
+    ("Bone",    124, 144),
+    ("Codex",   145, 165),
+    ("Grace",   166, 186),
+    ("Midnight",187, 207),
+    ("Sage",    208, 228),
+    ("Splendor",229, 249),
+    ("Valor",   250, 270),
+]
+
+DEFAULT_LEVEL = 1
+
+def domain_for_id(n: int) -> str | None:
+    for name, a, b in RANGES:
+        if a <= n <= b:
+            return name
+    return None
+
+def main():
+    if not CARDS_PATH.exists():
+        raise SystemExit(f"File non trovato: {CARDS_PATH.resolve()}")
+
+    raw = CARDS_PATH.read_text(encoding="utf-8")
+    data = json.loads(raw)
+
+    if "cards" not in data or not isinstance(data["cards"], list):
+        raise SystemExit("Formato non valido: manca 'cards' o non è una lista.")
+
+    updated = 0
+    skipped_not_domain = 0
+    skipped_out_of_range = 0
+
+    for c in data["cards"]:
+        if not isinstance(c, dict):
+            continue
+
+        kind = c.get("kind")
+        if kind not in ("domain", "unknown"):
+            skipped_not_domain += 1
+            continue
+
+        cid = c.get("id")
+        if not cid or not str(cid).isdigit():
+            skipped_out_of_range += 1
+            continue
+
+        n = int(cid)
+        dom = domain_for_id(n)
+        if dom is None:
+            skipped_out_of_range += 1
+            continue
+
+        # se era unknown lo promuoviamo a domain
+        if kind == "unknown":
+            c["kind"] = "domain"
+
+        c["domain"] = dom
+        c.setdefault("level", DEFAULT_LEVEL)
+        updated += 1
+
+    # backup
+    BACKUP_PATH.write_text(raw, encoding="utf-8")
+
+    # save
+    CARDS_PATH.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8"
+    )
+
+    print(f"OK: aggiornate {updated} carte dominio.")
+    print(f"Saltate (non domain/unknown): {skipped_not_domain}")
+    print(f"Saltate (id fuori range o non valido): {skipped_out_of_range}")
+    print(f"Backup: {BACKUP_PATH}")
+
+if __name__ == "__main__":
+    main()
