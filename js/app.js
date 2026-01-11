@@ -52,7 +52,7 @@
       version: 1,
       activeCharacterId: null,
       characters: [],
-      print: { bleedOn: true, cropMarks: true, addBackSheets: true }
+      print: { bleedOn: false, cropMarks: true, addBackSheets: true }
     };
   }
 
