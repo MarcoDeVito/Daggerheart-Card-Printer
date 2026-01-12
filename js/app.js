@@ -59,6 +59,8 @@
   let zoomModalPrevBtn = null;
   let zoomModalNextBtn = null;
   let zoomModalPanelEl = null;
+  let zoomAllowToggle = true;   // true: dominio (click immagine seleziona); false: preview sola
+  let zoomHideNav = false;      // true: nasconde frecce
 
   
 
@@ -95,7 +97,7 @@
     zoomModalImgEl.style.cursor = "pointer";
     zoomModalImgEl.addEventListener("click", (e) => {
       e.stopPropagation();
-
+      if (!zoomAllowToggle) return;
       if (!activeChar || zoomIndex < 0) return;
       const card = zoomList[zoomIndex];
       if (!card) return;
@@ -151,9 +153,34 @@
   // fallback: se non trovato, apri la prima
   if (zoomIndex < 0) zoomIndex = 0;
 
+  zoomAllowToggle = true;
+zoomHideNav = false;
+
+if (zoomModalPrevBtn) zoomModalPrevBtn.classList.remove("hidden");
+if (zoomModalNextBtn) zoomModalNextBtn.classList.remove("hidden");
   zoomModalEl.classList.add("open");
   zoomShowCurrent();
 }
+
+function openZoomModalSingleCard(cardId) {
+  ensureZoomModal();
+
+  const card = getCardById(cardId);
+  if (!card) return;
+
+  zoomList = [card];
+  zoomIndex = 0;
+
+  zoomAllowToggle = false;
+  zoomHideNav = true;
+
+  if (zoomModalPrevBtn) zoomModalPrevBtn.classList.add("hidden");
+  if (zoomModalNextBtn) zoomModalNextBtn.classList.add("hidden");
+
+  zoomModalEl.classList.add("open");
+  zoomShowCurrent();
+}
+
 
   function closeZoomModal() {
   if (!zoomModalEl) return;
@@ -171,9 +198,13 @@ function isCardSelected(ch, cardId) {
 function setModalSelectedUI() {
   if (!zoomModalPanelEl) return;
 
+  if (!zoomAllowToggle) {
+    zoomModalPanelEl.classList.remove("is-selected");
+    return;
+  }
+
   const card = zoomList[zoomIndex];
   const selected = !!(card && isCardSelected(activeChar, card.id));
-
   zoomModalPanelEl.classList.toggle("is-selected", selected);
 }
 
@@ -537,11 +568,35 @@ function b64DecodeUnicode(b64) {
       left.style.alignItems = "center";
       left.style.gap = "10px";
 
-      const img = document.createElement("img");
-      img.className = "subThumb";
-      img.alt = "";
-      img.src = card?.thumb || "";
-      left.appendChild(img);
+      const thumbWrap = document.createElement("div");
+thumbWrap.className = "subThumbWrap";
+
+const img = document.createElement("img");
+img.className = "subThumb";
+img.alt = "";
+img.src = card?.thumb || "";
+thumbWrap.appendChild(img);
+
+// lente SOLO se la carta è "usabile" (non bloccata dal livello) e la card esiste
+if (enabled && card) {
+  const zoom = document.createElement("div");
+  zoom.className = "zoom-icon zoom-icon--sub";
+  zoom.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  `;
+  zoom.onclick = (e) => {
+    e.stopPropagation();
+    openZoomModalSingleCard(card.id);
+  };
+  thumbWrap.appendChild(zoom);
+}
+
+left.appendChild(thumbWrap);
+
 
       const txt = document.createElement("div");
       const b = document.createElement("b");
@@ -701,6 +756,10 @@ function b64DecodeUnicode(b64) {
 
       const body = document.createElement("div");
       body.className = "cardTile__body";
+      const bodyDescription = document.createElement("div");
+      bodyDescription.innerHTML = `${card.description}`;
+      bodyDescription.className = "cardTile__description";
+      if (!isListView) bodyDescription.classList.add("hidden");
       const zoom = document.createElement("div");
       zoom.className = "zoom-icon";
       zoom.innerHTML = `
@@ -746,19 +805,18 @@ function b64DecodeUnicode(b64) {
       const meta = document.createElement("div");
       meta.className = "cardTile__meta";
       meta.textContent = `${card.domain} • Lvl ${card.level}`;
-      const descriptiontext = document.createElement("div");
-      descriptiontext.className = "cardTile__name";
-      descriptiontext.textContent = `${card.description}`;
+      
       txt.appendChild(name);
       txt.appendChild(meta);
-      txt.appendChild(descriptiontext);
-
+      
       body.appendChild(cb);
       body.appendChild(txt);
       body.appendChild(zoom);
-
+      
       tile.appendChild(imgWrap);
       tile.appendChild(body);
+      
+      tile.appendChild(bodyDescription);
 
       domainGrid.appendChild(tile);
     }

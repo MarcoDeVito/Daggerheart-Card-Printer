@@ -298,6 +298,45 @@ input,select{
 .subline.disabled{opacity:.6}
 .subThumb{width:44px;height:44px;border-radius:8px;background:#0b0f14;border:1px solid var(--border);object-fit:cover}
 
+.subThumbWrap{
+  position: relative;
+  width:44px;
+  height:44px;
+  flex: 0 0 auto;
+}
+
+.subThumbWrap .subThumb{
+  width:100%;
+  height:100%;
+}
+
+.zoom-icon--sub{
+  position:absolute;
+  right:-6px;
+  bottom:-6px;
+  width:18px;
+  height:18px;
+  border-radius:7px;
+  border:1px solid var(--border);
+  background: rgba(0,0,0,.45);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color: var(--border);
+  cursor:pointer;
+  opacity:.9;
+}
+
+.zoom-icon--sub svg{
+  width:12px;
+  height:12px;
+}
+
+.zoom-icon--sub:hover{filter:brightness(1.1)}
+.zoom-icon--sub:active{transform: translateY(1px)}
+
+
+
 .toolbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
 .input{min-width:180px}
 
@@ -319,6 +358,7 @@ input,select{
 }
 .cardTile__img img{width:100%;height:100%;object-fit:cover;display:block}
 .cardTile__body{padding:10px; display:flex; gap:10px; align-items:center}
+.cardTile__description{padding:10px;}
 .cardTile__body input{margin-top:3px}
 .cardTile__text{min-width:0}
 .cardTile__name{font-weight:700; font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
