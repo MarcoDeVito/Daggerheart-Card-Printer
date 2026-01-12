@@ -42,6 +42,10 @@
   const btnLicense = $("btnLicense");
   const licenseModal = $("licenseModal");
 
+  const btnLangITA = $("btnLangITA");
+  const btnLangENG = $("btnLangENG");
+
+
 
 
 
@@ -49,7 +53,9 @@
   let rules = null;   // rules.json
 
   let state = loadState();
-  if (!state.ui) state.ui = { domainView: "grid" };
+  if (!state.ui) state.ui = { domainView: "grid", language: "eng" };
+  if (state.ui.language !== "eng" && state.ui.language !== "ita") state.ui.language = "eng";
+
   if (state.ui.domainView !== "grid" && state.ui.domainView !== "list") state.ui.domainView = "grid";
 
   let activeChar = null;
@@ -341,6 +347,28 @@ function b64DecodeUnicode(b64) {
     return state.characters.find(c => c.id === id) || null;
   }
 
+  function deleteCharacterById(charId) {
+  const ch = findChar(charId);
+  if (!ch) return;
+
+  const ok = confirm(`Vuoi eliminare definitivamente il personaggio "${ch.name || "(senza nome)"}"?`);
+  if (!ok) return;
+
+  const idx = state.characters.findIndex(c => c.id === charId);
+  if (idx >= 0) state.characters.splice(idx, 1);
+
+  // Se ho eliminato quello attivo, scelgo un nuovo active
+  if (state.activeCharacterId === charId) {
+    const next = state.characters[0]?.id || null;
+    state.activeCharacterId = next;
+    activeChar = next ? findChar(next) : null;
+  }
+
+  saveState();
+  renderAll();
+}
+
+
   function setActiveChar(id) {
     state.activeCharacterId = id;
     saveState();
@@ -437,6 +465,7 @@ function b64DecodeUnicode(b64) {
       btnOpen.textContent = "Apri";
       btnOpen.onclick = () => setActiveChar(ch.id);
 
+      
       const btnDup = document.createElement("button");
       btnDup.className = "btn";
       btnDup.type = "button";
@@ -448,9 +477,15 @@ function b64DecodeUnicode(b64) {
         state.characters.push(copy);
         setActiveChar(copy.id);
       };
+      const btnDel = document.createElement("button");
+btnDel.className = "btn btn--danger";
+btnDel.type = "button";
+btnDel.textContent = "Elimina";
+btnDel.onclick = () => deleteCharacterById(ch.id);
 
       actions.appendChild(btnOpen);
       actions.appendChild(btnDup);
+      actions.appendChild(btnDel);
 
       row.appendChild(main);
       row.appendChild(actions);
@@ -995,18 +1030,30 @@ function setDomainView(view) {
     btnExportChar.onclick = exportActiveCharacter;
     btnImportChar.onclick = importCharacterFromString;
 
-    btnDeleteChar.onclick = () => {
-      if (!activeChar) return;
-      const idx = state.characters.findIndex(c => c.id === activeChar.id);
-      if (idx >= 0) state.characters.splice(idx, 1);
+    btnLangITA.onclick = async () => {
+  if (!state.ui) state.ui = { domainView: "grid" };
+  state.ui.language = "ita";
+  saveState();
 
-      // pick new active
-      const next = state.characters[0]?.id || null;
-      state.activeCharacterId = next;
-      saveState();
-      activeChar = next ? findChar(next) : null;
-      renderAll();
-    };
+  await loadDataByLanguage("ita");
+  renderAll();
+};
+
+btnLangENG.onclick = async () => {
+  if (!state.ui) state.ui = { domainView: "grid" };
+  state.ui.language = "eng";
+  saveState();
+
+  await loadDataByLanguage("eng");
+  renderAll();
+};
+
+
+    btnDeleteChar.onclick = () => {
+  if (!activeChar) return;
+  deleteCharacterById(activeChar.id);
+};
+
 
     editorForm.onsubmit = (e) => {
       e.preventDefault();
@@ -1149,22 +1196,38 @@ function setDomainView(view) {
     }
   }
 
-  async function init() {
-    // Load data
-    const [cardsRes, rulesRes] = await Promise.all([
-      fetch("data/cards.json", { cache: "no-store" }),
-      fetch("data/rules.json", { cache: "no-store" })
-    ]);
-    catalog = await cardsRes.json();
-    rules = await rulesRes.json();
+ async function loadDataByLanguage(lang) {
+  const isITA = lang === "ita";
+  const cardsPath = isITA ? "data/cardsITA.json" : "data/cards.json";
+  const rulesPath = isITA ? "data/rulesITA.json" : "data/rules.json";
 
-    // pick active char if exists
-    activeChar = state.activeCharacterId ? findChar(state.activeCharacterId) : null;
-    if (!activeChar && state.characters.length > 0) {
-      state.activeCharacterId = state.characters[0].id;
-      saveState();
-      activeChar = findChar(state.activeCharacterId);
-    }
+  const [cardsRes, rulesRes] = await Promise.all([
+    fetch(cardsPath, { cache: "no-store" }),
+    fetch(rulesPath, { cache: "no-store" })
+  ]);
+
+  if (!cardsRes.ok) throw new Error(`Impossibile caricare ${cardsPath} (HTTP ${cardsRes.status})`);
+  if (!rulesRes.ok) throw new Error(`Impossibile caricare ${rulesPath} (HTTP ${rulesRes.status})`);
+
+  catalog = await cardsRes.json();
+  rules = await rulesRes.json();
+}
+
+
+ async function init() {
+  // carica cards.json / rules.json in base alla lingua salvata
+  await loadDataByLanguage(state.ui.language);
+
+  // pick active char if exists
+  activeChar = state.activeCharacterId
+    ? findChar(state.activeCharacterId)
+    : null;
+
+  if (!activeChar && state.characters.length > 0) {
+    state.activeCharacterId = state.characters[0].id;
+    saveState();
+    activeChar = findChar(state.activeCharacterId);
+  }
 
     wireEvents();
     updateDomainViewButtons();
