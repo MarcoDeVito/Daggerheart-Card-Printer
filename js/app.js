@@ -746,8 +746,12 @@ function b64DecodeUnicode(b64) {
       const meta = document.createElement("div");
       meta.className = "cardTile__meta";
       meta.textContent = `${card.domain} • Lvl ${card.level}`;
+      const descriptiontext = document.createElement("div");
+      descriptiontext.className = "cardTile__name";
+      descriptiontext.textContent = `${card.description}`;
       txt.appendChild(name);
       txt.appendChild(meta);
+      txt.appendChild(descriptiontext);
 
       body.appendChild(cb);
       body.appendChild(txt);
