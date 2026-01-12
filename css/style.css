@@ -606,6 +606,10 @@ input,select{
   .cardTile__img{
     height: 220px;
   }
+  h1{
+    font-size: 21px!important;
+    line-height: 0.95;
+  }
 }
 
 @media (max-width: 420px){
@@ -615,6 +619,9 @@ input,select{
   .cardTile__img{
     height: 400px;
   }
+  
 }
+
+
 
 /* Helper classes for marks (positions set inline via JS) */
