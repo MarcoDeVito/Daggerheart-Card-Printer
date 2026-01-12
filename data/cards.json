@@ -504,7 +504,7 @@
     {
       "id": "056",
       "kind": "ancestry",
-      "name": "Clanks",
+      "name": "Clank",
       "front": "assets/front/056.webp",
       "thumb": "assets/thumbs/056.webp",
       "tags": [],
@@ -522,7 +522,7 @@
     {
       "id": "058",
       "kind": "ancestry",
-      "name": "Dwarves",
+      "name": "Dwarf",
       "front": "assets/front/058.webp",
       "thumb": "assets/thumbs/058.webp",
       "tags": [],
@@ -531,7 +531,7 @@
     {
       "id": "059",
       "kind": "ancestry",
-      "name": "Elves",
+      "name": "Elf",
       "front": "assets/front/059.webp",
       "thumb": "assets/thumbs/059.webp",
       "tags": [],
@@ -540,7 +540,7 @@
     {
       "id": "060",
       "kind": "ancestry",
-      "name": "Faeries",
+      "name": "Faerie",
       "front": "assets/front/060.webp",
       "thumb": "assets/thumbs/060.webp",
       "tags": [],
@@ -549,7 +549,7 @@
     {
       "id": "061",
       "kind": "ancestry",
-      "name": "Firbolgs",
+      "name": "Firbolg",
       "front": "assets/front/061.webp",
       "thumb": "assets/thumbs/061.webp",
       "tags": [],
@@ -567,7 +567,7 @@
     {
       "id": "063",
       "kind": "ancestry",
-      "name": "Fauns",
+      "name": "Faun",
       "front": "assets/front/063.webp",
       "thumb": "assets/thumbs/063.webp",
       "tags": [],
@@ -585,7 +585,7 @@
     {
       "id": "065",
       "kind": "ancestry",
-      "name": "Giants",
+      "name": "Giant",
       "front": "assets/front/065.webp",
       "thumb": "assets/thumbs/065.webp",
       "tags": [],
@@ -594,7 +594,7 @@
     {
       "id": "066",
       "kind": "ancestry",
-      "name": "Goblins",
+      "name": "Goblin",
       "front": "assets/front/066.webp",
       "thumb": "assets/thumbs/066.webp",
       "tags": [],
@@ -603,7 +603,7 @@
     {
       "id": "067",
       "kind": "ancestry",
-      "name": "Halflings",
+      "name": "Halfling",
       "front": "assets/front/067.webp",
       "thumb": "assets/thumbs/067.webp",
       "tags": [],
@@ -612,7 +612,7 @@
     {
       "id": "068",
       "kind": "ancestry",
-      "name": "Humans",
+      "name": "Human",
       "front": "assets/front/068.webp",
       "thumb": "assets/thumbs/068.webp",
       "tags": [],
@@ -639,7 +639,7 @@
     {
       "id": "071",
       "kind": "ancestry",
-      "name": "Orcs",
+      "name": "Orc",
       "front": "assets/front/071.webp",
       "thumb": "assets/thumbs/071.webp",
       "tags": [],
@@ -648,7 +648,7 @@
     {
       "id": "072",
       "kind": "ancestry",
-      "name": "Ribbets",
+      "name": "Ribbet",
       "front": "assets/front/072.webp",
       "thumb": "assets/thumbs/072.webp",
       "tags": [],
