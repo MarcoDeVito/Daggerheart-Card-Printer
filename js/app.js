@@ -548,7 +548,7 @@ function b64DecodeUnicode(b64) {
       b.textContent = title;
       const m = document.createElement("div");
       m.className = "muted";
-      m.textContent = card ? `${card.id} — ${card.name}` : "Carta non trovata nel catalogo";
+      m.textContent = card ? `${card.name}` : "Carta non trovata nel catalogo";
       txt.appendChild(b);
       txt.appendChild(m);
       left.appendChild(txt);
@@ -742,7 +742,7 @@ function b64DecodeUnicode(b64) {
       txt.className = "cardTile__text";
       const name = document.createElement("div");
       name.className = "cardTile__name";
-      name.textContent = `${card.id} — ${card.name}`;
+      name.textContent = `${card.name}`;
       const meta = document.createElement("div");
       meta.className = "cardTile__meta";
       meta.textContent = `${card.domain} • Lvl ${card.level}`;
