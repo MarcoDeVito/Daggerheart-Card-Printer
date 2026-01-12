@@ -2,9 +2,9 @@ import csv
 import json
 from pathlib import Path
 
-CSV_PATH = "daggerheart_cards_fixed.csv"
-JSON_PATH = "data/cards.json"
-OUT_PATH = "data/cards_updated.json"
+CSV_PATH = "per_csv_finale.csv"
+JSON_PATH = "data/cardsITA.json"
+OUT_PATH = "data/cards_updatedITA.json"
 
 
 def load_csv(csv_path: Path) -> dict:
