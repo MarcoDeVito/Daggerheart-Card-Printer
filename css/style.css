@@ -119,7 +119,7 @@ input,select{
 .toolbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
 .input{min-width:180px}
 
-.cards{padding:12px; display:grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap:10px}
+.cards{padding:12px; display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:10px}
 .cardTile{
   border:1px solid var(--border);
   background: var(--card2);
@@ -129,7 +129,7 @@ input,select{
   flex-direction:column;
 }
 .cardTile__img{
-  height:180px;
+  height:300px;
   background:var(--card);
   display:flex;
   align-items:center;
