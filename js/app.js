@@ -43,6 +43,106 @@
 
   let visibleDomainCards = []; // currently filtered list in UI
 
+
+    // ===== Zoom Modal =====
+  let zoomModalEl = null;
+  let zoomModalImgEl = null;
+  let zoomModalPrevBtn = null;
+  let zoomModalNextBtn = null;
+
+  let zoomList = [];       // lista carte visibili (oggetti card)
+  let zoomIndex = -1;      // indice corrente dentro zoomList
+
+
+  function ensureZoomModal() {
+    if (zoomModalEl) return;
+
+    zoomModalEl = document.createElement("div");
+    zoomModalEl.className = "zoomModal";
+    zoomModalEl.innerHTML = `
+      <div class="zoomModal__backdrop" data-zoom-close="1"></div>
+      <div class="zoomModal__panel" role="dialog" aria-modal="true">
+        <button class="zoomModal__close" type="button" aria-label="Chiudi (Esc)" data-zoom-close="1">✕</button>
+
+        <button class="zoomModal__nav zoomModal__nav--prev" type="button" aria-label="Precedente (←)">←</button>
+        <button class="zoomModal__nav zoomModal__nav--next" type="button" aria-label="Successiva (→)">→</button>
+
+        <img class="zoomModal__img" alt="" />
+      </div>
+    `;
+
+
+    document.body.appendChild(zoomModalEl);
+
+    zoomModalImgEl = zoomModalEl.querySelector(".zoomModal__img");
+    zoomModalPrevBtn = zoomModalEl.querySelector(".zoomModal__nav--prev");
+    zoomModalNextBtn = zoomModalEl.querySelector(".zoomModal__nav--next");
+
+    zoomModalPrevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      zoomStep(-1);
+    });
+
+    zoomModalNextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      zoomStep(+1);
+    });
+
+    // click su backdrop o sul bottone chiude
+    zoomModalEl.addEventListener("click", (e) => {
+      const close = e.target.closest("[data-zoom-close='1']");
+      if (close) closeZoomModal();
+    });
+
+    // ESC chiude
+    document.addEventListener("keydown", (e) => {
+  if (!zoomModalEl || !zoomModalEl.classList.contains("open")) return;
+
+  if (e.key === "Escape") closeZoomModal();
+  else if (e.key === "ArrowLeft") zoomStep(-1);
+  else if (e.key === "ArrowRight") zoomStep(+1);
+});
+  }
+
+  function openZoomModalByCardId(cardId, list) {
+  ensureZoomModal();
+
+  zoomList = Array.isArray(list) ? list : [];
+  zoomIndex = zoomList.findIndex(c => c.id === cardId);
+
+  // fallback: se non trovato, apri la prima
+  if (zoomIndex < 0) zoomIndex = 0;
+
+  zoomModalEl.classList.add("open");
+  zoomShowCurrent();
+}
+
+  function closeZoomModal() {
+  if (!zoomModalEl) return;
+  zoomModalEl.classList.remove("open");
+  if (zoomModalImgEl) zoomModalImgEl.src = "";
+  zoomList = [];
+  zoomIndex = -1;
+}
+
+
+function zoomShowCurrent() {
+  if (!zoomModalImgEl) return;
+  const card = zoomList[zoomIndex];
+  if (!card) return;
+
+  zoomModalImgEl.src = card.front || card.thumb || card.back || "";
+  setZoomNavDisabled();
+}
+
+function zoomStep(delta) {
+  const next = zoomIndex + delta;
+  if (next < 0 || next >= zoomList.length) return;
+  zoomIndex = next;
+  zoomShowCurrent();
+}
+
+
   function loadState() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -414,8 +514,10 @@
 
     clampSubclassPicksByLevel(ch);
 
+    const prevDomFilter = filterDomain.value || "";
     const eligible = currentEligibleDomainCards(ch);
     renderDomainFilters(ch);
+    filterDomain.value = prevDomFilter;
 
     const classDef = getClassDef(ch.classKey);
     domainHint.textContent = `Domini classe: ${classDef.domains.join(" + ")} — Carte disponibili (≤ lvl ${ch.level}): ${eligible.length}`;
@@ -441,9 +543,12 @@
     for (const card of visibleDomainCards) {
       const tile = document.createElement("div");
       tile.className = "cardTile";
+      tile.classList.toggle("active", selectedSet.has(card.id));
+
 
       const imgWrap = document.createElement("div");
       imgWrap.className = "cardTile__img";
+      imgWrap.style.backgroundImage = `url(${card.front})`;
       const img = document.createElement("img");
       img.alt = "";
       img.loading = "lazy";
@@ -452,17 +557,41 @@
 
       const body = document.createElement("div");
       body.className = "cardTile__body";
+      const zoom = document.createElement("div");
+      zoom.className = "zoom-icon";
+      zoom.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      `;
+
 
       const cb = document.createElement("input");
       cb.type = "checkbox";
+      cb.classList.add("hidden");
       cb.checked = selectedSet.has(card.id);
       cb.onchange = () => {
-        const set = new Set(ch.selectedCardIds);
-        if (cb.checked) set.add(card.id);
-        else set.delete(card.id);
-        ch.selectedCardIds = Array.from(set).sort();
-        saveState();
-        updateCountsAndPrintLink();
+      tile.classList.toggle("active", cb.checked);
+
+      const set = new Set(ch.selectedCardIds);
+      if (cb.checked) set.add(card.id);
+      else set.delete(card.id);
+
+      ch.selectedCardIds = Array.from(set).sort();
+      saveState();
+      updateCountsAndPrintLink();
+      };
+      tile.style.cursor = "pointer";
+      tile.onclick = (e) => {
+        if (e.target === cb) return; // se clicchi proprio sul checkbox, lascia fare a lui
+        cb.checked = !cb.checked;
+        cb.dispatchEvent(new Event("change"));
+      };
+      zoom.onclick = (e) => {
+        e.stopPropagation();
+        openZoomModalByCardId(card.id, visibleDomainCards);
       };
 
       const txt = document.createElement("div");
@@ -478,6 +607,7 @@
 
       body.appendChild(cb);
       body.appendChild(txt);
+      body.appendChild(zoom);
 
       tile.appendChild(imgWrap);
       tile.appendChild(body);
@@ -733,6 +863,7 @@
     }
 
     wireEvents();
+    ensureZoomModal();
     renderAll();
   }
 
