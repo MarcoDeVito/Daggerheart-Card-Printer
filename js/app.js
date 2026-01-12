@@ -96,26 +96,9 @@
     zoomModalNextBtn = zoomModalEl.querySelector(".zoomModal__nav--next");
     zoomModalImgEl.style.cursor = "pointer";
     zoomModalImgEl.addEventListener("click", (e) => {
-      e.stopPropagation();
-      if (!zoomAllowToggle) return;
-      if (!activeChar || zoomIndex < 0) return;
-      const card = zoomList[zoomIndex];
-      if (!card) return;
-
-      if (!Array.isArray(activeChar.selectedCardIds)) activeChar.selectedCardIds = [];
-      const set = new Set(activeChar.selectedCardIds);
-
-      if (set.has(card.id)) set.delete(card.id);
-      else set.add(card.id);
-
-      activeChar.selectedCardIds = Array.from(set).sort();
-      saveState();
-
-      renderDomainCards();
-      updateCountsAndPrintLink();
-      setModalSelectedUI();
-    });
-
+  e.stopPropagation();
+  toggleZoomSelection();
+});
 
 
     zoomModalPrevBtn.addEventListener("click", (e) => {
@@ -141,6 +124,10 @@
   if (e.key === "Escape") closeZoomModal();
   else if (e.key === "ArrowLeft") zoomStep(-1);
   else if (e.key === "ArrowRight") zoomStep(+1);
+  else if (e.code === "Space") {
+  e.preventDefault(); // evita scroll pagina
+  toggleZoomSelection();
+}
 });
   }
 
@@ -222,6 +209,28 @@ function zoomShowCurrent() {
 
   zoomModalImgEl.src = card.front || card.thumb || card.back || "";
   setZoomNavDisabled();
+  setModalSelectedUI();
+}
+
+
+function toggleZoomSelection() {
+  if (!zoomAllowToggle) return;
+
+  if (!activeChar || zoomIndex < 0) return;
+  const card = zoomList[zoomIndex];
+  if (!card) return;
+
+  if (!Array.isArray(activeChar.selectedCardIds)) activeChar.selectedCardIds = [];
+  const set = new Set(activeChar.selectedCardIds);
+
+  if (set.has(card.id)) set.delete(card.id);
+  else set.add(card.id);
+
+  activeChar.selectedCardIds = Array.from(set).sort();
+  saveState();
+
+  renderDomainCards();
+  updateCountsAndPrintLink();
   setModalSelectedUI();
 }
 
