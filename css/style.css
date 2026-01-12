@@ -245,9 +245,7 @@ p{margin:6px 0 0 0}
    MODAL ZOOM (fullscreen)
    =========================== */
 
-   .zoomModal__panel{
-  position: relative;
-}
+
 
 .zoomModal__selected{
   position: absolute;
@@ -281,25 +279,31 @@ p{margin:6px 0 0 0}
 .zoomModal__panel{
   position: relative;
   z-index: 1;
+
   width: min(92vw, 520px);
-  aspect-ratio: 63 / 88;
+  max-height: 92vh;              /* 🔴 CHIAVE */
   margin: 0 auto;
+
   top: 50%;
   transform: translateY(-50%);
+
   border-radius: 14px;
   border: 1px solid var(--border);
   background: #111;
-  overflow: hidden;
+  overflow: hidden;              /* 🔴 importante */
   box-shadow: 0 20px 80px rgba(0,0,0,.6);
 }
 
+
 .zoomModal__img{
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: 100%;                  /* 🔴 usa tutta l’altezza disponibile */
+  max-height: 92vh;              /* sicurezza extra */
+  object-fit: contain;           /* 🔴 MOSTRA TUTTA L’IMMAGINE */
   display: block;
   background: #000;
 }
+
 
 .zoomModal__close{
   position: absolute;
