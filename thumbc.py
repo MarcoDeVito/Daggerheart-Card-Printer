@@ -1,8 +1,8 @@
 from pathlib import Path
 from PIL import Image
 
-FRONT_DIR = Path("assets/front")
-THUMB_DIR = Path("assets/thumbs")
+FRONT_DIR = Path("assets/frontITA")
+THUMB_DIR = Path("assets/thumbsITA")
 
 THUMB_MAX = 320
 THUMB_QUALITY = 82

@@ -23,6 +23,10 @@
 
   async function init() {
     const state = loadState();
+    const lang = (state.ui && (state.ui.language === "ita" || state.ui.language === "eng"))
+  ? state.ui.language
+  : "eng";
+
     if (!state) {
       document.body.innerHTML = "Nessuno stato trovato in localStorage.";
       return;
@@ -35,10 +39,17 @@
       return;
     }
 
-    const [cardsRes, rulesRes] = await Promise.all([
-      fetch("data/cards.json", { cache: "no-store" }),
-      fetch("data/rules.json", { cache: "no-store" })
-    ]);
+    const cardsPath = (lang === "ita") ? "data/cardsITA.json" : "data/cards.json";
+const rulesPath = (lang === "ita") ? "data/rulesITA.json" : "data/rules.json";
+
+const [cardsRes, rulesRes] = await Promise.all([
+  fetch(cardsPath, { cache: "no-store" }),
+  fetch(rulesPath, { cache: "no-store" })
+]);
+
+if (!cardsRes.ok) throw new Error(`Impossibile caricare ${cardsPath} (HTTP ${cardsRes.status})`);
+if (!rulesRes.ok) throw new Error(`Impossibile caricare ${rulesPath} (HTTP ${rulesRes.status})`);
+
     const catalog = await cardsRes.json();
     const rules = await rulesRes.json();
 
@@ -100,7 +111,7 @@
     const finalCards = orderedIds.map((id) => cardsById.get(id)).filter(Boolean);
 
     const meta = $("printMeta");
-    meta.textContent = `PG: ${ch.name} • Lvl ${ch.level} • ${
+    meta.textContent = `Lingua: ${lang.toUpperCase()} - PG: ${ch.name} • Lvl ${ch.level} • ${
       classDef?.label || ch.classKey
     }/${subDef?.label || ch.subclassKey} • Carte: ${finalCards.length} • Bleed: ${
       printOpt.bleedOn ? "ON" : "OFF"
