@@ -19,6 +19,17 @@
   --outerH: calc(var(--cutH) + (var(--bleedOn) * var(--bleedMm) * 2));
 }
 
+
+@font-face {
+  font-family: "IvyMode";
+  src:
+    url("../fonts/ivy-mode-bold.woff2") format("woff2"),
+    url("../fonts/ivy-mode-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -138,10 +149,26 @@ a{color:var(--border)}
   margin: 0 0 12px 0;
 }
 
+.titleWithLogo{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.titleWithLogo .titleLogo{
+  height: 1.2em;       /* scala insieme al font */
+  width: auto;
+  vertical-align: middle;
+}
 
 
 .card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:var(--card2)}
-h1{margin:0;font-size:18px}
+h1{margin:0;font-size:60px}
+h1{
+  font-family: "IvyMode", serif;
+  font-weight: 700;
+  letter-spacing: 0.02em; /* opzionale, IvyMode rende bene così */
+}
 h2{margin:0;font-size:16px}
 h3{margin:0 0 8px 0;font-size:14px}
 p{margin:6px 0 0 0}

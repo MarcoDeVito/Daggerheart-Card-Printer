@@ -219,24 +219,22 @@ function zoomShowCurrent() {
 
 function toggleZoomSelection() {
   if (!zoomAllowToggle) return;
-
   if (!activeChar || zoomIndex < 0) return;
+
   const card = zoomList[zoomIndex];
   if (!card) return;
 
-  if (!Array.isArray(activeChar.selectedCardIds)) activeChar.selectedCardIds = [];
-  const set = new Set(activeChar.selectedCardIds);
+  const currentlySelected = isCardSelected(activeChar, card.id);
+  const wantSelected = !currentlySelected;
 
-  if (set.has(card.id)) set.delete(card.id);
-  else set.add(card.id);
-
-  activeChar.selectedCardIds = Array.from(set).sort();
-  saveState();
+  const ok = trySetDomainCardSelected(activeChar, card.id, wantSelected, { source: "modal" });
+  if (!ok) return;
 
   renderDomainCards();
   updateCountsAndPrintLink();
   setModalSelectedUI();
 }
+
 
 
 function zoomStep(delta) {
@@ -708,6 +706,47 @@ left.appendChild(thumbWrap);
     }
   }
 
+function maxDomainVaultForLevel(level) {
+  const lvl = Number(level) || 1;
+  return Math.max(0, lvl + 1); // Vault = livello + 1
+}
+
+function trySetDomainCardSelected(ch, cardId, wantSelected, { source = "" } = {}) {
+  if (!ch) return false;
+  if (!Array.isArray(ch.selectedCardIds)) ch.selectedCardIds = [];
+
+  const set = new Set(ch.selectedCardIds);
+  const already = set.has(cardId);
+
+  // Deselezionare è sempre permesso
+  if (!wantSelected) {
+    if (already) {
+      set.delete(cardId);
+      ch.selectedCardIds = Array.from(set).sort();
+      saveState();
+    }
+    return true;
+  }
+
+  // Se è già selezionata, ok
+  if (already) return true;
+
+  // Controllo cap
+  const cap = maxDomainVaultForLevel(ch.level);
+  if (set.size >= cap) {
+    alert(`Hai raggiunto il numero massimo di Carte Dominio possedute per questo livello.\n` +
+          `Massimo (Vault) a lvl ${ch.level}: ${cap}\n` +
+          `Deseleziona una carta prima di aggiungerne un’altra.`);
+    return false;
+  }
+
+  set.add(cardId);
+  ch.selectedCardIds = Array.from(set).sort();
+  saveState();
+  return true;
+}
+
+
   function renderDomainCards() {
     const ch = activeChar;
     const ok = ch && requiredFieldsOk(ch);
@@ -789,16 +828,18 @@ left.appendChild(thumbWrap);
       cb.classList.add("hidden");
       cb.checked = selectedSet.has(card.id);
       cb.onchange = () => {
-      tile.classList.toggle("active", cb.checked);
+  const ok = trySetDomainCardSelected(ch, card.id, cb.checked, { source: "grid" });
 
-      const set = new Set(ch.selectedCardIds);
-      if (cb.checked) set.add(card.id);
-      else set.delete(card.id);
+  if (!ok) {
+    cb.checked = false;                // revert
+    tile.classList.remove("active");
+    return;
+  }
 
-      ch.selectedCardIds = Array.from(set).sort();
-      saveState();
-      updateCountsAndPrintLink();
-      };
+  tile.classList.toggle("active", cb.checked);
+  updateCountsAndPrintLink();
+};
+
       tile.style.cursor = "pointer";
       tile.onclick = (e) => {
         if (e.target === cb) return; // se clicchi proprio sul checkbox, lascia fare a lui
@@ -1056,13 +1097,20 @@ function setDomainView(view) {
 
 
     btnSelectAllVisible.onclick = () => {
-      if (!activeChar || !requiredFieldsOk(activeChar)) return;
-      const set = new Set(activeChar.selectedCardIds || []);
-      for (const c of visibleDomainCards) set.add(c.id);
-      activeChar.selectedCardIds = Array.from(set).sort();
-      saveState();
-      renderDomainCards();
-    };
+  if (!activeChar || !requiredFieldsOk(activeChar)) return;
+
+  let hitCap = false;
+  for (const c of visibleDomainCards) {
+    const ok = trySetDomainCardSelected(activeChar, c.id, true, { source: "bulk" });
+    if (!ok) { hitCap = true; break; }
+  }
+
+  renderDomainCards();
+  if (hitCap) {
+    // alert già mostrato da trySetDomainCardSelected
+  }
+};
+
 
     btnLicense.onclick = () => {
     licenseModal.classList.remove("hidden");
