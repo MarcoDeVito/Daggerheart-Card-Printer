@@ -384,10 +384,20 @@ function zoomStep(delta) {
     fillSelectOptions(chClass, classItems, {placeholder:"Seleziona classe…"});
 
     // Fill community/ancestry selects from catalog
-    const communityItems = getCardsByKind("community").map(c => ({ value: c.id, label: `${c.id} — ${c.name}` }));
-    const ancestryItems  = getCardsByKind("ancestry").map(c => ({ value: c.id, label: `${c.id} — ${c.name}` }));
-    fillSelectOptions(chCommunity, communityItems, {placeholder:"Seleziona community…"});
-    fillSelectOptions(chAncestry, ancestryItems, {placeholder:"Seleziona ancestry…"});
+    // Fill community/ancestry selects from catalog (ordinati alfabeticamente)
+    const communityItems = getCardsByKind("community")
+      .slice()
+      .sort((a, b) => a.name.localeCompare(b.name, "it", { sensitivity: "base" }))
+      .map(c => ({ value: c.id, label: c.name }));
+
+    const ancestryItems = getCardsByKind("ancestry")
+      .slice()
+      .sort((a, b) => a.name.localeCompare(b.name, "it", { sensitivity: "base" }))
+      .map(c => ({ value: c.id, label: c.name }));
+
+    fillSelectOptions(chCommunity, communityItems, { placeholder: "Seleziona community…" });
+    fillSelectOptions(chAncestry, ancestryItems, { placeholder: "Seleziona ancestry…" });
+
 
     // Assign values
     chName.value = activeChar.name || "";
