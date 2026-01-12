@@ -1,10 +1,10 @@
 :root{
-  --bg:#0b0f14;
-  --card:#121823;
-  --card2:#0f1520;
+  --bg:#6c3290;
+  --card:#6c3290;
+  --card2:#6c3290;
   --text:#e7eefc;
   --muted:#9fb0cc;
-  --border:#223149;
+  --border:gold;
 
   --a4w: 210mm;
   --a4h: 297mm;
@@ -24,15 +24,15 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: linear-gradient(180deg, #070a0f 0%, #0b0f14 100%);
+  background: linear-gradient(180deg, #6c3290 0%, #4b2264 100%);
   color:var(--text);
 }
 
 .wrap{max-width:1200px;margin:0 auto;padding:16px}
 .grid{display:grid;grid-template-columns: 1fr 1fr; gap:16px}
-.card{background:rgba(18,24,35,.92); border:1px solid var(--border); border-radius:14px; overflow:hidden}
+.card{background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden}
 .card--full{grid-column:1 / -1}
-.card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:rgba(15,21,32,.65)}
+.card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:var(--card)}
 h1{margin:0;font-size:18px}
 h2{margin:0;font-size:16px}
 h3{margin:0 0 8px 0;font-size:14px}
@@ -40,13 +40,13 @@ p{margin:6px 0 0 0}
 .muted{color:var(--muted)}
 .small{font-size:12px}
 
-.topbar{position:sticky;top:0;z-index:10;backdrop-filter: blur(10px); border-bottom:1px solid var(--border); background: rgba(7,10,15,.75)}
+.topbar{position:sticky;top:0;z-index:10;backdrop-filter: blur(10px); border-bottom:1px solid var(--border); background: var(--card)}
 .topbar__inner{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .topbar__actions{display:flex;gap:10px}
 
 .btn{
   border:1px solid var(--border);
-  background:#0f1520;
+  background:#6c3290;
   color:var(--text);
   padding:9px 12px;
   border-radius:10px;
@@ -66,7 +66,7 @@ p{margin:6px 0 0 0}
 .list{padding:10px; display:flex; flex-direction:column; gap:8px}
 .listItem{
   display:flex; align-items:center; gap:10px;
-  background: rgba(15,21,32,.6);
+  background: var(--card);
   border:1px solid var(--border);
   border-radius:12px;
   padding:10px;
@@ -89,7 +89,7 @@ input,select{
   padding:10px;
   border-radius:10px;
   border:1px solid var(--border);
-  background:#0f1520;
+  background:var(--card);
   color:var(--text);
 }
 .actions{align-items:center}
@@ -99,7 +99,7 @@ input,select{
 .check input{width:auto}
 
 .subcard{
-  background: rgba(15,21,32,.6);
+  background: var(--card);
   border:1px solid var(--border);
   border-radius:12px;
   padding:12px;
@@ -119,7 +119,7 @@ input,select{
 .cards{padding:12px; display:grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap:10px}
 .cardTile{
   border:1px solid var(--border);
-  background: rgba(15,21,32,.6);
+  background: var(--card);
   border-radius:12px;
   overflow:hidden;
   display:flex;
@@ -127,7 +127,7 @@ input,select{
 }
 .cardTile__img{
   height:180px;
-  background:#0b0f14;
+  background:var(--card);
   display:flex;
   align-items:center;
   justify-content:center;
