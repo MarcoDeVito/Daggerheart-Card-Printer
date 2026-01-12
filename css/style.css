@@ -1,7 +1,7 @@
 :root{
   --bg:#6c3290;
   --card:#6c3290;
-  --card2:#6c3290;
+  --card2:#45205d;
   --text:#e7eefc;
   --muted:#9fb0cc;
   --border:gold;
@@ -24,7 +24,9 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: linear-gradient(180deg, #6c3290 0%, #4b2264 100%);
+  background: var(--card);
+
+  background: radial-gradient(circle, var(--card) 0%, var(--card2) 100%);
   color:var(--text);
 }
 
@@ -32,7 +34,7 @@ body{
 .grid{display:grid;grid-template-columns: 1fr 1fr; gap:16px}
 .card{background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden}
 .card--full{grid-column:1 / -1}
-.card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:var(--card)}
+.card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:var(--card2)}
 h1{margin:0;font-size:18px}
 h2{margin:0;font-size:16px}
 h3{margin:0 0 8px 0;font-size:14px}
@@ -40,7 +42,7 @@ p{margin:6px 0 0 0}
 .muted{color:var(--muted)}
 .small{font-size:12px}
 
-.topbar{position:sticky;top:0;z-index:10;backdrop-filter: blur(10px); border-bottom:1px solid var(--border); background: var(--card)}
+.topbar{position:sticky;top:0;z-index:10;backdrop-filter: blur(10px); border-bottom:1px solid var(--border); background: var(--card2)}
 .topbar__inner{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .topbar__actions{display:flex;gap:10px}
 
@@ -66,12 +68,12 @@ p{margin:6px 0 0 0}
 .list{padding:10px; display:flex; flex-direction:column; gap:8px}
 .listItem{
   display:flex; align-items:center; gap:10px;
-  background: var(--card);
+  background: var(--card2);
   border:1px solid var(--border);
   border-radius:12px;
   padding:10px;
 }
-.listItem.active{outline:2px solid #2c3f66}
+.listItem.active{outline:2px solid var(--border)}
 .listItem__main{flex:1; min-width:0}
 .listItem__title{font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .listItem__sub{font-size:12px; color:var(--muted)}
@@ -80,7 +82,7 @@ p{margin:6px 0 0 0}
 .empty{padding:16px;color:var(--muted)}
 .hidden{display:none !important}
 
-.form{padding:14px 16px}
+.form{padding:14px 16px; background: var(--card2);}
 .row{display:grid;grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px}
 .row--3{grid-template-columns: 1fr 1fr 1fr}
 label span{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
@@ -114,12 +116,12 @@ input,select{
 .subThumb{width:44px;height:44px;border-radius:8px;background:#0b0f14;border:1px solid var(--border);object-fit:cover}
 
 .toolbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-.input{min-width:180px}
+.input{}
 
 .cards{padding:12px; display:grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap:10px}
 .cardTile{
   border:1px solid var(--border);
-  background: var(--card);
+  background: var(--card2);
   border-radius:12px;
   overflow:hidden;
   display:flex;
