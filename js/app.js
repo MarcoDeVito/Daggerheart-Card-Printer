@@ -34,11 +34,17 @@
   const sheetCount = $("sheetCount");
   const domainHint = $("domainHint");
   const activeHint = $("activeHint");
+  const btnViewGrid = $("btnViewGrid");
+  const btnViewList = $("btnViewList");
+
 
   let catalog = null; // cards.json
   let rules = null;   // rules.json
 
   let state = loadState();
+  if (!state.ui) state.ui = { domainView: "grid" };
+  if (state.ui.domainView !== "grid" && state.ui.domainView !== "list") state.ui.domainView = "grid";
+
   let activeChar = null;
 
   let visibleDomainCards = []; // currently filtered list in UI
@@ -49,6 +55,9 @@
   let zoomModalImgEl = null;
   let zoomModalPrevBtn = null;
   let zoomModalNextBtn = null;
+  let zoomModalPanelEl = null;
+
+  
 
   let zoomList = [];       // lista carte visibili (oggetti card)
   let zoomIndex = -1;      // indice corrente dentro zoomList
@@ -67,16 +76,42 @@
         <button class="zoomModal__nav zoomModal__nav--prev" type="button" aria-label="Precedente (←)">←</button>
         <button class="zoomModal__nav zoomModal__nav--next" type="button" aria-label="Successiva (→)">→</button>
 
+        <div class="zoomModal__selected"></div>
         <img class="zoomModal__img" alt="" />
       </div>
     `;
+    
 
 
     document.body.appendChild(zoomModalEl);
 
+    zoomModalPanelEl = zoomModalEl.querySelector(".zoomModal__panel");
     zoomModalImgEl = zoomModalEl.querySelector(".zoomModal__img");
     zoomModalPrevBtn = zoomModalEl.querySelector(".zoomModal__nav--prev");
     zoomModalNextBtn = zoomModalEl.querySelector(".zoomModal__nav--next");
+    zoomModalImgEl.style.cursor = "pointer";
+    zoomModalImgEl.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      if (!activeChar || zoomIndex < 0) return;
+      const card = zoomList[zoomIndex];
+      if (!card) return;
+
+      if (!Array.isArray(activeChar.selectedCardIds)) activeChar.selectedCardIds = [];
+      const set = new Set(activeChar.selectedCardIds);
+
+      if (set.has(card.id)) set.delete(card.id);
+      else set.add(card.id);
+
+      activeChar.selectedCardIds = Array.from(set).sort();
+      saveState();
+
+      renderDomainCards();
+      updateCountsAndPrintLink();
+      setModalSelectedUI();
+    });
+
+
 
     zoomModalPrevBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -125,6 +160,26 @@
   zoomIndex = -1;
 }
 
+function isCardSelected(ch, cardId) {
+  if (!ch || !Array.isArray(ch.selectedCardIds)) return false;
+  return ch.selectedCardIds.includes(cardId);
+}
+
+function setModalSelectedUI() {
+  if (!zoomModalPanelEl) return;
+
+  const card = zoomList[zoomIndex];
+  const selected = !!(card && isCardSelected(activeChar, card.id));
+
+  zoomModalPanelEl.classList.toggle("is-selected", selected);
+}
+
+function setZoomNavDisabled() {
+  if (!zoomModalPrevBtn || !zoomModalNextBtn) return;
+  zoomModalPrevBtn.disabled = zoomIndex <= 0;
+  zoomModalNextBtn.disabled = zoomIndex >= zoomList.length - 1;
+}
+
 
 function zoomShowCurrent() {
   if (!zoomModalImgEl) return;
@@ -133,7 +188,9 @@ function zoomShowCurrent() {
 
   zoomModalImgEl.src = card.front || card.thumb || card.back || "";
   setZoomNavDisabled();
+  setModalSelectedUI();
 }
+
 
 function zoomStep(delta) {
   const next = zoomIndex + delta;
@@ -141,6 +198,7 @@ function zoomStep(delta) {
   zoomIndex = next;
   zoomShowCurrent();
 }
+
 
 
   function loadState() {
@@ -152,7 +210,8 @@ function zoomStep(delta) {
       version: 1,
       activeCharacterId: null,
       characters: [],
-      print: { bleedOn: false, cropMarks: true, addBackSheets: true }
+      print: { bleedOn: false, cropMarks: true, addBackSheets: true },
+      ui: { domainView: "grid" }
     };
   }
 
@@ -548,6 +607,9 @@ function zoomStep(delta) {
 
       const imgWrap = document.createElement("div");
       imgWrap.className = "cardTile__img";
+      const isListView = (state.ui?.domainView || "grid") === "list";
+      if (isListView) imgWrap.classList.add("hidden");
+
       imgWrap.style.backgroundImage = `url(${card.front})`;
       const img = document.createElement("img");
       img.alt = "";
@@ -700,6 +762,21 @@ function zoomStep(delta) {
     btnPrint.href = `print.html?ch=${encodeURIComponent(ch.id)}`;
   }
 
+function updateDomainViewButtons() {
+  const v = state.ui?.domainView || "grid";
+  if (btnViewGrid) btnViewGrid.setAttribute("aria-pressed", v === "grid" ? "true" : "false");
+  if (btnViewList) btnViewList.setAttribute("aria-pressed", v === "list" ? "true" : "false");
+}
+
+function setDomainView(view) {
+  if (!state.ui) state.ui = { domainView: "grid" };
+  state.ui.domainView = view === "list" ? "list" : "grid";
+  saveState();
+  updateDomainViewButtons();
+  renderDomainCards();
+}
+
+
   function wireEvents() {
     btnNewChar.onclick = () => {
       const id = uid();
@@ -815,6 +892,9 @@ function zoomStep(delta) {
 
     search.oninput = () => renderDomainCards();
     filterDomain.onchange = () => renderDomainCards();
+    btnViewGrid.onclick = () => setDomainView("grid");
+    btnViewList.onclick = () => setDomainView("list");
+
 
     btnSelectAllVisible.onclick = () => {
       if (!activeChar || !requiredFieldsOk(activeChar)) return;
@@ -863,6 +943,7 @@ function zoomStep(delta) {
     }
 
     wireEvents();
+    updateDomainViewButtons();
     ensureZoomModal();
     renderAll();
   }

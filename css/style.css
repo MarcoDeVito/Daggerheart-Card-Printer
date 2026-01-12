@@ -68,9 +68,65 @@ p{margin:6px 0 0 0}
   opacity: 1;
 }
 
+
+.viewToggle{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.viewBtn{
+  width:42px;
+  height:42px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background: transparent;
+  color: rgb(83, 71, 0);        
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  padding:0;
+}
+
+.viewBtn svg{
+  width:24px;
+  height:24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.viewBtn[aria-pressed="true"]{
+  color: var(--border); 
+  
+}
+
+.viewBtn:hover{filter:brightness(1.08)}
+.viewBtn:active{transform: translateY(1px)}
+
+
 /* ===========================
    MODAL ZOOM (fullscreen)
    =========================== */
+
+   .zoomModal__panel{
+  position: relative;
+}
+
+.zoomModal__selected{
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 215, 0, 0.22); /* gold trasparente */
+  pointer-events: none;
+  opacity: 0;
+}
+
+.zoomModal__panel.is-selected .zoomModal__selected{
+  opacity: 1;
+}
 
 .zoomModal{
   position: fixed;
@@ -355,6 +411,33 @@ input,select{
 /* each mark is a thin line. we place them around cutbox corners */
 .pcard.crop .m{
   opacity:.9;
+}
+
+
+@media (max-width: 900px){
+  .grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Carte dominio responsive */
+@media (max-width: 700px){
+  .cards{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cardTile__img{
+    height: 220px;
+  }
+}
+
+@media (max-width: 420px){
+  .cards{
+    grid-template-columns: 1fr;
+  }
+  .cardTile__img{
+    height: 400px;
+  }
 }
 
 /* Helper classes for marks (positions set inline via JS) */
