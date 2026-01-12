@@ -18,6 +18,10 @@
   const chCommunity = $("chCommunity");
   const chAncestry = $("chAncestry");
 
+  const btnZoomCommunity = $("btnZoomCommunity");
+const btnZoomAncestry = $("btnZoomAncestry");
+
+
   const optBleed = $("optBleed");
   const optCrop = $("optCrop");
   const optBack = $("optBack");
@@ -158,6 +162,13 @@ if (zoomModalNextBtn) zoomModalNextBtn.classList.remove("hidden");
   zoomModalEl.classList.add("open");
   zoomShowCurrent();
 }
+
+function updateCommunityAncestryZoomButtons() {
+  if (btnZoomCommunity) btnZoomCommunity.disabled = !chCommunity.value;
+  if (btnZoomAncestry) btnZoomAncestry.disabled = !chAncestry.value;
+  
+}
+
 
 function openZoomModalSingleCard(cardId) {
   ensureZoomModal();
@@ -554,6 +565,9 @@ btnDel.onclick = () => deleteCharacterById(ch.id);
     chClass.value = activeChar.classKey || "";
     chCommunity.value = activeChar.communityId || "";
     chAncestry.value = activeChar.ancestryId || "";
+
+    updateCommunityAncestryZoomButtons();
+
 
     // Subclass depends on class
     renderSubclassSelect();
@@ -1054,6 +1068,21 @@ btnLangENG.onclick = async () => {
   deleteCharacterById(activeChar.id);
 };
 
+btnZoomCommunity.onclick = (e) => {
+  e.preventDefault();
+  const id = chCommunity.value;
+  if (!id) return;
+  openZoomModalSingleCard(id);
+};
+
+btnZoomAncestry.onclick = (e) => {
+  e.preventDefault();
+  const id = chAncestry.value;
+  if (!id) return;
+  openZoomModalSingleCard(id);
+};
+
+
 
     editorForm.onsubmit = (e) => {
       e.preventDefault();
@@ -1114,6 +1143,7 @@ btnLangENG.onclick = async () => {
       saveState();
       updateCountsAndPrintLink();
       renderCharList();
+      updateCommunityAncestryZoomButtons();
     };
 
     chAncestry.onchange = () => {
@@ -1122,6 +1152,7 @@ btnLangENG.onclick = async () => {
       saveState();
       updateCountsAndPrintLink();
       renderCharList();
+      updateCommunityAncestryZoomButtons();
     };
 
     optBleed.onchange = () => {

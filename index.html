@@ -61,16 +61,37 @@
         </div>
 
         <div class="row">
-          <label>
-            <span>Community (obbligatoria)</span>
-            <select id="chCommunity" required></select>
-          </label>
+  <label>
+    <span>Community (obbligatoria)</span>
 
-          <label>
-            <span>Ancestry (obbligatoria)</span>
-            <select id="chAncestry" required></select>
-          </label>
-        </div>
+    <div class="selectWithIcon">
+      <select id="chCommunity" required></select>
+      <button id="btnZoomCommunity" class="zoomMiniBtn" type="button" aria-label="Apri carta Community">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+  </label>
+
+  <label>
+    <span>Ancestry (obbligatoria)</span>
+
+    <div class="selectWithIcon">
+      <select id="chAncestry" required></select>
+      <button id="btnZoomAncestry" class="zoomMiniBtn" type="button" aria-label="Apri carta Ancestry">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+  </label>
+</div>
+
 
         <div class="row">
           <label>

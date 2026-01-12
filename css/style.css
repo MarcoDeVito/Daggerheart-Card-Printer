@@ -590,6 +590,42 @@ input,select{
   opacity:.9;
 }
 
+.selectWithIcon{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.selectWithIcon select{
+  flex: 1;
+}
+
+.zoomMiniBtn{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,.25);
+  color: var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  flex: 0 0 auto;
+  opacity: .9;
+}
+
+.zoomMiniBtn svg{
+  width: 18px;
+  height: 18px;
+}
+
+.zoomMiniBtn:hover{ filter: brightness(1.1); opacity: 1; }
+.zoomMiniBtn:active{ transform: translateY(1px); }
+.zoomMiniBtn[disabled]{ opacity: .35; pointer-events: none; }
+
+
 
 @media (max-width: 900px){
   .grid{
