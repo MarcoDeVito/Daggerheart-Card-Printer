@@ -74,6 +74,7 @@ p{margin:6px 0 0 0}
   padding:10px;
 }
 .listItem.active{outline:2px solid var(--border)}
+.cardTile.active{outline:2px solid var(--border)}
 .listItem__main{flex:1; min-width:0}
 .listItem__title{font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .listItem__sub{font-size:12px; color:var(--muted)}
@@ -116,7 +117,7 @@ input,select{
 .subThumb{width:44px;height:44px;border-radius:8px;background:#0b0f14;border:1px solid var(--border);object-fit:cover}
 
 .toolbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-.input{}
+.input{min-width:180px}
 
 .cards{padding:12px; display:grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap:10px}
 .cardTile{
