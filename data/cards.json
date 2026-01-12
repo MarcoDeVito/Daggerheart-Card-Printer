@@ -63,7 +63,7 @@
     {
       "id": "007",
       "kind": "subclass",
-      "name": "WARDEN of the Elements Foundation",
+      "name": "Warden of the Elements Foundation",
       "front": "assets/front/007.webp",
       "thumb": "assets/thumbs/007.webp",
       "tags": [],
@@ -72,7 +72,7 @@
     {
       "id": "008",
       "kind": "subclass",
-      "name": "|Warden OF THE ELEMENTS Specialization",
+      "name": "Warden of the Elements Specialization",
       "front": "assets/front/008.webp",
       "thumb": "assets/thumbs/008.webp",
       "tags": [],
@@ -81,7 +81,7 @@
     {
       "id": "009",
       "kind": "subclass",
-      "name": "Warden OF THE ELEMENTS Mastery",
+      "name": "Warden of the Elements Mastery",
       "front": "assets/front/009.webp",
       "thumb": "assets/thumbs/009.webp",
       "tags": [],
@@ -90,7 +90,7 @@
     {
       "id": "010",
       "kind": "subclass",
-      "name": "WARDEN of Renewal Foundation",
+      "name": "Warden of Renewal Foundation",
       "front": "assets/front/010.webp",
       "thumb": "assets/thumbs/010.webp",
       "tags": [],
@@ -171,7 +171,7 @@
     {
       "id": "019",
       "kind": "subclass",
-      "name": "BEASTBOUND Foundation",
+      "name": "Beastbound Foundation",
       "front": "assets/front/019.webp",
       "thumb": "assets/thumbs/019.webp",
       "tags": [],
@@ -279,7 +279,7 @@
     {
       "id": "031",
       "kind": "subclass",
-      "name": "DIVINE WIELDER Foundation",
+      "name": "Divine Wilder Foundation",
       "front": "assets/front/031.webp",
       "thumb": "assets/thumbs/031.webp",
       "tags": [],
@@ -288,7 +288,7 @@
     {
       "id": "032",
       "kind": "subclass",
-      "name": "DIVINE WIELDER Specialization",
+      "name": "Divine Wilder Specialization",
       "front": "assets/front/032.webp",
       "thumb": "assets/thumbs/032.webp",
       "tags": [],
@@ -297,7 +297,7 @@
     {
       "id": "033",
       "kind": "subclass",
-      "name": "DIVINE WIELDER Mastery",
+      "name": "Divine Wilder Mastery",
       "front": "assets/front/033.webp",
       "thumb": "assets/thumbs/033.webp",
       "tags": [],
@@ -387,7 +387,7 @@
     {
       "id": "043",
       "kind": "subclass",
-      "name": "Call of the BRAVE Foundation",
+      "name": "Call of the Brave Foundation",
       "front": "assets/front/043.webp",
       "thumb": "assets/thumbs/043.webp",
       "tags": [],
@@ -396,7 +396,7 @@
     {
       "id": "044",
       "kind": "subclass",
-      "name": "Call of the BRAVE Specialization",
+      "name": "Call of the Brave Specialization",
       "front": "assets/front/044.webp",
       "thumb": "assets/thumbs/044.webp",
       "tags": [],
@@ -405,7 +405,7 @@
     {
       "id": "045",
       "kind": "subclass",
-      "name": "Call of the BRAVE Mastery",
+      "name": "Call of the Brave Mastery",
       "front": "assets/front/045.webp",
       "thumb": "assets/thumbs/045.webp",
       "tags": [],
@@ -432,7 +432,7 @@
     {
       "id": "048",
       "kind": "subclass",
-      "name": "Call OF THE SLAYER Mastery",
+      "name": "Call of the Slayer Mastery",
       "front": "assets/front/048.webp",
       "thumb": "assets/thumbs/048.webp",
       "tags": [],
@@ -450,7 +450,7 @@
     {
       "id": "050",
       "kind": "subclass",
-      "name": "SCHOOL OF KNOWLEDGE Specialization",
+      "name": "School of knowledge Specialization",
       "front": "assets/front/050.webp",
       "thumb": "assets/thumbs/050.webp",
       "tags": [],
@@ -459,7 +459,7 @@
     {
       "id": "051",
       "kind": "subclass",
-      "name": "SCHOOL OF KNOWLEDGE Mastery",
+      "name": "School of knowledge Mastery",
       "front": "assets/front/051.webp",
       "thumb": "assets/thumbs/051.webp",
       "tags": [],
@@ -468,7 +468,7 @@
     {
       "id": "052",
       "kind": "subclass",
-      "name": "SCHOOL OF WAR Foundation",
+      "name": "School of war Foundation",
       "front": "assets/front/052.webp",
       "thumb": "assets/thumbs/052.webp",
       "tags": [],
@@ -477,7 +477,7 @@
     {
       "id": "053",
       "kind": "subclass",
-      "name": "SCHOOL OF WAR Specialization",
+      "name": "School of war Specialization",
       "front": "assets/front/053.webp",
       "thumb": "assets/thumbs/053.webp",
       "tags": [],
@@ -486,7 +486,7 @@
     {
       "id": "054",
       "kind": "subclass",
-      "name": "SCHOOL OF WAR Mastery",
+      "name": "School of war Mastery",
       "front": "assets/front/054.webp",
       "thumb": "assets/thumbs/054.webp",
       "tags": [],
@@ -1156,7 +1156,7 @@
     {
       "id": "120",
       "kind": "domain",
-      "name": "GORE AND GLORY",
+      "name": "Gore and Glory",
       "front": "assets/front/120.webp",
       "thumb": "assets/thumbs/120.webp",
       "tags": [],
@@ -1189,7 +1189,7 @@
     {
       "id": "123",
       "kind": "domain",
-      "name": "ONSLAUGHT",
+      "name": "Onslaught",
       "front": "assets/front/123.webp",
       "thumb": "assets/thumbs/123.webp",
       "tags": [],
@@ -1288,7 +1288,7 @@
     {
       "id": "132",
       "kind": "domain",
-      "name": "REDIRECT",
+      "name": "Redirect",
       "front": "assets/front/132.webp",
       "thumb": "assets/thumbs/132.webp",
       "tags": [],
@@ -1354,7 +1354,7 @@
     {
       "id": "138",
       "kind": "domain",
-      "name": "CRUEL PRECISION",
+      "name": "Cruel precision",
       "front": "assets/front/138.webp",
       "thumb": "assets/thumbs/138.webp",
       "tags": [],
@@ -1365,7 +1365,7 @@
     {
       "id": "139",
       "kind": "domain",
-      "name": "BREAKING Blow",
+      "name": "Breaking Blow",
       "front": "assets/front/139.webp",
       "thumb": "assets/thumbs/139.webp",
       "tags": [],
@@ -1651,7 +1651,7 @@
     {
       "id": "165",
       "kind": "domain",
-      "name": "TRANSCENDENT Union",
+      "name": "Trascendent Union",
       "front": "assets/front/165.webp",
       "thumb": "assets/thumbs/165.webp",
       "tags": [],
@@ -2102,7 +2102,7 @@
     {
       "id": "206",
       "kind": "domain",
-      "name": "ECLIPSE",
+      "name": "Eclipse",
       "front": "assets/front/206.webp",
       "thumb": "assets/thumbs/206.webp",
       "tags": [],
@@ -2190,7 +2190,7 @@
     {
       "id": "214",
       "kind": "domain",
-      "name": "TOWERING Stalk",
+      "name": "Towering Stalk",
       "front": "assets/front/214.webp",
       "thumb": "assets/thumbs/214.webp",
       "tags": [],
@@ -2344,7 +2344,7 @@
     {
       "id": "228",
       "kind": "domain",
-      "name": "TEMPEST",
+      "name": "Tempest",
       "front": "assets/front/228.webp",
       "thumb": "assets/thumbs/228.webp",
       "tags": [],
@@ -2421,7 +2421,7 @@
     {
       "id": "235",
       "kind": "domain",
-      "name": "VOICE OF REASON",
+      "name": "Voice of reason",
       "front": "assets/front/235.webp",
       "thumb": "assets/thumbs/235.webp",
       "tags": [],
@@ -2685,7 +2685,7 @@
     {
       "id": "259",
       "kind": "domain",
-      "name": "ARMORER",
+      "name": "Armorer",
       "front": "assets/front/259.webp",
       "thumb": "assets/thumbs/259.webp",
       "tags": [],

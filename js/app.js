@@ -39,6 +39,10 @@
   const btnExportChar = $("btnExportChar");
   const btnImportChar = $("btnImportChar");
 
+  const btnLicense = $("btnLicense");
+  const licenseModal = $("licenseModal");
+
+
 
 
   let catalog = null; // cards.json
@@ -1059,6 +1063,23 @@ function setDomainView(view) {
       saveState();
       renderDomainCards();
     };
+
+    btnLicense.onclick = () => {
+    licenseModal.classList.remove("hidden");
+    };
+
+    licenseModal.addEventListener("click", (e) => {
+      const close = e.target.closest("[data-license-close='1']");
+      if (close) licenseModal.classList.add("hidden");
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      if (!licenseModal.classList.contains("hidden")) {
+        licenseModal.classList.add("hidden");
+      }
+    });
+
 
     btnClearSelected.onclick = () => {
       if (!activeChar) return;

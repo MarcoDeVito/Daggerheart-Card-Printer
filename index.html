@@ -14,7 +14,7 @@
         <p class="muted">Seleziona o Crea un personaggio, scegli carte, poi stampa in scala 100%.</p>
       </div>
       <div class="topbar__actions">
-        <button id="btnNewChar" class="btn">+ Nuovo personaggio</button>
+        
       </div>
     </div>
   </header>
@@ -24,6 +24,7 @@
       <div class="card__head">
         <h2>Personaggi</h2>
         <div class="card__headActions">
+          <button id="btnNewChar" class="btn">+ Nuovo personaggio</button>
           <button id="btnExportChar" class="btn" type="button">Esporta PG</button>
           <button id="btnImportChar" class="btn" type="button">Importa PG</button>
         </div>
@@ -166,6 +167,49 @@
       </div>
     </section>
   </main>
+  <footer class="siteFooter">
+    <div class="wrap siteFooter__inner">
+    <div class="siteFooter__copy">
+      © 2025 - 2026 <b><a href="https://www.daggerheartitalia.it/">Daggerheart Italia</a></b>
+      <p>Sviluppato da <a href="https://github.com/MarcoDeVito">Marco De Vito</a> per Daggerheart Italia Players Community</p>
+      <p>Not associated with, endorsed by, or sponsored by Darrington Press. https://darringtonpress.com/ - Published under the Darrington Press Community Gaming License. https://darringtonpress.com/license/</p> </div>
+
+
+    <div class="siteFooter__actions">
+      <button id="btnLicense" class="btn" type="button">Licenza</button>
+    </div>
+  </div>
+</footer>
+<div id="licenseModal" class="licenseModal hidden" role="dialog" aria-modal="true" aria-labelledby="licenseTitle">
+  <div class="licenseModal__backdrop" data-license-close="1"></div>
+
+  <div class="licenseModal__panel">
+    <div class="licenseModal__head">
+      <h3 id="licenseTitle">Licenza</h3>
+      <button class="licenseModal__close" type="button" aria-label="Chiudi" data-license-close="1">✕</button>
+    </div>
+
+    <div class="licenseModal__body">
+      <p>
+        This site uses only official Public Game Content from the Darrington Press System Reference Document (SRD),
+        shared under the Community Gaming License. The descriptive text comes straight from the SRD, but all the
+        images here are original creations inspired by those descriptions.
+      </p>
+
+      <p>
+        We don't use any copyrighted art, logos, or story content from Critical Role or its related companies.
+        All trademarks and rights belong to Critical Role, LLC and its partners. Just so you know, this project
+        isn't officially connected to or endorsed by Critical Role or Darrington Press.
+      </p>
+
+      <p>
+        This product includes materials from the Daggerheart System Reference Document 1.0, © Critical Role, LLC,
+        under the terms of the Darrington Press Community Gaming (DPCGL) License.
+      </p>
+    </div>
+  </div>
+</div>
+
 
   <script src="js/app.js"></script>
 </body>

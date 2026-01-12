@@ -45,6 +45,101 @@ body{
   font-size:12px;
 }
 
+/* ===========================
+   FOOTER
+   =========================== */
+.siteFooter{
+  margin-top: 18px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.siteFooter__inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+}
+
+.siteFooter__copy{
+  color: rgba(159,176,204,0.85);
+  font-size: 13px;
+}
+
+.siteFooter__actions{
+  display:flex;
+  gap: 10px;
+}
+
+/* ===========================
+   LICENSE MODAL
+   =========================== */
+.licenseModal{
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+}
+
+.licenseModal.hidden{
+  display: none;
+}
+
+.licenseModal__backdrop{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.55);
+}
+
+.licenseModal__panel{
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 720px);
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 12px;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 20px 80px rgba(0,0,0,.6);
+  overflow: hidden;
+}
+
+.licenseModal__head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.licenseModal__head h3{
+  margin: 0;
+  font-size: 20px;
+  color: var(--border); /* gold del tuo tema */
+}
+a{color:var(--border)}
+.licenseModal__close{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.15);
+  background: transparent;
+  cursor: pointer;
+  color: #444;
+}
+
+.licenseModal__body{
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.licenseModal__body p{
+  margin: 0 0 12px 0;
+}
+
+
+
 .card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:var(--card2)}
 h1{margin:0;font-size:18px}
 h2{margin:0;font-size:16px}

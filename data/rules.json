@@ -20,7 +20,20 @@
         }
       }
     },
-
+    "sgogo": {
+      "label": "sgogo",
+      "domains": ["Sage", "Arcana"],
+      "subclasses": {
+        "warden_of_elements": {
+          "label": "Warden of the Elements",
+          "cards": { "base": "007", "specialization": "008", "mastery": "009" }
+        },
+        "warden_of_renewal": {
+          "label": "Warden of Renewal",
+          "cards": { "base": "010", "specialization": "011", "mastery": "012" }
+        }
+      }
+    },
     "druid": {
       "label": "Druid",
       "domains": ["Sage", "Arcana"],
