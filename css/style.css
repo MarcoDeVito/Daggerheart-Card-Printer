@@ -34,6 +34,17 @@ body{
 .grid{display:grid;grid-template-columns: 1fr 1fr; gap:16px}
 .card{background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden}
 .card--full{grid-column:1 / -1}
+.card__headActions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.card__headActions .btn{
+  padding:7px 10px;
+  border-radius:10px;
+  font-size:12px;
+}
+
 .card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:var(--card2)}
 h1{margin:0;font-size:18px}
 h2{margin:0;font-size:16px}

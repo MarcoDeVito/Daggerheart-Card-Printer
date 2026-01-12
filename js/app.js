@@ -36,6 +36,9 @@
   const activeHint = $("activeHint");
   const btnViewGrid = $("btnViewGrid");
   const btnViewList = $("btnViewList");
+  const btnExportChar = $("btnExportChar");
+  const btnImportChar = $("btnImportChar");
+
 
 
   let catalog = null; // cards.json
@@ -199,6 +202,64 @@ function zoomStep(delta) {
   zoomShowCurrent();
 }
 
+function exportActiveCharacter() {
+  if (!activeChar) {
+    alert("Seleziona prima un personaggio da esportare.");
+    return;
+  }
+
+  const payload = {
+    type: "DHCP_CHAR",
+    v: 1,
+    exportedAt: new Date().toISOString(),
+    character: activeChar
+  };
+
+  const encoded = b64EncodeUnicode(JSON.stringify(payload));
+
+  window.prompt(
+    "Copia questa stringa per importare il personaggio su un altro browser:",
+    encoded
+  );
+}
+
+function importCharacterFromString() {
+  const raw = window.prompt("Incolla qui la stringa di import:");
+  if (!raw) return;
+
+  let payload;
+  try {
+    const json = b64DecodeUnicode(raw.trim());
+    payload = JSON.parse(json);
+  } catch {
+    alert("Stringa non valida (decodifica/JSON fallita).");
+    return;
+  }
+
+  if (!payload || payload.type !== "DHCP_CHAR" || !payload.character) {
+    alert("Stringa non valida (payload non riconosciuto).");
+    return;
+  }
+
+  const ch = payload.character;
+
+  // Validazione minima (evitiamo roba rotta)
+  if (!ch.name || !ch.level) {
+    alert("Personaggio incompleto (manca nome o livello).");
+    return;
+  }
+
+  // Nuovo ID per evitare collisioni
+  const imported = structuredClone(ch);
+  imported.id = uid();
+
+  // Normalizza campi mancanti
+  if (!imported.subclassPicks) imported.subclassPicks = { specialization: false, mastery: false };
+  if (!Array.isArray(imported.selectedCardIds)) imported.selectedCardIds = [];
+
+  state.characters.push(imported);
+  setActiveChar(imported.id); // salva + renderAll
+}
 
 
   function loadState() {
@@ -218,6 +279,17 @@ function zoomStep(delta) {
   function saveState() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   }
+function b64EncodeUnicode(str) {
+  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) =>
+    String.fromCharCode(parseInt(p1, 16))
+  ));
+}
+
+function b64DecodeUnicode(b64) {
+  const bin = atob(b64);
+  const bytes = Array.from(bin, c => "%" + c.charCodeAt(0).toString(16).padStart(2, "0")).join("");
+  return decodeURIComponent(bytes);
+}
 
   function uid() {
     return "ch_" + Date.now();
@@ -804,6 +876,8 @@ function setDomainView(view) {
       state.characters.push(ch);
       setActiveChar(id);
     };
+    btnExportChar.onclick = exportActiveCharacter;
+    btnImportChar.onclick = importCharacterFromString;
 
     btnDeleteChar.onclick = () => {
       if (!activeChar) return;
