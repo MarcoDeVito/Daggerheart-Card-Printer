@@ -462,7 +462,7 @@ function b64DecodeUnicode(b64) {
 
       const sub = document.createElement("div");
       sub.className = "listItem__sub";
-      sub.textContent = `Lvl ${ch.level || "?"} • ${ch.classKey || "classe?"}/${ch.subclassKey || "sottoclasse?"}`;
+      sub.textContent = `Lvl ${ch.level>10?10:ch.level || "?"} • ${ch.classKey || "classe?"}/${ch.subclassKey || "sottoclasse?"}`;
 
       main.appendChild(title);
       main.appendChild(sub);
