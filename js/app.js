@@ -861,7 +861,8 @@ function trySetDomainCardSelected(ch, cardId, wantSelected, { source = "" } = {}
       const body = document.createElement("div");
       body.className = "cardTile__body";
       const bodyDescription = document.createElement("div");
-      bodyDescription.innerHTML = `${card.description}`;
+      descriptiontext=card.description.replaceAll(".",".<br>").replaceAll(":",":<br>").replaceAll("•","<br>•").replaceAll(/<br>\s*<br>/g,"<br>");
+      bodyDescription.innerHTML = `${descriptiontext}`;
       bodyDescription.className = "cardTile__description";
       if (!isListView) bodyDescription.classList.add("hidden");
       const zoom = document.createElement("div");
