@@ -188,8 +188,8 @@ function makeSheetCropMarks(bleedOn) {
   const slotH = cutH + bleed * 2;
 
   const L = 6;       // lunghezza crocino (mm)
-  const T = 0.25;    // spessore (mm)
-  const gap = 0.8;   // distanza dal bordo carta (mm)
+  const T = 0.1;    // spessore (mm)
+  const gap = 0;   // distanza dal bordo carta (mm)
 
   const line = ({ left, top, w, h }) => {
     const d = document.createElement("div");
@@ -225,17 +225,98 @@ function makeSheetCropMarks(bleedOn) {
       const yTopCut   = pad + row * slotH + bleed;
       const yBotCut   = yTopCut + cutH;
 
-      // Top-left: fuori = su + sinistra  (forma tipo ┘ sul foglio)
-      cornerL(xLeftCut,  yTopCut,  -1, -1);
+      if(row===0 && col===0) {
+        // Top-left: fuori = su + sinistra  (forma tipo ┘ sul foglio)
+        cornerL(xLeftCut,  yTopCut,  -1, -1);
+        continue;
+      }
+      
+      if(row===0 && col===2) {
+        // Top-right: fuori = su + destra (forma tipo └)
+        cornerL(xRightCut, yTopCut,  +1, -1);
+        continue;
+      }
 
-      // Top-right: fuori = su + destra (forma tipo └)
-      cornerL(xRightCut, yTopCut,  +1, -1);
+      if(row===0 && col===1) {
+        line({
+          left: xLeftCut - (T/2),
+          top:  yTopCut - L,
+          w:    T,
+          h:    L
+        });
+        line({
+          left: xRightCut - (T/2),
+          top:  yTopCut - L,
+          w:    T,
+          h:    L
+        });
+        continue;
+      }
+      
+      if(row===2 && col===0) {
+        // Bottom-left: fuori = giù + sinistra (forma tipo ┐)
+        cornerL(xLeftCut,  yBotCut,  -1, +1);
+        continue;
+      }
+       if(row===2 && col===1) {
+        // Bottom-left: fuori = giù + sinistra (forma tipo ┐)
+        line({
+          left: xLeftCut - (T/2),
+          top:  yBotCut,
+          w:    T,
+          h:    L
+        });
+        line({
+          left: xRightCut - (T/2),
+          top:  yBotCut,
+          w:    T,
+          h:    L
+        });
+        continue;
+      }
 
-      // Bottom-left: fuori = giù + sinistra (forma tipo ┐)
-      cornerL(xLeftCut,  yBotCut,  -1, +1);
+      if(row===1 && col===0) {
+        // Bottom-left: fuori = giù + sinistra (forma tipo ┐)
+        line({
+          left: xLeftCut - L,
+          top:  yTopCut - T/2,
+          w:    L,
+          h:    T
+        });
+        line({
+          left: xLeftCut - L,
+          top:  yBotCut - T/2,
+          w:    L,
+          h:    T
+        });
+        continue;
+      }
 
-      // Bottom-right: fuori = giù + destra (forma tipo ┌)
-      cornerL(xRightCut, yBotCut,  +1, +1);
+
+      if(row===1 && col===2) {
+        // Bottom-left: fuori = giù + sinistra (forma tipo ┐)
+        line({
+          left: xRightCut,
+          top:  yTopCut - T/2,
+          w:    L,
+          h:    T
+        });
+        line({
+          left: xRightCut,
+          top:  yBotCut - T/2,
+          w:    L,
+          h:    T
+        });
+        continue;
+      }
+
+
+      if(row===2 && col===2) {
+        // Bottom-right: fuori = giù + destra (forma tipo ┌)
+        cornerL(xRightCut, yBotCut,  +1, +1);
+        continue;
+      }
+
     }
   }
 

@@ -531,7 +531,7 @@ input,select{
 
   .m {
     display: block !important;
-    background: #000 !important;
+    background: #686868 !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }

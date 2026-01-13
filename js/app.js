@@ -852,7 +852,7 @@ function trySetDomainCardSelected(ch, cardId, wantSelected, { source = "" } = {}
       const img = document.createElement("img");
       img.alt = "";
       img.loading = "lazy";
-      img.src = card.thumb || card.front;
+      img.src = card.front || card.thumb;
       imgWrap.appendChild(img);
 
       const body = document.createElement("div");
