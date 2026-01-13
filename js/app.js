@@ -793,7 +793,7 @@ function trySetDomainCardSelected(ch, cardId, wantSelected, { source = "" } = {}
   if (set.size >= cap) {
     alert(`Hai raggiunto il numero massimo di Carte Dominio possedute per questo livello.\n` +
           `Massimo (Vault) a lvl ${ch.level}: ${cap}\n` +
-          `Deseleziona una carta prima di aggiungerne un’altra.`);
+          `Deseleziona una carta prima di aggiungerne un'altra.`);
     return false;
   }
 
