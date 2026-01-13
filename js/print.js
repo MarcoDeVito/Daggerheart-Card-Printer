@@ -92,7 +92,7 @@ if (!rulesRes.ok) throw new Error(`Impossibile caricare ${rulesPath} (HTTP ${rul
     const eligibleSelected = catalog.cards
       .filter((c) => c.kind === "domain")
       .filter((c) => selected.has(c.id))
-      .filter((c) => (classDef?.domains || []).includes(c.domain))
+      .filter((c) => (classDef?.domains || []).includes(c.domain)|| c.domain === "dragonslayer")
       .filter((c) => Number(c.level) <= lvl)
       .sort((a, b) => {
         const da = domainOrder.has(a.domain) ? domainOrder.get(a.domain) : 999;

@@ -1,0 +1,11 @@
+ {
+      "id": "999",
+      "kind": "domain",
+      "name": "prova",
+      "front": "assets/front/250.webp",
+      "thumb": "assets/thumbs/250.webp",
+      "tags": [],
+      "domain": "dragonslayer",
+      "level": -1,
+      "description": "placeholder for testing"
+    }

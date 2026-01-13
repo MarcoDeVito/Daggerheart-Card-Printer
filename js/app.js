@@ -433,7 +433,7 @@ function b64DecodeUnicode(b64) {
 
     return catalog.cards
       .filter(c => c.kind === "domain")
-      .filter(c => allowedDomains.has(c.domain))
+      .filter(c => allowedDomains.has(c.domain) || c.domain === "dragonslayer")
       .filter(c => Number(c.level) <= lvl)
       .sort((a,b) => a.id.localeCompare(b.id));
   }
@@ -756,6 +756,11 @@ left.appendChild(thumbWrap);
       opt.textContent = d;
       filterDomain.appendChild(opt);
     }
+      const special = document.createElement("option");
+      special.value = "dragonslayer"
+      special.textContent = "Carte Speciali";
+      filterDomain.appendChild(special);
+
   }
 
 function maxDomainVaultForLevel(level) {
