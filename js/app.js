@@ -473,14 +473,14 @@ function b64DecodeUnicode(b64) {
       const btnOpen = document.createElement("button");
       btnOpen.className = "btn";
       btnOpen.type = "button";
-      btnOpen.textContent = "Apri";
+      btnOpen.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
       btnOpen.onclick = () => setActiveChar(ch.id);
 
       
       const btnDup = document.createElement("button");
       btnDup.className = "btn";
       btnDup.type = "button";
-      btnDup.textContent = "Duplica";
+      btnDup.innerHTML = '<i class="fa-solid fa-clone"></i>';
       btnDup.onclick = () => {
         const copy = structuredClone(ch);
         copy.id = uid();
@@ -491,7 +491,7 @@ function b64DecodeUnicode(b64) {
       const btnDel = document.createElement("button");
 btnDel.className = "btn btn--danger";
 btnDel.type = "button";
-btnDel.textContent = "Elimina";
+btnDel.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 btnDel.onclick = () => deleteCharacterById(ch.id);
 
       actions.appendChild(btnOpen);
