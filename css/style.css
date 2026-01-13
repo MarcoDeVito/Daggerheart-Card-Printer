@@ -393,7 +393,7 @@ p{margin:6px 0 0 0}
 
 .form{padding:14px 16px; background: var(--card2);}
 .row{display:grid;grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px}
-.rowlevel{display:grid;grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px}
+.rowlevel{display:grid;grid-template-columns: 3fr 1fr; gap:12px; margin-bottom:12px}
 
 
 .row--3{grid-template-columns: 1fr 1fr 1fr}

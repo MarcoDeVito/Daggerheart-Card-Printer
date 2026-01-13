@@ -444,7 +444,7 @@ function b64DecodeUnicode(b64) {
     if (state.characters.length === 0) {
       const div = document.createElement("div");
       div.className = "empty";
-      div.textContent = "Nessun personaggio. Clicca “Nuovo personaggio”.";
+      div.innerHTML = 'Nessun personaggio. Clicca <i class="fa-solid fa-user-plus"></i>';
       elCharList.appendChild(div);
       return;
     }
