@@ -144,11 +144,11 @@
     {
       "id": "016",
       "kind": "subclass",
-      "name": "Valoroso",
+      "name": "Vendicatore",
       "front": "assets/frontITA/016.webp",
       "thumb": "assets/thumbsITA/016.webp",
       "tags": [],
-      "description": "Imperturbabile: Guadagnate bonus +3 permanente alle soglie di danno. Protettore Fedele: Quando un alleato entro distanza Ravvicinata ha 2 o meno Punti Ferita sta per subire un danno, potete marcare uno Stress per correre al suo fianco e subire il danno al suo posto. DH MB 015 /270 | VENDICATORE A Suo Agio: Guadagnate uno Stress aggiuntivo. Vendetta: Quando un avversario in Mischia riesce a sferrare un attacco contro di voi, potete marcare 2 Stress per costringere l'attaccante a subire un Punto Ferita."
+      "description": "A Suo Agio: Guadagnate uno Stress aggiuntivo. Vendetta: Quando un avversario in Mischia riesce a sferrare un attacco contro di voi, potete marcare 2 Stress per costringere l'attaccante a subire un Punto Ferita."
     },
     {
       "id": "017",
@@ -180,11 +180,11 @@
     {
       "id": "020",
       "kind": "subclass",
-      "name": "Vendicatore",
+      "name": "Ferale",
       "front": "assets/frontITA/020.webp",
       "thumb": "assets/thumbsITA/020.webp",
       "tags": [],
-      "description": "Nemesi: Spendete 2 Speranze per Dare Priorità a un avversario fino al vostro prossimo riposo. Quando effettuate un attacco contro l'avversario a cui avete dato Priorità, potete scambiare i risultati dei Dadi Speranza e Paura. Potete Dare Priorità a un solo avversario alla volta. DH MB 018 /270 | FERALE TRATTO DA INCANTATORE: AGILITÀ Compagno: Avete un compagno animale a vostra scelta (a discrezione del GM). Rimane al vostro fianco a meno che non gli ordiniate di fare altrimenti. Prendete la scheda del Compagno del Ranger. Quando fate salire di livello il vostro personaggio, scegliete anche un'opzione di aumento di livello per il vostro compagno da questa scheda. DH MB 019 FERALE Addestramento Intensivo: Scegliete un'ulteriore opzione di aumento di livello per il vostro compagno. Uniti nella Battaglia: Quando un avversario vi attacca mentre si trova in Mischia con il vostro compagno, guadagnate bonus +2 alla vostra Evasione contro l'attacco."
+      "description": "Addestramento Intensivo: Scegliete un'ulteriore opzione di aumento di livello per il vostro compagno. Uniti nella Battaglia: Quando un avversario vi attacca mentre si trova in Mischia con il vostro compagno, guadagnate bonus +2 alla vostra Evasione contro l'attacco."
     },
     {
       "id": "021",
@@ -288,11 +288,11 @@
     {
       "id": "032",
       "kind": "subclass",
-      "name": "Emissario divino",
+      "name": "Emissario Divino",
       "front": "assets/frontITA/032.webp",
       "thumb": "assets/thumbsITA/032.webp",
       "tags": [],
-      "description": "TRATTO DA INCANTATORE: FORZA Arma Animata: Quando impugnate un'arma con portata Mischia o Prossima, questa può volare dalla vostra mano per attaccare un avversario entro distanza Ravvicinata e poi tornare nelle vostre mani. Potete marcare uno Stress per colpire un altro avversario entro portata con lo stesso tiro attacco. Tocco Ristoratore: Una volta per riposo lungo, toccando una creatura potete curare 2 Punti Ferita o rimuovere 2 Stress. DH MB 031 EMISSARIO DIVINO Devoto: Quando tirate i Dadi Preghiera, potete tirare un dado aggiuntivo e scartare il risultato più basso. Inoltre, potete usare il privilegio \"Tocco Ristoratore\" due volte invece di una per riposo lungo."
+      "description": "Devoto: Quando tirate i Dadi Preghiera, potete tirare un dado aggiuntivo e scartare il risultato più basso. Inoltre, potete usare il privilegio \"Tocco Ristoratore\" due volte invece di una per riposo lungo."
     },
     {
       "id": "033",
@@ -306,11 +306,11 @@
     {
       "id": "034",
       "kind": "subclass",
-      "name": "Emissario divino",
+      "name": "Sentinella Alata",
       "front": "assets/frontITA/034.webp",
       "thumb": "assets/thumbsITA/034.webp",
       "tags": [],
-      "description": "Risonanza Celestiale: Quando tirate i danni per la vostra \"Arma Animata\", se i risultati dei dadi coincidono, raddoppiate il valore di ogni dado corrispondente. Ad esempio, se ottenete due 5, questi contano come due 10. DH MB 033 /270 | SENTINELLA ALATA TRATTO DA INCANTATORE: FORZA Ali di Luce: Potete volare. Quando siete in volo, potete: • Marcare uno Stress per afferrare e trasportare un'altra creatura consenziente della vostra taglia o più piccola. • Spendere una Speranza per infliggere 1d8 danni extra in un attacco riuscito."
+      "description": "TRATTO DA INCANTATORE: FORZA Ali di Luce: Potete volare. Quando siete in volo, potete: • Marcare uno Stress per afferrare e trasportare un'altra creatura consenziente della vostra taglia o più piccola. • Spendere una Speranza per infliggere 1d8 danni extra in un attacco riuscito."
     },
     {
       "id": "035",
@@ -328,16 +328,16 @@
       "front": "assets/frontITA/036.webp",
       "thumb": "assets/thumbsITA/036.webp",
       "tags": [],
-      "description": "Ascendente: Guadagnate bonus +4 permanente alla soglia dei danni Gravi. Potere degli Dèi: Quando siete in volo grazie al privilegio “Ali di Luce”, inﬂiggete 1d12 danni extra invece di 1d8."
+      "description": "Ascendente: Guadagnate bonus +4 permanente alla soglia dei danni Gravi. Potere degli Dèi: Quando siete in volo grazie al privilegio “Ali di Luce”, inﬂiggete 1d12 danni extra invece di 1d8. Potere degli Dèi: Quando siete in volo grazie al privilegio \"Ali di Luce\", infliggete 1d12 danni extra invece di 1d8."
     },
     {
       "id": "037",
       "kind": "subclass",
-      "name": "Sentinella alata",
+      "name": "Potere elementale",
       "front": "assets/frontITA/037.webp",
       "thumb": "assets/thumbsITA/037.webp",
       "tags": [],
-      "description": "Volto Celeste: Il vostro volto soprannaturale incute timore e paura. Quando siete in volo, avete vantaggio sui Tiri Presenza. Quando avete successo con Speranza in un Tiro Presenza, potete rimuovere una Paura dalla riserva di Paura del GM invece di guadagnare Speranza. DH MB 035 SENTINELLA ALATA Ascendente: Guadagnate bonus +4 permanente alla soglia dei danni Gravi. Potere degli Dèi: Quando siete in volo grazie al privilegio \"Ali di Luce\", infliggete 1d12 danni extra invece di 1d8. DH MB 036 /270 | POTERE ELEMENTALE TRATTO DA INCANTATORE: ISTINTO Elementalista: Scegliete uno dei seguenti elementi alla creazione del personaggio: ARIA · ACQUA · FULMINE · FUOCO · TERRA Potete plasmare questo elemento generando effetti innocui. Inoltre, spendendo una Speranza e descrivendo in che modo il controllo su questo elemento favorisce un tiro azione che state per effettuare, ottenete bonus +2 al tiro azione o bonus +3 al tiro per i danni."
+      "description": "TRATTO DA INCANTATORE: ISTINTO Elementalista: Scegliete uno dei seguenti elementi alla creazione del personaggio: ARIA · ACQUA · FULMINE · FUOCO · TERRA Potete plasmare questo elemento generando effetti innocui. Inoltre, spendendo una Speranza e descrivendo in che modo il controllo su questo elemento favorisce un tiro azione che state per effettuare, ottenete bonus +2 al tiro azione o bonus +3 al tiro per i danni."
     },
     {
       "id": "038",
@@ -373,7 +373,7 @@
       "front": "assets/frontITA/041.webp",
       "thumb": "assets/thumbsITA/041.webp",
       "tags": [],
-      "description": "TRATTO DA INCANTATORE: ISTINTO Manipolare la Magia: Il vostro potere primordiale vi permette di modificare l'essenza stessa della magia. Dopo aver lanciato un incantesimo o aver effettuato un attacco con un'arma che infligge danni magici, potete marcare uno Stress per attivare un effetto a scelta tra i seguenti: • Estendere la portata dell'incantesimo o dell'attacco di una categoria • Ottenere bonus +2 al risultato del tiro azione • Raddoppiare un dado danno a scelta • Colpire un altro bersaglio entro portata DH MB 040 POTERE PRIMORDIALE Aiuto Incantato: Potete potenziare la magia altrui grazie alla vostra essenza. Quando Aiutate un Alleato con un Tiro Incantesimo, potete tirare un d8 come dado vantaggio. Una volta per riposo lungo, dopo che un alleato ha effettuato un Tiro Incantesimo con il vostro aiuto, potete scambiare i risultati dei suoi Dadi Dualità."
+      "description": "Aiuto Incantato: Potete potenziare la magia altrui grazie alla vostra essenza. Quando Aiutate un Alleato con un Tiro Incantesimo, potete tirare un d8 come dado vantaggio. Una volta per riposo lungo, dopo che un alleato ha effettuato un Tiro Incantesimo con il vostro aiuto, potete scambiare i risultati dei suoi Dadi Dualità."
     },
     {
       "id": "042",
@@ -414,7 +414,7 @@
     {
       "id": "046",
       "kind": "subclass",
-      "name": "Chiamata dello sterminatore",
+      "name": "Chiamata dello Sterminatore",
       "front": "assets/frontITA/046.webp",
       "thumb": "assets/thumbsITA/046.webp",
       "tags": [],
@@ -423,7 +423,7 @@
     {
       "id": "047",
       "kind": "subclass",
-      "name": "Chiamata dello sterminatore",
+      "name": "Chiamata dello Sterminatore",
       "front": "assets/frontITA/047.webp",
       "thumb": "assets/thumbsITA/047.webp",
       "tags": [],
@@ -432,7 +432,7 @@
     {
       "id": "048",
       "kind": "subclass",
-      "name": "Chiamata dello sterminatore",
+      "name": "Chiamata dello Sterminatore",
       "front": "assets/frontITA/048.webp",
       "thumb": "assets/thumbsITA/048.webp",
       "tags": [],
@@ -441,7 +441,7 @@
     {
       "id": "049",
       "kind": "subclass",
-      "name": "Scuola della conoscenza",
+      "name": "Scuola della Conoscenza",
       "front": "assets/frontITA/049.webp",
       "thumb": "assets/thumbsITA/049.webp",
       "tags": [],
@@ -450,7 +450,7 @@
     {
       "id": "050",
       "kind": "subclass",
-      "name": "Scuola della conoscenza",
+      "name": "Scuola della Conoscenza",
       "front": "assets/frontITA/050.webp",
       "thumb": "assets/thumbsITA/050.webp",
       "tags": [],
@@ -468,11 +468,11 @@
     {
       "id": "052",
       "kind": "subclass",
-      "name": "Scuola della conoscenza",
+      "name": "Scuola della Guerra",
       "front": "assets/frontITA/052.webp",
       "thumb": "assets/thumbsITA/052.webp",
       "tags": [],
-      "description": "Brillante: Prendete una carta dominio aggiuntiva del vostro livello o di livello inferiore da un dominio a cui avete accesso. Padronanza Affinata: Quando Utilizzate un'Esperienza, tirate un d6. Con un risultato di 5 o superiore, potete utilizzarla senza spendere Speranza. DH MB 051 /270 | SCUOLA DELLA GUERRA TRATTO DA INCANTATORE: CONOSCENZA Magia da Battaglia: Avete concentrato i vostri sforzi per diventare una forza incontrastabile sul campo di battaglia. Guadagnate una casella aggiuntiva di Punti Ferita. Affronta la Tua Paura: Quando avete successo con Paura in un tiro di attacco, infliggete 1d10 danni magici addizionali."
+      "description": "TRATTO DA INCANTATORE: CONOSCENZA Magia da Battaglia: Avete concentrato i vostri sforzi per diventare una forza incontrastabile sul campo di battaglia. Guadagnate una casella aggiuntiva di Punti Ferita. Affronta la Tua Paura: Quando avete successo con Paura in un tiro di attacco, infliggete 1d10 danni magici addizionali."
     },
     {
       "id": "053",
@@ -490,7 +490,7 @@
       "front": "assets/frontITA/054.webp",
       "thumb": "assets/thumbsITA/054.webp",
       "tags": [],
-      "description": "Evoca Scudo: Potete evocare una barriera protettiva di magia. Finché avete almeno 2 Speranze, aggiungete la vostra Competenza alla vostra Evasione. Alimentato dalla Paura: Il danno magico addizionale della caratteristica \"Affronta la Tua Paura\" aumenta a 2d10. DH MB 053 SCUOLA DELLA GUERRA Prosperare nel Caos: Quando un attacco va a segno, potete marcare uno Stress dopo aver tirato i danni per costringere il bersaglio a subire un Punto Ferita aggiuntivo. Non Conoscerai la Paura: Il danno magico extra della caratteristica \"Affronta la Tua Paura\" aumenta a 3d10."
+      "description": "Prosperare nel Caos: Quando un attacco va a segno, potete marcare uno Stress dopo aver tirato i danni per costringere il bersaglio a subire un Punto Ferita aggiuntivo. Non Conoscerai la Paura: Il danno magico extra della caratteristica \"Affronta la Tua Paura\" aumenta a 3d10."
     },
     {
       "id": "055",
@@ -657,7 +657,7 @@
     {
       "id": "073",
       "kind": "community",
-      "name": "PRIVILEGIATA",
+      "name": "Privilegiata",
       "front": "assets/frontITA/073.webp",
       "thumb": "assets/thumbsITA/073.webp",
       "tags": [],
