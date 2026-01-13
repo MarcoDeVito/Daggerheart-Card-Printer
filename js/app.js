@@ -473,6 +473,7 @@ function b64DecodeUnicode(b64) {
       const btnOpen = document.createElement("button");
       btnOpen.className = "btn";
       btnOpen.type = "button";
+      btnOpen.title = "Modifica personaggio";
       btnOpen.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
       btnOpen.onclick = () => setActiveChar(ch.id);
 
@@ -480,6 +481,7 @@ function b64DecodeUnicode(b64) {
       const btnDup = document.createElement("button");
       btnDup.className = "btn";
       btnDup.type = "button";
+      btnDup.title = "Duplica personaggio";
       btnDup.innerHTML = '<i class="fa-solid fa-clone"></i>';
       btnDup.onclick = () => {
         const copy = structuredClone(ch);
@@ -491,6 +493,7 @@ function b64DecodeUnicode(b64) {
       const btnDel = document.createElement("button");
 btnDel.className = "btn btn--danger";
 btnDel.type = "button";
+btnDel.title = "Elimina personaggio";
 btnDel.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 btnDel.onclick = () => deleteCharacterById(ch.id);
 

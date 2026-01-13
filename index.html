@@ -16,7 +16,7 @@
 </h1>
         <p class="muted">Seleziona o Crea un personaggio, scegli carte, poi stampa in scala 100%.</p>
       </div>
-      <div class="topbar__actions">
+      <div class="topbar__actions ">
         <button id="btnLangITA" class="btn" type="button">ITA</button>
         <button id="btnLangENG" class="btn" type="button">ENG</button>
 
@@ -30,8 +30,8 @@
         <h2>Personaggi</h2>
         <div class="card__headActions">
           <button id="btnNewChar" class="btn">+ Nuovo personaggio</button>
-          <button id="btnExportChar" class="btn" type="button"><i class="fa-solid fa-download"></i></button>
-          <button id="btnImportChar" class="btn" type="button"><i class="fa-solid fa-upload"></i></button>
+          <button id="btnExportChar" class="btn" type="button" title="Esporta personaggio"><i class="fa-solid fa-upload"></i></button>
+          <button id="btnImportChar" class="btn" type="button" title="Importa personaggio"><i class="fa-solid fa-download"></i></button>
         </div>
       </div>
       <div id="charList" class="list"></div>
@@ -62,7 +62,7 @@
 
         <div class="row">
   <label>
-    <span>Community (obbligatoria)</span>
+    <span>Community</span>
 
     <div class="selectWithIcon">
       <select id="chCommunity" required></select>
@@ -77,7 +77,7 @@
   </label>
 
   <label>
-    <span>Ancestry (obbligatoria)</span>
+    <span>Ancestry</span>
 
     <div class="selectWithIcon">
       <select id="chAncestry" required></select>

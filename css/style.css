@@ -516,6 +516,39 @@ input,select{
   margin: 0mm;
 }
 
+
+.topbar__actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+   .topbar__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.siteFooter__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .siteFooter__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .siteFooter__actions {
+    margin-top: 12px;
+  }
+}
+
 @media print{
   .no-print{display:none !important}
   body{background:#fff}
