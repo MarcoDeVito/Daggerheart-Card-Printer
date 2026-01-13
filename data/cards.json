@@ -2813,16 +2813,6 @@
       "domain": "Valor",
       "level": 10,
       "description": "When you would mark an Armor Slot, roll a number of d6s equal to your Proﬁciency. If any roll a 6, reduce the severity by one threshold without marking an Armor Slot. Samantha Kung"
-    },{
-      "id": "999",
-      "kind": "domain",
-      "name": "Special Object",
-      "front": "assets/front/999.webp",
-      "thumb": "assets/thumbs/999.webp",
-      "tags": [],
-      "domain": "dragonslayer",
-      "level": -1,
-      "description": "placeholder for testing"
     }
   ]
 }

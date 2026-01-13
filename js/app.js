@@ -438,6 +438,24 @@ function b64DecodeUnicode(b64) {
       .sort((a,b) => a.id.localeCompare(b.id));
   }
 
+
+function isDragonSlayerCardId(cardId) {
+  const card = getCardById(cardId);
+  return card && card.kind === "domain" && card.domain === "dragonslayer";
+}
+
+function countSelectedDomainNonSpecial(selectedIds) {
+  let n = 0;
+  for (const id of selectedIds) {
+    const card = getCardById(id);
+    if (!card) continue;
+    if (card.kind !== "domain") continue;
+    if (card.domain === "dragonslayer") continue; // <- NON conta
+    n++;
+  }
+  return n;
+}
+
   function renderCharList() {
     elCharList.innerHTML = "";
 
@@ -789,13 +807,22 @@ function trySetDomainCardSelected(ch, cardId, wantSelected, { source = "" } = {}
   if (already) return true;
 
   // Controllo cap
+  // Controllo cap (le "dragonslayer" NON contano e sono illimitate)
+if (!isDragonSlayerCardId(cardId)) {
   const cap = maxDomainVaultForLevel(ch.level);
-  if (set.size >= cap) {
-    alert(`Hai raggiunto il numero massimo di Carte Dominio possedute per questo livello.\n` +
-          `Massimo (Vault) a lvl ${ch.level}: ${cap}\n` +
-          `Deseleziona una carta prima di aggiungerne un'altra.`);
+
+  // conta solo le dominio NON-speciali tra quelle già selezionate
+  const used = countSelectedDomainNonSpecial(set);
+
+  if (used >= cap) {
+    alert(
+      `Hai raggiunto il numero massimo di Carte Dominio possedute per questo livello.\n` +
+      `Massimo (Vault) a lvl ${ch.level}: ${cap}\n` +
+      `Le carte dragonslayer non contano nel limite.`
+    );
     return false;
   }
+}
 
   set.add(cardId);
   ch.selectedCardIds = Array.from(set).sort();
