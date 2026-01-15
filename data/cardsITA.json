@@ -45,11 +45,11 @@
     {
       "id": "005",
       "kind": "subclass",
-      "name": "Oratore Specializzazione",
+      "name": "Oratore",
       "front": "assets/frontITA/005.webp",
       "thumb": "assets/thumbsITA/005.webp",
       "tags": [],
-      "description": "Eloquente: Le vostre parole toccanti aumentano il morale. Una volta per sessione, quando incoraggiate un alleato, potete scegliere una delle seguenti opzioni: • Permettere di trovare un oggetto o uno strumento comune di cui ha bisogno. • Aiutare un Alleato senza spendere Speranza. • Assegnare una mossa aggiuntiva in un interludiodurante il prossimo riposo."
+      "description": "Eloquente: Le vostre parole toccanti aumentano il morale. Una volta per sessione, quando incoraggiate un alleato, potete scegliere una delle seguenti opzioni: • Permettere di trovare un oggetto o uno strumento comune di cui ha bisogno. • Aiutare un Alleato senza spendere Speranza. • Assegnare una mossa aggiuntiva in un interludio durante il prossimo riposo."
     },
     {
       "id": "006",
@@ -58,7 +58,7 @@
       "front": "assets/frontITA/006.webp",
       "thumb": "assets/thumbsITA/006.webp",
       "tags": [],
-      "description": "Eloquente: Le vostre parole toccanti aumentano il morale. Una volta per sessione, quando incoraggiate un alleato, potete scegliere una delle seguenti opzioni: • Permettere di trovare un oggetto o uno strumento comune di cui ha bisogno. • Aiutare un Alleato senza spendere Speranza. • Assegnare una mossa aggiuntiva in un interludio durante il prossimo riposo. DH MB 005 ORATORE Poesia Epica: Il Dado A Raccolta aumenta a d10. Inoltre, quando Aiutate un Alleato, potete narrare il momento come se steste scrivendo la storia del suo eroismo in un libro di memorie. Quando lo fate, tirate un d10 come dado vantaggio."
+      "description": "Poesia Epica: Il Dado A Raccolta aumenta a d10. Inoltre, quando Aiutate un Alleato, potete narrare il momento come se steste scrivendo la storia del suo eroismo in un libro di memorie. Quando lo fate, tirate un d10 come dado vantaggio."
     },
     {
       "id": "007",
@@ -76,7 +76,7 @@
       "front": "assets/frontITA/008.webp",
       "thumb": "assets/thumbsITA/008.webp",
       "tags": [],
-      "description": "TRATTO DA INCANTATORE: ISTINTO Incarnazione Elementale: Marcate uno Stress per Incanalare uno dei seguenti elementi finché non subite un danno Grave o fino al vostro prossimo riposo: • Fuoco: Quando un avversario in Mischia vi infligge danno, subisce 1d10 danni magici. • Terra: Guadagnate un bonus alle soglie di danno pari alla vostra Competenza. • Acqua: Quando infliggete danno a un avversario in Mischia, tutti gli altri avversari entro distanza Prossima devono marcare uno Stress. • Aria: Potete librarvi in aria, ottenendo vantaggio nei Tiri Agilità. DH MB 007 CUSTODE DEGLI ELEMENTI Aura Elementale: Una volta per riposo, mentre Incanalate, potete ammantarvi di un'aura corrispondente al vostro elemento. L'aura colpisce i bersagli entro distanza Ravvicinata finché non smettete di Incanalare. • Fuoco: Quando un avversario subisce 1 o più Punti Ferita, deve marcare anche uno Stress. • Terra: Gli alleati ottengono bonus +1 alla Forza. • Acqua: Quando un avversario vi infligge un danno, potete marcare uno Stress per spostarlo ovunque entro una distanza Prossima da dove si trova. • Aria: Quando voi o un alleato subite danni da un attacco non in Mischia, riducete i danni di 1d8."
+      "description": "Aura Elementale: Una volta per riposo, mentre Incanalate, potete ammantarvi di un'aura corrispondente al vostro elemento. L'aura colpisce i bersagli entro distanza Ravvicinata finché non smettete di Incanalare. • Fuoco: Quando un avversario subisce 1 o più Punti Ferita, deve marcare anche uno Stress. • Terra: Gli alleati ottengono bonus +1 alla Forza. • Acqua: Quando un avversario vi infligge un danno, potete marcare uno Stress per spostarlo ovunque entro una distanza Prossima da dove si trova. • Aria: Quando voi o un alleato subite danni da un attacco non in Mischia, riducete i danni di 1d8."
     },
     {
       "id": "009",
@@ -328,7 +328,7 @@
       "front": "assets/frontITA/036.webp",
       "thumb": "assets/thumbsITA/036.webp",
       "tags": [],
-      "description": "Ascendente: Guadagnate bonus +4 permanente alla soglia dei danni Gravi. Potere degli Dèi: Quando siete in volo grazie al privilegio “Ali di Luce”, inﬂiggete 1d12 danni extra invece di 1d8. Potere degli Dèi: Quando siete in volo grazie al privilegio \"Ali di Luce\", infliggete 1d12 danni extra invece di 1d8."
+      "description": "Ascendente: Guadagnate bonus +4 permanente alla soglia dei danni Gravi. Potere degli Dèi: Quando siete in volo grazie al privilegio \"Ali di Luce\", infliggete 1d12 danni extra invece di 1d8."
     },
     {
       "id": "037",
@@ -369,7 +369,7 @@
     {
       "id": "041",
       "kind": "subclass",
-      "name": "Potere primordiale",
+      "name": "Potere Primordiale",
       "front": "assets/frontITA/041.webp",
       "thumb": "assets/thumbsITA/041.webp",
       "tags": [],
@@ -378,7 +378,7 @@
     {
       "id": "042",
       "kind": "subclass",
-      "name": "Potere primordiale",
+      "name": "Potere Primordiale",
       "front": "assets/frontITA/042.webp",
       "thumb": "assets/thumbsITA/042.webp",
       "tags": [],
@@ -486,7 +486,7 @@
     {
       "id": "054",
       "kind": "subclass",
-      "name": "Scuola della guerra",
+      "name": "Scuola della Guerra",
       "front": "assets/frontITA/054.webp",
       "thumb": "assets/thumbsITA/054.webp",
       "tags": [],
