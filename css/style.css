@@ -607,6 +607,7 @@ input,select{
   object-fit: cover;
   display:block;
 }
+.subcard .check span { line-height: 1.2; }
 
 /* Cut box overlay (shows final trim area when bleed on) */
 .pcard .cutbox{

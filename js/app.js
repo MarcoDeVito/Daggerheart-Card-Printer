@@ -17,6 +17,10 @@
   const chSubclass = $("chSubclass");
   const chCommunity = $("chCommunity");
   const chAncestry = $("chAncestry");
+const optVaultB2 = $("optVaultB2");
+const optVaultB5 = $("optVaultB5");
+const optVaultB8 = $("optVaultB8");
+const vaultMaxHint = $("vaultMaxHint");
 
   const btnZoomCommunity = $("btnZoomCommunity");
 const btnZoomAncestry = $("btnZoomAncestry");
@@ -315,6 +319,8 @@ function importCharacterFromString() {
   // Normalizza campi mancanti
   if (!imported.subclassPicks) imported.subclassPicks = { specialization: false, mastery: false };
   if (!Array.isArray(imported.selectedCardIds)) imported.selectedCardIds = [];
+  ensureDomainVaultBonuses(imported);
+
 
   state.characters.push(imported);
   setActiveChar(imported.id); // salva + renderAll
@@ -414,6 +420,14 @@ function b64DecodeUnicode(b64) {
     if (typeof ch.subclassPicks.specialization !== "boolean") ch.subclassPicks.specialization = false;
     if (typeof ch.subclassPicks.mastery !== "boolean") ch.subclassPicks.mastery = false;
   }
+
+  function ensureDomainVaultBonuses(ch) {
+  if (!ch.domainVaultBonuses) ch.domainVaultBonuses = { b2: false, b5: false, b8: false };
+  if (typeof ch.domainVaultBonuses.b2 !== "boolean") ch.domainVaultBonuses.b2 = false;
+  if (typeof ch.domainVaultBonuses.b5 !== "boolean") ch.domainVaultBonuses.b5 = false;
+  if (typeof ch.domainVaultBonuses.b8 !== "boolean") ch.domainVaultBonuses.b8 = false;
+}
+
 
   function clampSubclassPicksByLevel(ch) {
     const specMin = rules.meta.subclassUnlocks.specializationMinLevel;
@@ -540,6 +554,35 @@ btnDel.onclick = () => deleteCharacterById(ch.id);
       select.appendChild(opt);
     }
   }
+function updateVaultBonusUI() {
+  if (!activeChar) return;
+
+  ensureDomainVaultBonuses(activeChar);
+
+  const lvl = Number(activeChar.level) || 1;
+
+  // sblocco: si possono prendere anche più tardi, quindi:
+  // - disabilitate solo se non hai ancora raggiunto il livello minimo
+  const canB2 = lvl >= 2;
+  const canB5 = lvl >= 5;
+  const canB8 = lvl >= 8;
+
+  // se il livello scende sotto soglia, spengo e disabilito (evita stati incoerenti)
+  if (!canB2) activeChar.domainVaultBonuses.b2 = false;
+  if (!canB5) activeChar.domainVaultBonuses.b5 = false;
+  if (!canB8) activeChar.domainVaultBonuses.b8 = false;
+
+  optVaultB2.checked = !!activeChar.domainVaultBonuses.b2;
+  optVaultB5.checked = !!activeChar.domainVaultBonuses.b5;
+  optVaultB8.checked = !!activeChar.domainVaultBonuses.b8;
+
+  optVaultB2.disabled = !canB2;
+  optVaultB5.disabled = !canB5;
+  optVaultB8.disabled = !canB8;
+
+  // hint max
+  vaultMaxHint.textContent = String(getMaxDomainVault(activeChar));
+}
 
   function renderEditor() {
     if (!activeChar) {
@@ -595,9 +638,11 @@ btnDel.onclick = () => deleteCharacterById(ch.id);
     chSubclass.value = activeChar.subclassKey || "";
 
     // Ensure picks
-    ensureSubclassPicks(activeChar);
-    clampSubclassPicksByLevel(activeChar);
-    renderSubclassCardsBox();
+ensureSubclassPicks(activeChar);
+ensureDomainVaultBonuses(activeChar);
+updateVaultBonusUI();
+clampSubclassPicksByLevel(activeChar);
+renderSubclassCardsBox();
   }
 
   function renderSubclassSelect() {
@@ -781,10 +826,31 @@ left.appendChild(thumbWrap);
 
   }
 
-function maxDomainVaultForLevel(level) {
-  const lvl = Number(level) || 1;
-  return Math.max(0, lvl + 1); // Vault = livello + 1
+function hasKnowledgeMageBonus(ch) {
+  if (!ch) return false;
+  return ch.classKey === "wizard" && ch.subclassKey === "school_of_knowledge";
 }
+
+
+function getMaxDomainVault(ch) {
+  const lvl = Number(ch?.level) || 1;
+
+  // regola base confermata
+  const base = lvl + 1;
+
+  ensureDomainVaultBonuses(ch);
+
+  const bonusSubclass = hasKnowledgeMageBonus(ch) ? 1 : 0;
+  const b = ch.domainVaultBonuses;
+
+  const bonusWindows =
+    (b.b2 ? 1 : 0) +
+    (b.b5 ? 1 : 0) +
+    (b.b8 ? 1 : 0);
+
+  return base + bonusSubclass + bonusWindows;
+}
+
 
 function trySetDomainCardSelected(ch, cardId, wantSelected, { source = "" } = {}) {
   if (!ch) return false;
@@ -809,7 +875,8 @@ function trySetDomainCardSelected(ch, cardId, wantSelected, { source = "" } = {}
   // Controllo cap
   // Controllo cap (le "dragonslayer" NON contano e sono illimitate)
 if (!isDragonSlayerCardId(cardId)) {
-  const cap = maxDomainVaultForLevel(ch.level);
+  const cap = getMaxDomainVault(ch);
+
 
   // conta solo le dominio NON-speciali tra quelle già selezionate
   const used = countSelectedDomainNonSpecial(set);
@@ -1072,6 +1139,7 @@ function setDomainView(view) {
         communityId: "",
         ancestryId: "",
         subclassPicks: { specialization: false, mastery: false },
+        domainVaultBonuses: { b2: false, b5: false, b8: false },
         selectedCardIds: []
       };
       state.characters.push(ch);
@@ -1110,6 +1178,32 @@ btnZoomCommunity.onclick = (e) => {
   if (!id) return;
   openZoomModalSingleCard(id);
 };
+optVaultB2.onchange = () => {
+  if (!activeChar) return;
+  ensureDomainVaultBonuses(activeChar);
+  activeChar.domainVaultBonuses.b2 = !!optVaultB2.checked;
+  saveState();
+  updateVaultBonusUI();
+  updateCountsAndPrintLink();
+};
+
+optVaultB5.onchange = () => {
+  if (!activeChar) return;
+  ensureDomainVaultBonuses(activeChar);
+  activeChar.domainVaultBonuses.b5 = !!optVaultB5.checked;
+  saveState();
+  updateVaultBonusUI();
+  updateCountsAndPrintLink();
+};
+
+optVaultB8.onchange = () => {
+  if (!activeChar) return;
+  ensureDomainVaultBonuses(activeChar);
+  activeChar.domainVaultBonuses.b8 = !!optVaultB8.checked;
+  saveState();
+  updateVaultBonusUI();
+  updateCountsAndPrintLink();
+};
 
 btnZoomAncestry.onclick = (e) => {
   e.preventDefault();
@@ -1130,6 +1224,7 @@ btnZoomAncestry.onclick = (e) => {
       activeChar.subclassKey = chSubclass.value;
       activeChar.communityId = chCommunity.value;
       activeChar.ancestryId = chAncestry.value;
+updateVaultBonusUI();
 
       ensureSubclassPicks(activeChar);
       clampSubclassPicksByLevel(activeChar);
@@ -1161,11 +1256,13 @@ btnZoomAncestry.onclick = (e) => {
       renderCharList();
       updateCountsAndPrintLink();
     };
+chLevel.addEventListener("input", chLevel.onchange);
 
     chLevel.onchange = () => {
       if (!activeChar) return;
       activeChar.level = Number(chLevel.value) || 1;
       clampSubclassPicksByLevel(activeChar);
+      updateVaultBonusUI(); 
       saveState();
       renderSubclassCardsBox();
       renderDomainCards();
