@@ -973,7 +973,7 @@ if (!isDragonSlayerCardId(cardId)) {
       const body = document.createElement("div");
       body.className = "cardTile__body";
       const bodyDescription = document.createElement("div");
-      descriptiontext=card.description.replaceAll(".",".<br>").replaceAll(":",":<br>").replaceAll("•","<br>•").replaceAll(/<br>\s*<br>/g,"<br>");
+      descriptiontext=card.description.replaceAll("\n\n","").replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/_(.+?)_/g, '<em>$1</em>').replaceAll("•","<br>•").replaceAll(".",".<br>").replace(/<br>\s*<br>/g,"<br>");
       bodyDescription.innerHTML = `${descriptiontext}`;
       bodyDescription.className = "cardTile__description";
       if (!isListView) bodyDescription.classList.add("hidden");

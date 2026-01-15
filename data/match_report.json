@@ -1,0 +1,24 @@
+{
+  "updated_sections": [
+    {
+      "section": "ancestry",
+      "matched": 18,
+      "missing": 0,
+      "total": 18
+    },
+    {
+      "section": "community",
+      "matched": 9,
+      "missing": 0,
+      "total": 9
+    },
+    {
+      "section": "domain",
+      "matched": 189,
+      "missing": 0,
+      "total": 189
+    }
+  ],
+  "missing_matches": [],
+  "cards_duplicates_same_kind_name": []
+}
