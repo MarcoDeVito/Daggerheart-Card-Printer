@@ -1431,101 +1431,101 @@
     {
       "id": "145",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Ava",
       "front": "assets/frontITA/145.webp",
       "thumb": "assets/thumbsITA/145.webp",
       "tags": [],
       "domain": "Codice",
       "level": 1,
-      "description": "TOMO DI AVA Spinta Magica: Effettuate un Tiro Incantesimo contro un bersaglio entro distanza di Mischia. In caso di successo, il bersaglio viene respinto fino a distanza Lontana e subisce d10+2 danni magici pari alla vostra Competenza. Armatura di Tava: Spendete una Speranza per conferire a un bersaglio che potete toccare bonus +1 al suo Punteggio di Armatura fino al suo prossimo riposo o fino a quando non lanciate nuovamente Armatura di Tava. Spunzone di Ghiaccio: Effettuate un Tiro Incantesimo (12) per evocare una grande punta di ghiaccio entro distanza Lontana. Se la usate come arma, effettuate invece il Tiro Incantesimo contro la Difficoltà del bersaglio. In caso di successo, infliggete d6 danni fisici applicando la vostra Competenza."
+      "description": "Spinta Magica: Effettuate un Tiro Incantesimo contro un bersaglio entro distanza di Mischia. In caso di successo, il bersaglio viene respinto fino a distanza Lontana e subisce d10+2 danni magici pari alla vostra Competenza. Armatura di Tava: Spendete una Speranza per conferire a un bersaglio che potete toccare bonus +1 al suo Punteggio di Armatura fino al suo prossimo riposo o fino a quando non lanciate nuovamente Armatura di Tava. Spunzone di Ghiaccio: Effettuate un Tiro Incantesimo (12) per evocare una grande punta di ghiaccio entro distanza Lontana. Se la usate come arma, effettuate invece il Tiro Incantesimo contro la Difficoltà del bersaglio. In caso di successo, infliggete d6 danni fisici applicando la vostra Competenza."
     },
     {
       "id": "146",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Illiat",
       "front": "assets/frontITA/146.webp",
       "thumb": "assets/thumbsITA/146.webp",
       "tags": [],
       "domain": "Codice",
       "level": 1,
-      "description": "TOMO DI ILLIAT Torpore: Effettuate un Tiro Incantesimo contro un bersaglio entro distanza Prossima. In caso di successo, il bersaglio è Addormentato fino a quando non subisce danni o il GM spende una Paura nel suo turno per rimuovere questa condizione. Salva Arcana: Una volta per riposo, spendete un numero qualsiasi di Speranze e lanciate proiettili magici che colpiscono un bersaglio entro distanza Ravvicinata. Tirate un numero di d6 pari alle Speranze spese e infliggete il totale come danni magici al bersaglio. Telepatia: Spendete una Speranza per aprire una linea di comunicazione mentale con un bersaglio che potete vedere. Questo legame dura fino al vostro prossimo riposo o fino a quando non lanciate nuovamente Telepatia."
+      "description": "Torpore: Effettuate un Tiro Incantesimo contro un bersaglio entro distanza Prossima. In caso di successo, il bersaglio è Addormentato fino a quando non subisce danni o il GM spende una Paura nel suo turno per rimuovere questa condizione. Salva Arcana: Una volta per riposo, spendete un numero qualsiasi di Speranze e lanciate proiettili magici che colpiscono un bersaglio entro distanza Ravvicinata. Tirate un numero di d6 pari alle Speranze spese e infliggete il totale come danni magici al bersaglio. Telepatia: Spendete una Speranza per aprire una linea di comunicazione mentale con un bersaglio che potete vedere. Questo legame dura fino al vostro prossimo riposo o fino a quando non lanciate nuovamente Telepatia."
     },
     {
       "id": "147",
       "kind": "domain",
-      "name": "Tomo di tyfar",
+      "name": "Tomo di Tyfar",
       "front": "assets/frontITA/147.webp",
       "thumb": "assets/thumbsITA/147.webp",
       "tags": [],
       "domain": "Codice",
       "level": 1,
-      "description": "Fiamma Selvaggia: Effettuate un Tiro Incantesimo contro un massimo di tre avversari entro distanza di Mischia. I bersagli contro cui avete successo subiscono 2d6 danni magici e devono marcare uno Stress mentre fiamme eruttano dalla vostra mano. Mano Magica: Evocate una mano magica delle stesse dimensioni e forza della vostra che potete comandare entro una distanza Lontana. Foschia Misteriosa: Effettuate un Tiro Incantesimo (13) per evocare temporaneamente una fitta nebbia entro distanza Prossima. La nebbia occulta quest'area e tutto ciò che contiene. Grimorio"
+      "description": "Fiamma Selvaggia: Effettuate un Tiro Incantesimo contro un massimo di tre avversari entro distanza di Mischia. I bersagli contro cui avete successo subiscono 2d6 danni magici e devono marcare uno Stress mentre fiamme eruttano dalla vostra mano. Mano Magica: Evocate una mano magica delle stesse dimensioni e forza della vostra che potete comandare entro una distanza Lontana. Foschia Misteriosa: Effettuate un Tiro Incantesimo (13) per evocare temporaneamente una fitta nebbia entro distanza Prossima. La nebbia occulta quest'area e tutto ciò che contiene."
     },
     {
       "id": "148",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Sitil",
       "front": "assets/frontITA/148.webp",
       "thumb": "assets/thumbsITA/148.webp",
       "tags": [],
       "domain": "Codice",
       "level": 2,
-      "description": "Grimorio TOMO DI SITIL Camuffamento: Modificate magicamente il vostro aspetto e i vostri vestiti per evitare di essere riconosciuti. Gemellare: Spendete 2 Speranze per lanciare questo incantesimo su voi stesso o su un alleato entro distanza Ravvicinata. La prossima volta che il bersaglio effettua un attacco, può colpire un bersaglio aggiuntivo entro la portata contro cui il suo tiro attacco avrebbe avuto successo. Potete mantenere attivo questo incantesimo su una sola creatura alla volta. Illusione: Effettuate un Tiro Incantesimo (14). In caso di successo, create un'illusione visiva non più grande di voi entro distanza Ravvicinata che dura finché la osservate. Solo chi la osserva entro distanza di Mischia può capirne la natura illusoria."
+      "description": "Camuffamento: Modificate magicamente il vostro aspetto e i vostri vestiti per evitare di essere riconosciuti. Gemellare: Spendete 2 Speranze per lanciare questo incantesimo su voi stesso o su un alleato entro distanza Ravvicinata. La prossima volta che il bersaglio effettua un attacco, può colpire un bersaglio aggiuntivo entro la portata contro cui il suo tiro attacco avrebbe avuto successo. Potete mantenere attivo questo incantesimo su una sola creatura alla volta. Illusione: Effettuate un Tiro Incantesimo (14). In caso di successo, create un'illusione visiva non più grande di voi entro distanza Ravvicinata che dura finché la osservate. Solo chi la osserva entro distanza di Mischia può capirne la natura illusoria."
     },
     {
       "id": "149",
       "kind": "domain",
-      "name": "Tomo di vagras",
+      "name": "Tomo di Vagras",
       "front": "assets/frontITA/149.webp",
       "thumb": "assets/thumbsITA/149.webp",
       "tags": [],
       "domain": "Codice",
       "level": 2,
-      "description": "Chiavistello Runico: Effettuate un Tiro Incantesimo (15) su un oggetto che state toccando e che può essere chiuso (come una serratura, uno scrigno o una scatola). Una volta per riposo, in caso di successo, potete chiudere l'oggetto in modo che possa essere aperto solo da creature a vostra scelta. Qualcuno con accesso alla magia e un'ora di tempo per studiare l'incantesimo può aprirlo. Varco Arcano: Quando non avete avversari entro distanza di Mischia, effettuate un Tiro Incantesimo (13). In caso di successo, spendete una Speranza per creare un portale dalla vostra posizione fino a un punto entro distanza Lontana che potete vedere. Il portale si chiude non appena una creatura lo oltrepassa. Svelare: Effettuate un Tiro Incantesimo. Se c'è qualcosa di nascosto con la magia entro distanza Ravvicinata, viene rivelato. Grimorio"
+      "description": "Chiavistello Runico: Effettuate un Tiro Incantesimo (15) su un oggetto che state toccando e che può essere chiuso (come una serratura, uno scrigno o una scatola). Una volta per riposo, in caso di successo, potete chiudere l'oggetto in modo che possa essere aperto solo da creature a vostra scelta. Qualcuno con accesso alla magia e un'ora di tempo per studiare l'incantesimo può aprirlo. Varco Arcano: Quando non avete avversari entro distanza di Mischia, effettuate un Tiro Incantesimo (13). In caso di successo, spendete una Speranza per creare un portale dalla vostra posizione fino a un punto entro distanza Lontana che potete vedere. Il portale si chiude non appena una creatura lo oltrepassa. Svelare: Effettuate un Tiro Incantesimo. Se c'è qualcosa di nascosto con la magia entro distanza Ravvicinata, viene rivelato. "
     },
     {
       "id": "150",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Korvax",
       "front": "assets/frontITA/150.webp",
       "thumb": "assets/thumbsITA/150.webp",
       "tags": [],
       "domain": "Codice",
       "level": 3,
-      "description": "TOMO DI KORVAX Levitazione: Effettuate un Tiro Incantesimo per sollevare temporaneamente in aria un bersaglio che potete vedere e spostarlo entro distanza Ravvicinata dalla sua posizione di partenza. Smentire: Spendete una Speranza per costringere un bersaglio entro distanza di Mischia a effettuare un Tiro Reazione (15). In caso di fallimento, questi dimentica l'ultimo minuto della vostra conversazione. Cerchio Runico: Marcate uno Stress per creare un cerchio magico temporaneo sul terreno dove vi trovate. Tutti gli avversari che si trovano o entrano a distanza di Mischia subiscono 2d12+4 danni magici e vengono respinti indietro a distanza Prossima."
+      "description": "Levitazione: Effettuate un Tiro Incantesimo per sollevare temporaneamente in aria un bersaglio che potete vedere e spostarlo entro distanza Ravvicinata dalla sua posizione di partenza. Smentire: Spendete una Speranza per costringere un bersaglio entro distanza di Mischia a effettuare un Tiro Reazione (15). In caso di fallimento, questi dimentica l'ultimo minuto della vostra conversazione. Cerchio Runico: Marcate uno Stress per creare un cerchio magico temporaneo sul terreno dove vi trovate. Tutti gli avversari che si trovano o entrano a distanza di Mischia subiscono 2d12+4 danni magici e vengono respinti indietro a distanza Prossima."
     },
     {
       "id": "151",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Norai",
       "front": "assets/frontITA/151.webp",
       "thumb": "assets/thumbsITA/151.webp",
       "tags": [],
       "domain": "Codice",
       "level": 3,
-      "description": "TOMO DI NORAI Laccio Mistico: Effettuate un Tiro Incantesimo contro un bersaglio entro distanza Lontana. In caso di successo, il bersaglio viene temporaneamente Trattenuto e deve marcare uno Stress. Se bersagliate una creatura volante, questo incantesimo la fa atterrare e la Trattiene temporaneamente. Palla di Fuoco: Effettuate un Tiro Incantesimo contro un bersaglio entro distanza Remota. In caso di successo, scagliate una sfera di fuoco verso di esso che esplode all'impatto. Il bersaglio e tutte le creature entro distanza Prossima da esso devono effettuare un Tiro Reazione (13). I bersagli che falliscono subiscono d20+5 danni magici applicando la vostra Competenza. I bersagli che superano il tiro subiscono metà dei danni."
+      "description": "Laccio Mistico: Effettuate un Tiro Incantesimo contro un bersaglio entro distanza Lontana. In caso di successo, il bersaglio viene temporaneamente Trattenuto e deve marcare uno Stress. Se bersagliate una creatura volante, questo incantesimo la fa atterrare e la Trattiene temporaneamente. Palla di Fuoco: Effettuate un Tiro Incantesimo contro un bersaglio entro distanza Remota. In caso di successo, scagliate una sfera di fuoco verso di esso che esplode all'impatto. Il bersaglio e tutte le creature entro distanza Prossima da esso devono effettuare un Tiro Reazione (13). I bersagli che falliscono subiscono d20+5 danni magici applicando la vostra Competenza. I bersagli che superano il tiro subiscono metà dei danni."
     },
     {
       "id": "152",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Exota",
       "front": "assets/frontITA/152.webp",
       "thumb": "assets/thumbsITA/152.webp",
       "tags": [],
       "domain": "Codice",
       "level": 4,
-      "description": "TOMO DI EXOTA Ripudiare: Potete interrompere un effetto magico in atto. Effettuate un tiro reazione usando il vostro tratto da Incantatore. Una volta per riposo, in caso di successo, l'effetto si interrompe e tutte le conseguenze vengono evitate. Creare Costrutto: Spendete una Speranza per scegliere un gruppo di oggetti intorno a voi e creare un costrutto animato che obbedisce a comandi di base. Effettuate un Tiro Incantesimo per dargli ordini. Se necessario, condivide la vostra Evasione e i vostri tratti e i suoi attacchi infliggono 2d10+3 danni fisici. Potete mantenere solo un costrutto alla volta e questo si disintegra quando subisce danni."
+      "description": "ipudiare: Potete interrompere un effetto magico in atto. Effettuate un tiro reazione usando il vostro tratto da Incantatore. Una volta per riposo, in caso di successo, l'effetto si interrompe e tutte le conseguenze vengono evitate. Creare Costrutto: Spendete una Speranza per scegliere un gruppo di oggetti intorno a voi e creare un costrutto animato che obbedisce a comandi di base. Effettuate un Tiro Incantesimo per dargli ordini. Se necessario, condivide la vostra Evasione e i vostri tratti e i suoi attacchi infliggono 2d10+3 danni fisici. Potete mantenere solo un costrutto alla volta e questo si disintegra quando subisce danni."
     },
     {
       "id": "153",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Grynn",
       "front": "assets/frontITA/153.webp",
       "thumb": "assets/thumbsITA/153.webp",
       "tags": [],
       "domain": "Codice",
       "level": 4,
-      "description": "TOMO DI GRYNN Deflessione Arcana: Una volta per ogni riposo lungo, spendete una Speranza per annullare il danno di un attacco che ha come bersaglio voi o un alleato entro distanza Prossima. Cronolucchetto: Scegliete un oggetto entro distanza Lontana. L'oggetto si ferma nel tempo e nello spazio esattamente dove si trova fino al vostro prossimo riposo. Se una creatura cerca di spostarlo, effettuate un Tiro Incantesimo contro di essa per impedirglielo. Muro di Fiamme: Effettuate un Tiro Incantesimo (15). In caso di successo, create un muro di fiamme magiche tra due punti entro distanza Lontana. Tutte le creature nel suo percorso devono scegliere da che parte stare e qualsiasi cosa oltrepassi il muro subisce 4d10+3 danni magici."
+      "description": "Deflessione Arcana: Una volta per ogni riposo lungo, spendete una Speranza per annullare il danno di un attacco che ha come bersaglio voi o un alleato entro distanza Prossima. Cronolucchetto: Scegliete un oggetto entro distanza Lontana. L'oggetto si ferma nel tempo e nello spazio esattamente dove si trova fino al vostro prossimo riposo. Se una creatura cerca di spostarlo, effettuate un Tiro Incantesimo contro di essa per impedirglielo. Muro di Fiamme: Effettuate un Tiro Incantesimo (15). In caso di successo, create un muro di fiamme magiche tra due punti entro distanza Lontana. Tutte le creature nel suo percorso devono scegliere da che parte stare e qualsiasi cosa oltrepassi il muro subisce 4d10+3 danni magici."
     },
     {
       "id": "154",
@@ -1574,13 +1574,13 @@
     {
       "id": "158",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Homet",
       "front": "assets/frontITA/158.webp",
       "thumb": "assets/thumbsITA/158.webp",
       "tags": [],
       "domain": "Codice",
       "level": 7,
-      "description": "TOMO DI HOMET Oltrepasso: Effettuate un Tiro Incantesimo (13). Una volta per riposo, in caso di successo, voi e tutte le creature che vi toccano potete oltrepassare un muro o una porta entro distanza Ravvicinata. L'effetto termina quando tutti si trovano dall'altra parte. Portale Dimensionale: Effettuate un Tiro Incantesimo (14). Una volta per ogni riposo lungo, se il tiro ha esito positivo, aprite un portale verso un luogo in un'altra dimensione o piano dell'esistenza in cui siete già stati. Il portale rimane aperto fino al vostro prossimo riposo."
+      "description": "Oltrepasso: Effettuate un Tiro Incantesimo (13). Una volta per riposo, in caso di successo, voi e tutte le creature che vi toccano potete oltrepassare un muro o una porta entro distanza Ravvicinata. L'effetto termina quando tutti si trovano dall'altra parte. Portale Dimensionale: Effettuate un Tiro Incantesimo (14). Una volta per ogni riposo lungo, se il tiro ha esito positivo, aprite un portale verso un luogo in un'altra dimensione o piano dell'esistenza in cui siete già stati. Il portale rimane aperto fino al vostro prossimo riposo."
     },
     {
       "id": "159",
@@ -1596,13 +1596,13 @@
     {
       "id": "160",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Vyola",
       "front": "assets/frontITA/160.webp",
       "thumb": "assets/thumbsITA/160.webp",
       "tags": [],
       "domain": "Codice",
       "level": 8,
-      "description": "TOMO DI VYOLA Tuffo nella Memoria: Effettuate un Tiro Incantesimo contro un bersaglio entro distanza Lontana. In caso di successo, scrutate nella mente del bersaglio e ponete una domanda al GM. Il GM descrive qualsiasi ricordo del bersaglio pertinente alla risposta. Lucidità Condivisa: Una volta per ogni riposo lungo, spendete una Speranza per scegliere due creature consenzienti. Quando una di esse dovrebbe marcare Stress, possono scegliere chi delle due lo marcherà. Questo incantesimo dura fino al loro prossimo riposo."
+      "description": "Tuffo nella Memoria: Effettuate un Tiro Incantesimo contro un bersaglio entro distanza Lontana. In caso di successo, scrutate nella mente del bersaglio e ponete una domanda al GM. Il GM descrive qualsiasi ricordo del bersaglio pertinente alla risposta. Lucidità Condivisa: Una volta per ogni riposo lungo, spendete una Speranza per scegliere due creature consenzienti. Quando una di esse dovrebbe marcare Stress, possono scegliere chi delle due lo marcherà. Questo incantesimo dura fino al loro prossimo riposo."
     },
     {
       "id": "161",
@@ -1618,13 +1618,13 @@
     {
       "id": "162",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Ronin",
       "front": "assets/frontITA/162.webp",
       "thumb": "assets/thumbsITA/162.webp",
       "tags": [],
       "domain": "Codice",
       "level": 9,
-      "description": "TOMO DI RONIN Trasformazione: Effettuate un Tiro Incantesimo (15). In caso di successo, vi trasformate in un oggetto inanimato non più grande del doppio della vostra taglia normale. Potete rimanere in questa forma finché non subite danni. Spossatezza Eterna: Una volta per riposo lungo, effettuate un Tiro Incantesimo contro un bersaglio entro distanza Ravvicinata. In caso di successo, il bersaglio diventa permanentemente Vulnerabile. Non può liberarsi di questa condizione in alcun modo."
+      "description": "Trasformazione: Effettuate un Tiro Incantesimo (15). In caso di successo, vi trasformate in un oggetto inanimato non più grande del doppio della vostra taglia normale. Potete rimanere in questa forma finché non subite danni. Spossatezza Eterna: Una volta per riposo lungo, effettuate un Tiro Incantesimo contro un bersaglio entro distanza Ravvicinata. In caso di successo, il bersaglio diventa permanentemente Vulnerabile. Non può liberarsi di questa condizione in alcun modo."
     },
     {
       "id": "163",
@@ -1640,13 +1640,13 @@
     {
       "id": "164",
       "kind": "domain",
-      "name": "Grimorio",
+      "name": "Tomo di Yarrow",
       "front": "assets/frontITA/164.webp",
       "thumb": "assets/thumbsITA/164.webp",
       "tags": [],
       "domain": "Codice",
       "level": 10,
-      "description": "TOMO DI YARROW Inceppatempo: Effettuate un Tiro Incantesimo (18). In caso di successo, il tempo rallenta temporaneamente fino a fermarsi per tutti quelli che si trovano entro distanza Lontana tranne voi. Riprende il suo normale scorrere la prossima volta che effettuate un tiro azione che ha come bersaglio un'altra creatura. Immunità alla Magia: Spendete 5 Speranze per diventare immune ai danni da magia fino al prossimo riposo."
+      "description": "Inceppatempo: Effettuate un Tiro Incantesimo (18). In caso di successo, il tempo rallenta temporaneamente fino a fermarsi per tutti quelli che si trovano entro distanza Lontana tranne voi. Riprende il suo normale scorrere la prossima volta che effettuate un tiro azione che ha come bersaglio un'altra creatura. Immunità alla Magia: Spendete 5 Speranze per diventare immune ai danni da magia fino al prossimo riposo."
     },
     {
       "id": "165",
