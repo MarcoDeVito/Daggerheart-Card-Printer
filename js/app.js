@@ -437,6 +437,18 @@ function b64DecodeUnicode(b64) {
     if (Number(ch.level) < mastMin) ch.subclassPicks.mastery = false;
   }
 
+function pruneSelectedDomainToEligible(ch) {
+  if (!ch || !Array.isArray(ch.selectedCardIds)) return;
+
+  const eligibleIds = new Set(currentEligibleDomainCards(ch).map(c => c.id));
+
+  const before = ch.selectedCardIds.length;
+  ch.selectedCardIds = ch.selectedCardIds.filter(id => eligibleIds.has(id));
+
+  if (ch.selectedCardIds.length !== before) saveState();
+}
+
+
   function currentEligibleDomainCards(ch) {
     if (!ch || !requiredFieldsOk(ch)) return [];
     const classDef = getClassDef(ch.classKey);
@@ -641,6 +653,7 @@ function updateVaultBonusUI() {
 ensureSubclassPicks(activeChar);
 ensureDomainVaultBonuses(activeChar);
 updateVaultBonusUI();
+
 clampSubclassPicksByLevel(activeChar);
 renderSubclassCardsBox();
   }
@@ -1238,7 +1251,9 @@ updateVaultBonusUI();
       activeChar.classKey = chClass.value;
       // reset subclass on class change
       activeChar.subclassKey = "";
+      pruneSelectedDomainToEligible(activeChar);   
       saveState();
+      updateVaultBonusUI();
       renderSubclassSelect();
       chSubclass.value = "";
       renderSubclassCardsBox();
@@ -1250,7 +1265,9 @@ updateVaultBonusUI();
     chSubclass.onchange = () => {
       if (!activeChar) return;
       activeChar.subclassKey = chSubclass.value;
+      pruneSelectedDomainToEligible(activeChar);
       saveState();
+      updateVaultBonusUI();
       renderSubclassCardsBox();
       renderDomainCards();
       renderCharList();
