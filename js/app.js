@@ -1221,15 +1221,6 @@ btnLangENG.onclick = async () => {
 
   
 
-btnLangENG.onclick = async () => {
-  if (!state.ui) state.ui = { domainView: "grid" };
-  state.ui.language = "eng";
-  saveState();
-
-  await loadDataByLanguage("eng");
-  renderAll();
-};
-
 
     btnDeleteChar.onclick = () => {
   if (!activeChar) return;
