@@ -356,10 +356,9 @@ function b64DecodeUnicode(b64) {
   return decodeURIComponent(bytes);
 }
 
-  function uid() {
-    return "ch_" + Date.now();
-  }
-
+ function uid() {
+  return "ch_" + Date.now() + "_" + Math.random().toString(16).slice(2);
+}
   function findChar(id) {
     return state.characters.find(c => c.id === id) || null;
   }
@@ -910,6 +909,11 @@ if (!isDragonSlayerCardId(cardId)) {
   return true;
 }
 
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, (c) => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+}
 
   function renderDomainCards() {
     const ch = activeChar;
@@ -973,8 +977,20 @@ if (!isDragonSlayerCardId(cardId)) {
       const body = document.createElement("div");
       body.className = "cardTile__body";
       const bodyDescription = document.createElement("div");
-      descriptiontext=card.description.replaceAll("\n\n","").replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/_(.+?)_/g, '<em>$1</em>').replaceAll("•","<br>•").replaceAll(".",".<br>").replace(/<br>\s*<br>/g,"<br>");
-      bodyDescription.innerHTML = `${descriptiontext}`;
+
+
+
+
+const raw = String(card.description || "");
+const safe = escapeHtml(raw)
+  .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+  .replace(/_(.+?)_/g, "<em>$1</em>")
+  .replaceAll("•","<br>•");
+bodyDescription.innerHTML = safe;
+
+
+  
+     
       bodyDescription.className = "cardTile__description";
       if (!isListView) bodyDescription.classList.add("hidden");
       const zoom = document.createElement("div");
@@ -1161,14 +1177,49 @@ function setDomainView(view) {
     btnExportChar.onclick = exportActiveCharacter;
     btnImportChar.onclick = importCharacterFromString;
 
-    btnLangITA.onclick = async () => {
-  if (!state.ui) state.ui = { domainView: "grid" };
-  state.ui.language = "ita";
-  saveState();
+btnLangITA.onclick = async () => {
+  const prev = state.ui?.language || "eng";
+  if (!state.ui) state.ui = { domainView: "grid", language: prev };
 
-  await loadDataByLanguage("ita");
-  renderAll();
+  // evita lavoro inutile
+  if (state.ui.language === "ita") return;
+
+  state.ui.language = "ita";
+
+  try {
+    await loadDataByLanguage("ita");
+    saveState();
+    renderAll();
+  } catch (err) {
+    console.error(err);
+    state.ui.language = prev; // rollback
+    saveState();
+    alert("Errore: non riesco a caricare i file ITA (cardsITA.json / rulesITA.json). Controlla che esistano e che il path sia corretto.");
+  }
 };
+
+btnLangENG.onclick = async () => {
+  const prev = state.ui?.language || "eng";
+  if (!state.ui) state.ui = { domainView: "grid", language: prev };
+
+  // evita lavoro inutile
+  if (state.ui.language === "eng") return;
+
+  state.ui.language = "eng";
+
+  try {
+    await loadDataByLanguage("eng");
+    saveState();
+    renderAll();
+  } catch (err) {
+    console.error(err);
+    state.ui.language = prev; // rollback
+    saveState();
+    alert("Errore: non riesco a caricare i file ENG (cards.json / rules.json). Controlla che esistano e che il path sia corretto.");
+  }
+};
+
+  
 
 btnLangENG.onclick = async () => {
   if (!state.ui) state.ui = { domainView: "grid" };
@@ -1273,19 +1324,21 @@ updateVaultBonusUI();
       renderCharList();
       updateCountsAndPrintLink();
     };
-chLevel.addEventListener("input", chLevel.onchange);
+const onLevelChanged = () => {
+  if (!activeChar) return;
+  activeChar.level = Number(chLevel.value) || 1;
+  clampSubclassPicksByLevel(activeChar);
+  updateVaultBonusUI();
+  saveState();
+  renderSubclassCardsBox();
+  renderDomainCards();
+  renderCharList();
+  updateCountsAndPrintLink();
+};
 
-    chLevel.onchange = () => {
-      if (!activeChar) return;
-      activeChar.level = Number(chLevel.value) || 1;
-      clampSubclassPicksByLevel(activeChar);
-      updateVaultBonusUI(); 
-      saveState();
-      renderSubclassCardsBox();
-      renderDomainCards();
-      renderCharList();
-      updateCountsAndPrintLink();
-    };
+chLevel.addEventListener("input", onLevelChanged);
+chLevel.addEventListener("change", onLevelChanged);
+
 
     chCommunity.onchange = () => {
       if (!activeChar) return;
