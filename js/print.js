@@ -116,12 +116,36 @@ optBack.onchange = () => {
     const domainOrder = new Map();
     (classDef?.domains || []).forEach((d, i) => domainOrder.set(d, i));
 
-    const eligibleSelected = catalog.cards
-      .filter((c) => c.kind === "domain")
-      .filter((c) => selected.has(c.id))
-      .filter((c) => (classDef?.domains || []).includes(c.domain)|| c.domain === "dragonslayer")
-      .filter((c) => Number(c.level) <= lvl)
-      .sort((a, b) => {
+    const baseDomains = new Set(classDef?.domains || []);
+
+// dominio multiclasse (se attivo)
+let mcDomain = "";
+if (ch.multiclass) {
+  const mcClassDef = rules.classes?.[ch.multiclassClassKey];
+  if (mcClassDef) {
+    if (typeof ch.multiclassDomainIdx === "number" && mcClassDef.domains?.[ch.multiclassDomainIdx]) {
+      mcDomain = mcClassDef.domains[ch.multiclassDomainIdx];
+    } else if (typeof ch.multiclassDomain === "string") {
+      mcDomain = ch.multiclassDomain;
+    }
+  }
+}
+
+const mcMaxLvl = Math.ceil(lvl / 2);
+
+const eligibleSelected = catalog.cards
+  .filter((c) => c.kind === "domain")
+  .filter((c) => selected.has(c.id))
+  .filter((c) => {
+    const cardLvl = Number(c.level);
+
+    if (c.domain === "dragonslayer") return cardLvl <= lvl;
+    if (baseDomains.has(c.domain)) return cardLvl <= lvl;
+    if (mcDomain && c.domain === mcDomain) return cardLvl <= mcMaxLvl;
+
+    return false;
+  })
+       .sort((a, b) => {
         const da = domainOrder.has(a.domain) ? domainOrder.get(a.domain) : 999;
         const db = domainOrder.has(b.domain) ? domainOrder.get(b.domain) : 999;
         if (da !== db) return da - db;

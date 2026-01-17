@@ -34,6 +34,13 @@ const vaultMaxHint = $("vaultMaxHint");
 const btnZoomAncestry = $("btnZoomAncestry");
 
 
+
+const optMulticlass = $("optMulticlass");
+const multiclassBox = $("multiclassBox");
+const chMulticlassClass = $("chMulticlassClass");
+const chMulticlassDomain = $("chMulticlassDomain");
+
+
   const optBleed = $("optBleed");
   const optCrop = $("optCrop");
   const optBack = $("optBack");
@@ -187,7 +194,13 @@ function updateCommunityAncestryZoomButtons() {
   }
 }
 
-
+function getMulticlassDomain(ch) {
+  if (!ch?.multiclass) return "";
+  if (!ch.multiclassClassKey) return "";
+  if (ch.multiclassDomainIdx !== 0 && ch.multiclassDomainIdx !== 1) return "";
+  const def = getClassDef(ch.multiclassClassKey);
+  return def?.domains?.[ch.multiclassDomainIdx] || "";
+}
 
 function openZoomModalSingleCard(cardId) {
   ensureZoomModal();
@@ -332,6 +345,20 @@ function importCharacterFromString() {
   imported.id = uid();
 
   // Normalizza campi mancanti
+if (typeof imported.multiclass !== "boolean") imported.multiclass = false;
+if (!imported.multiclassClassKey) imported.multiclassClassKey = "";
+
+// compat vecchia: se esiste multiclassDomain string, butta via e riparti
+if (imported.multiclassDomain && imported.multiclassDomainIdx == null) {
+  imported.multiclassDomainIdx = null;
+  delete imported.multiclassDomain;
+}
+
+if (imported.multiclassDomainIdx !== 0 && imported.multiclassDomainIdx !== 1) {
+  imported.multiclassDomainIdx = null;
+}
+
+
   if (!imported.subclassPicks) imported.subclassPicks = { specialization: false, mastery: false };
   if (!Array.isArray(imported.selectedCardIds)) imported.selectedCardIds = [];
   ensureDomainVaultBonuses(imported);
@@ -467,20 +494,51 @@ function pruneSelectedDomainToEligible(ch) {
 }
 
 
-  function currentEligibleDomainCards(ch) {
-    if (!ch || !requiredFieldsOk(ch)) return [];
-    const classDef = getClassDef(ch.classKey);
-    if (!classDef) return [];
+ function currentEligibleDomainCards(ch) {
+  if (!ch || !requiredFieldsOk(ch)) return [];
+  const classDef = getClassDef(ch.classKey);
+  if (!classDef) return [];
 
-    const allowedDomains = new Set(classDef.domains);
-    const lvl = Number(ch.level);
+  const lvl = Number(ch.level) || 1;
 
-    return catalog.cards
-      .filter(c => c.kind === "domain")
-      .filter(c => allowedDomains.has(c.domain) || c.domain === "dragonslayer")
-      .filter(c => Number(c.level) <= lvl)
-      .sort((a,b) => a.id.localeCompare(b.id));
+  // domini base (classe PG)
+  const baseDomains = new Set(classDef.domains);
+
+  // dominio multiclasse (se attivo)
+  let mcDomain = "";
+  if (ch.multiclass) {
+    const mcClassDef = getClassDef(ch.multiclassClassKey);
+    if (mcClassDef) {
+      // supporta sia idx che stringa (nel caso tu abbia ancora vecchi salvataggi)
+      if (typeof ch.multiclassDomainIdx === "number" && mcClassDef.domains[ch.multiclassDomainIdx]) {
+        mcDomain = mcClassDef.domains[ch.multiclassDomainIdx];
+      } else if (typeof ch.multiclassDomain === "string") {
+        mcDomain = ch.multiclassDomain;
+      }
+    }
   }
+
+  const mcMaxLvl = Math.ceil(lvl / 2);
+
+  return catalog.cards
+    .filter(c => c.kind === "domain")
+    .filter(c => {
+      const cardLvl = Number(c.level);
+
+      // dragonslayer sempre ok col limite "normale"
+      if (c.domain === "dragonslayer") return cardLvl <= lvl;
+
+      // domini base: limite normale
+      if (baseDomains.has(c.domain)) return cardLvl <= lvl;
+
+      // dominio multiclasse: limite ceil(lvl/2)
+      if (mcDomain && c.domain === mcDomain) return cardLvl <= mcMaxLvl;
+
+      return false;
+    })
+    .sort((a,b) => a.id.localeCompare(b.id));
+}
+
 
 
 function isDragonSlayerCardId(cardId) {
@@ -614,6 +672,8 @@ function updateVaultBonusUI() {
   vaultMaxHint.textContent = String(getMaxDomainVault(activeChar));
 }
 
+
+
   function renderEditor() {
     if (!activeChar) {
       editorEmpty.classList.remove("hidden");
@@ -637,6 +697,43 @@ if (optBack)  optBack.checked  = !!state.print.addBackSheets;
       value: key, label: def.label
     }));
     fillSelectOptions(chClass, classItems, {placeholder:"Seleziona classe…"});
+// Classi per multiclasse (esclude la classe principale)
+const mcClasses = classItems.filter(c => c.value !== activeChar.classKey);
+fillSelectOptions(chMulticlassClass, mcClasses, { placeholder: "Classe multiclasse…" });
+
+chMulticlassClass.value = activeChar.multiclassClassKey || "";
+// === Dominio multiclasse (value = 0/1) ===
+chMulticlassDomain.innerHTML = "";
+
+if (activeChar.multiclass && activeChar.multiclassClassKey) {
+  const mcDef = getClassDef(activeChar.multiclassClassKey);
+  const doms = mcDef?.domains || [];
+
+  // placeholder
+  const ph = document.createElement("option");
+  ph.value = "";
+  ph.textContent = "Dominio multiclasse…";
+  chMulticlassDomain.appendChild(ph);
+
+  doms.slice(0, 2).forEach((label, idx) => {
+    const opt = document.createElement("option");
+    opt.value = String(idx);     // "0" o "1"
+    opt.textContent = label;     // label nella lingua corrente
+    chMulticlassDomain.appendChild(opt);
+  });
+
+  chMulticlassDomain.value =
+    (activeChar.multiclassDomainIdx === 0 || activeChar.multiclassDomainIdx === 1)
+      ? String(activeChar.multiclassDomainIdx)
+      : "";
+} else {
+  // se non attivo, tienilo vuoto
+  const ph = document.createElement("option");
+  ph.value = "";
+  ph.textContent = "Dominio multiclasse…";
+  chMulticlassDomain.appendChild(ph);
+  chMulticlassDomain.value = "";
+}
 
     // Fill community/ancestry selects from catalog
     // Fill community/ancestry selects from catalog (ordinati alfabeticamente)
@@ -679,6 +776,24 @@ if (activeChar.mixed) {
 }
 
     updateCommunityAncestryZoomButtons();
+
+
+    // === Multiclasse: sblocco a livello 5 ===
+const lvl = Number(activeChar.level) || 1;
+const canMulticlass = lvl >= 5;
+
+optMulticlass.disabled = !canMulticlass;
+
+if (!canMulticlass) {
+  activeChar.multiclass = false;
+  activeChar.multiclassClassKey = "";
+  activeChar.multiclassDomainIdx = null;
+  multiclassBox.classList.add("hidden");
+}
+
+optMulticlass.checked = !!activeChar.multiclass;
+if (activeChar.multiclass) multiclassBox.classList.remove("hidden");
+else multiclassBox.classList.add("hidden");
 
 
     // Subclass depends on class
@@ -868,6 +983,13 @@ left.appendChild(thumbWrap);
       opt.textContent = d;
       filterDomain.appendChild(opt);
     }
+    const mcDomain = getMulticlassDomain(ch);
+if (ch.multiclass && mcDomain && !classDef.domains.includes(mcDomain)) {
+  const opt = document.createElement("option");
+  opt.value = mcDomain;
+  opt.textContent = mcDomain;
+  filterDomain.appendChild(opt);
+}
       const special = document.createElement("option");
       special.value = "dragonslayer"
       special.textContent = "Carte Speciali";
@@ -973,7 +1095,10 @@ function escapeHtml(s) {
     filterDomain.value = prevDomFilter;
 
     const classDef = getClassDef(ch.classKey);
-    domainHint.textContent = `Domini classe: ${classDef.domains.join(" + ")} — Carte disponibili (≤ lvl ${ch.level}): ${eligible.length}`;
+   const lvl = Number(ch.level) || 1;
+const mcPart = (ch.multiclass ? ` — Multiclasse: + dominio (≤ lvl ${Math.ceil(lvl/2)})` : "");
+domainHint.textContent = `Domini classe: ${classDef.domains.join(" + ")} — Carte disponibili: ${eligible.length}${mcPart}`;
+
 
     const q = (search.value || "").trim().toLowerCase();
     const domFilter = filterDomain.value || "";
@@ -1208,6 +1333,11 @@ function setDomainView(view) {
         ancestryId: "",
         mixed: false,
 mixedAncestryId: "",
+multiclass: false,
+multiclassClassKey: "",
+multiclassDomainIdx: null,
+
+
         subclassPicks: { specialization: false, mastery: false },
         domainVaultBonuses: { b2: false, b5: false, b8: false },
         selectedCardIds: []
@@ -1273,6 +1403,67 @@ btnLangENG.onclick = async () => {
   if (!activeChar) return;
   deleteCharacterById(activeChar.id);
 };
+
+
+chMulticlassClass.onchange = () => {
+  if (!activeChar) return;
+
+  activeChar.multiclassClassKey = chMulticlassClass.value;
+
+  // reset dominio (perché i domini cambiano)
+  activeChar.multiclassDomainIdx = null;
+
+  // 🔪 elimina carte multiclass vecchie
+  pruneSelectedDomainToEligible(activeChar);
+
+  saveState();
+  renderEditor();        // ricostruisce anche la select dei domini
+  renderDomainCards();
+  updateCountsAndPrintLink();
+};
+
+optMulticlass.onchange = () => {
+  if (!activeChar) return;
+
+  activeChar.multiclass = !!optMulticlass.checked;
+
+  if (!activeChar.multiclass) {
+    // reset completo multiclasse
+    activeChar.multiclassClassKey = "";
+    activeChar.multiclassDomainIdx = null;
+    multiclassBox.classList.add("hidden");
+  } else {
+    multiclassBox.classList.remove("hidden");
+  }
+
+  // 🔪 rimuove eventuali carte ora illegali
+  pruneSelectedDomainToEligible(activeChar);
+
+  saveState();
+  renderDomainCards();
+  updateCountsAndPrintLink();
+};
+
+
+
+
+chMulticlassDomain.onchange = () => {
+  if (!activeChar) return;
+
+  const v = chMulticlassDomain.value;
+  activeChar.multiclassDomainIdx =
+    (v === "0" || v === "1") ? Number(v) : null;
+
+  // 🔪 se il dominio cambia, rimuovi carte non più valide
+  pruneSelectedDomainToEligible(activeChar);
+
+  saveState();
+  renderDomainCards();
+  updateCountsAndPrintLink();
+};
+
+
+
 
 btnZoomCommunity.onclick = (e) => {
   e.preventDefault();
@@ -1374,15 +1565,35 @@ updateVaultBonusUI();
     };
 const onLevelChanged = () => {
   if (!activeChar) return;
+
   activeChar.level = Number(chLevel.value) || 1;
+
+  // === Multiclasse: sblocco a livello 5 + auto-spegnimento ===
+  const canMulticlass = activeChar.level >= 5;
+
+  if (optMulticlass) optMulticlass.disabled = !canMulticlass;
+
+  if (!canMulticlass) {
+    activeChar.multiclass = false;
+    activeChar.multiclassClassKey = "";
+    activeChar.multiclassDomainIdx = null;
+    if (multiclassBox) multiclassBox.classList.add("hidden");
+  }
+
+  if (optMulticlass) optMulticlass.checked = !!activeChar.multiclass;
+
+  // resto logica livello
   clampSubclassPicksByLevel(activeChar);
   updateVaultBonusUI();
+  pruneSelectedDomainToEligible(activeChar);
+
   saveState();
   renderSubclassCardsBox();
   renderDomainCards();
   renderCharList();
   updateCountsAndPrintLink();
 };
+
 
 chLevel.addEventListener("input", onLevelChanged);
 chLevel.addEventListener("change", onLevelChanged);
