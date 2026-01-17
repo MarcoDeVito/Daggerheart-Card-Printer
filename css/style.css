@@ -629,6 +629,28 @@ input,select{
   opacity:.9;
 }
 
+
+.printOptions{
+  max-width: 800px;
+  margin: 12px auto;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.printOptions h3{
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.printOptions .check{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
 .selectWithIcon{
   display: flex;
   align-items: center;

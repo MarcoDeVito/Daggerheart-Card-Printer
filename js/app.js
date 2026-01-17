@@ -17,6 +17,14 @@
   const chSubclass = $("chSubclass");
   const chCommunity = $("chCommunity");
   const chAncestry = $("chAncestry");
+  const mixedAncestryBox = $("mixedAncestryBox");
+const chAncestryMix1 = $("chAncestryMix1");
+const chAncestryMix2 = $("chAncestryMix2");
+
+const MIXED_VALUE = "__mixed__";
+const btnZoomAncestryMix2 = $("btnZoomAncestryMix2");
+
+
 const optVaultB2 = $("optVaultB2");
 const optVaultB5 = $("optVaultB5");
 const optVaultB8 = $("optVaultB8");
@@ -169,9 +177,16 @@ if (zoomModalNextBtn) zoomModalNextBtn.classList.remove("hidden");
 
 function updateCommunityAncestryZoomButtons() {
   if (btnZoomCommunity) btnZoomCommunity.disabled = !chCommunity.value;
-  if (btnZoomAncestry) btnZoomAncestry.disabled = !chAncestry.value;
-  
+
+  // lente ancestry “principale” apre sempre ancestryId reale
+  if (btnZoomAncestry) btnZoomAncestry.disabled = !(activeChar && activeChar.ancestryId);
+
+  // lente della seconda ancestry (solo se mixed e se ha valore)
+  if (btnZoomAncestryMix2) {
+    btnZoomAncestryMix2.disabled = !(activeChar && activeChar.mixed && activeChar.mixedAncestryId);
+  }
 }
+
 
 
 function openZoomModalSingleCard(cardId) {
@@ -410,9 +425,13 @@ function b64DecodeUnicode(b64) {
     return c.subclasses[subclassKey] || null;
   }
 
-  function requiredFieldsOk(ch) {
-    return !!(ch && ch.name && ch.level && ch.classKey && ch.subclassKey && ch.communityId && ch.ancestryId);
-  }
+function requiredFieldsOk(ch) {
+  if (!(ch && ch.name && ch.level && ch.classKey && ch.subclassKey && ch.communityId)) return false;
+  if (!ch.ancestryId) return false;
+  if (ch.mixed) return !!ch.mixedAncestryId;
+  return true;
+}
+
 
   function ensureSubclassPicks(ch) {
     if (!ch.subclassPicks) ch.subclassPicks = { specialization: false, mastery: false };
@@ -608,9 +627,10 @@ function updateVaultBonusUI() {
     activeHint.textContent = `ID: ${activeChar.id}`;
 
     // Print options global
-    optBleed.checked = !!state.print.bleedOn;
-    optCrop.checked = !!state.print.cropMarks;
-    optBack.checked = !!state.print.addBackSheets;
+if (optBleed) optBleed.checked = !!state.print.bleedOn;
+if (optCrop)  optCrop.checked  = !!state.print.cropMarks;
+if (optBack)  optBack.checked  = !!state.print.addBackSheets;
+
 
     // Fill class select
     const classItems = Object.entries(rules.classes).map(([key, def]) => ({
@@ -632,6 +652,13 @@ function updateVaultBonusUI() {
 
     fillSelectOptions(chCommunity, communityItems, { placeholder: "Seleziona community…" });
     fillSelectOptions(chAncestry, ancestryItems, { placeholder: "Seleziona ancestry…" });
+const mixedOpt = document.createElement("option");
+mixedOpt.value = MIXED_VALUE;
+mixedOpt.textContent = "Mixed";
+chAncestry.appendChild(mixedOpt);
+
+fillSelectOptions(chAncestryMix1, ancestryItems, { placeholder: "Ancestry 1…" });
+fillSelectOptions(chAncestryMix2, ancestryItems, { placeholder: "Ancestry 2…" });
 
 
     // Assign values
@@ -639,7 +666,17 @@ function updateVaultBonusUI() {
     chLevel.value = activeChar.level || 1;
     chClass.value = activeChar.classKey || "";
     chCommunity.value = activeChar.communityId || "";
-    chAncestry.value = activeChar.ancestryId || "";
+   chAncestry.value = activeChar.mixed ? MIXED_VALUE : (activeChar.ancestryId || "");
+
+if (activeChar.mixed) {
+  mixedAncestryBox.classList.remove("hidden");
+  chAncestryMix1.value = activeChar.ancestryId || "";
+  chAncestryMix2.value = activeChar.mixedAncestryId || "";
+} else {
+  mixedAncestryBox.classList.add("hidden");
+  chAncestryMix1.value = "";
+  chAncestryMix2.value = "";
+}
 
     updateCommunityAncestryZoomButtons();
 
@@ -1070,6 +1107,8 @@ bodyDescription.innerHTML = safe;
   // 1) Mandatory in ordine fisso
   pushUnique(ch.communityId);
   pushUnique(ch.ancestryId);
+  if (ch.mixed) pushUnique(ch.mixedAncestryId);
+
 
   const classDef = getClassDef(ch.classKey);
   const subDef = getSubclassDef(ch.classKey, ch.subclassKey);
@@ -1167,6 +1206,8 @@ function setDomainView(view) {
         subclassKey: "",
         communityId: "",
         ancestryId: "",
+        mixed: false,
+mixedAncestryId: "",
         subclassPicks: { specialization: false, mastery: false },
         domainVaultBonuses: { b2: false, b5: false, b8: false },
         selectedCardIds: []
@@ -1219,7 +1260,13 @@ btnLangENG.onclick = async () => {
   }
 };
 
-  
+  if (btnZoomAncestryMix2) {
+  btnZoomAncestryMix2.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!activeChar || !activeChar.mixed || !activeChar.mixedAncestryId) return;
+    openZoomModalSingleCard(activeChar.mixedAncestryId);
+  });
+}
 
 
     btnDeleteChar.onclick = () => {
@@ -1262,7 +1309,8 @@ optVaultB8.onchange = () => {
 
 btnZoomAncestry.onclick = (e) => {
   e.preventDefault();
-  const id = chAncestry.value;
+  const id = activeChar?.ancestryId;
+
   if (!id) return;
   openZoomModalSingleCard(id);
 };
@@ -1278,7 +1326,16 @@ btnZoomAncestry.onclick = (e) => {
       activeChar.classKey = chClass.value;
       activeChar.subclassKey = chSubclass.value;
       activeChar.communityId = chCommunity.value;
-      activeChar.ancestryId = chAncestry.value;
+      if (chAncestry.value === MIXED_VALUE) {
+  activeChar.mixed = true;
+  activeChar.ancestryId = chAncestryMix1.value;
+  activeChar.mixedAncestryId = chAncestryMix2.value;
+} else {
+  activeChar.mixed = false;
+  activeChar.ancestryId = chAncestry.value;
+  activeChar.mixedAncestryId = "";
+}
+
 updateVaultBonusUI();
 
       ensureSubclassPicks(activeChar);
@@ -1341,26 +1398,74 @@ chLevel.addEventListener("change", onLevelChanged);
     };
 
     chAncestry.onchange = () => {
-      if (!activeChar) return;
-      activeChar.ancestryId = chAncestry.value;
-      saveState();
-      updateCountsAndPrintLink();
-      renderCharList();
-      updateCommunityAncestryZoomButtons();
-    };
+  if (!activeChar) return;
 
-    optBleed.onchange = () => {
-      state.print.bleedOn = !!optBleed.checked;
-      saveState();
-    };
-    optCrop.onchange = () => {
-      state.print.cropMarks = !!optCrop.checked;
-      saveState();
-    };
-    optBack.onchange = () => {
-      state.print.addBackSheets = !!optBack.checked;
-      saveState();
-    };
+  if (chAncestry.value === MIXED_VALUE) {
+    activeChar.mixed = true;
+    mixedAncestryBox.classList.remove("hidden");
+
+    // prefill comodo: metti la prima ancestry già scelta dentro mix1
+    if (activeChar.ancestryId) chAncestryMix1.value = activeChar.ancestryId;
+
+    // se era vuoto ancestryId, prendilo dal mix1
+    activeChar.ancestryId = chAncestryMix1.value || "";
+    activeChar.mixedAncestryId = chAncestryMix2.value || "";
+  } else {
+    activeChar.mixed = false;
+    activeChar.mixedAncestryId = "";
+    activeChar.ancestryId = chAncestry.value;
+    mixedAncestryBox.classList.add("hidden");
+    chAncestryMix1.value = "";
+    chAncestryMix2.value = "";
+  }
+
+  saveState();
+  updateCountsAndPrintLink();
+  renderCharList();
+  updateCommunityAncestryZoomButtons();
+};
+chAncestryMix1.onchange = () => {
+  if (!activeChar) return;
+  activeChar.mixed = true;
+  activeChar.ancestryId = chAncestryMix1.value || "";
+  saveState();
+  updateCountsAndPrintLink();
+  renderCharList();
+  updateCommunityAncestryZoomButtons();
+};
+
+chAncestryMix2.onchange = () => {
+  if (!activeChar) return;
+  activeChar.mixed = true;
+  activeChar.mixedAncestryId = chAncestryMix2.value || "";
+  saveState();
+  updateCountsAndPrintLink();
+  renderCharList();
+  updateCommunityAncestryZoomButtons();
+};
+
+
+if (optBleed) {
+  optBleed.onchange = () => {
+    state.print.bleedOn = !!optBleed.checked;
+    saveState();
+  };
+}
+
+if (optCrop) {
+  optCrop.onchange = () => {
+    state.print.cropMarks = !!optCrop.checked;
+    saveState();
+  };
+}
+
+if (optBack) {
+  optBack.onchange = () => {
+    state.print.addBackSheets = !!optBack.checked;
+    saveState();
+  };
+}
+
 
     search.oninput = () => renderDomainCards();
     filterDomain.onchange = () => renderDomainCards();

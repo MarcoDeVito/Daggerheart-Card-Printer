@@ -82,20 +82,36 @@
     </div>
   </label>
 
-  <label>
-    <span>Ancestry</span>
+ <label>
+  <span>Ancestry</span>
 
+  <div class="selectWithIcon">
+    <select id="chAncestry" required></select>
+    <button id="btnZoomAncestry" class="zoomMiniBtn" type="button" aria-label="Apri carta Ancestry">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mixedAncestryBox" class="hidden" style="margin-top:8px; display:flex; flex-direction:column; gap:8px;">
+    <select id="chAncestryMix1"></select>
     <div class="selectWithIcon">
-      <select id="chAncestry" required></select>
-      <button id="btnZoomAncestry" class="zoomMiniBtn" type="button" aria-label="Apri carta Ancestry">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
-    </div>
-  </label>
+  <select id="chAncestryMix2"></select>
+  <button id="btnZoomAncestryMix2" class="zoomMiniBtn" type="button" aria-label="Apri seconda carta Ancestry">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </button>
+</div>
+
+  </div>
+</label>
+
 </div>
 
 
@@ -140,26 +156,7 @@
   </p>
 </div>
 
-        <div class="subcard">
-          <h3>Impostazioni stampa (globali)</h3>
-          <div class="row row--3">
-            <label class="check hidden">
-              <input id="optBleed" type="checkbox" />
-              <span>Bleed 3 mm</span>
-            </label>
-            <label class="check">
-              <input id="optCrop" type="checkbox" />
-              <span>Crop marks</span>
-            </label>
-            <label class="check">
-              <input id="optBack" type="checkbox" />
-              <span>Aggiungi fogli retro</span>
-            </label>
-          </div>
-          <p class="muted small">
-            In stampa: imposta <b>Scala 100%</b> e disattiva <b>Adatta alla pagina</b>.
-          </p>
-        </div>
+
 
         <div class="row actions">
           <button id="btnDeleteChar" type="button" class="btn btn--danger">Elimina</button>

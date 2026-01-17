@@ -62,6 +62,31 @@ if (!rulesRes.ok) throw new Error(`Impossibile caricare ${rulesPath} (HTTP ${rul
     const mastMin = rules.meta.subclassUnlocks.masteryMinLevel;
 
     const printOpt = state.print || { bleedOn: true, cropMarks: true, addBackSheets: true };
+const optBleed = document.getElementById("optBleed");
+const optCrop  = document.getElementById("optCrop");
+const optBack  = document.getElementById("optBack");
+
+optBleed.checked = !!printOpt.bleedOn;
+optCrop.checked  = !!printOpt.cropMarks;
+optBack.checked  = !!printOpt.addBackSheets;
+
+optBleed.onchange = () => {
+  state.print.bleedOn = optBleed.checked;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  location.reload();
+};
+
+optCrop.onchange = () => {
+  state.print.cropMarks = optCrop.checked;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  location.reload();
+};
+
+optBack.onchange = () => {
+  state.print.addBackSheets = optBack.checked;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  location.reload();
+};
 
     // Set CSS var for bleed
     document.documentElement.style.setProperty("--bleedOn", printOpt.bleedOn ? "1" : "0");
@@ -75,6 +100,8 @@ if (!rulesRes.ok) throw new Error(`Impossibile caricare ${rulesPath} (HTTP ${rul
     // 1) Mandatory in ordine fisso
     pushUnique(ch.communityId);
     pushUnique(ch.ancestryId);
+    if (ch.mixed) pushUnique(ch.mixedAncestryId);
+
 
     // Subclass base sempre
     if (subDef?.cards?.base) pushUnique(subDef.cards.base);
