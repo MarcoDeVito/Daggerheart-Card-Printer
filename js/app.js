@@ -35,7 +35,7 @@ const btnZoomAncestry = $("btnZoomAncestry");
 
 
 
-const optMulticlass = $("optMulticlass");
+
 const multiclassBox = $("multiclassBox");
 const chMulticlassClass = $("chMulticlassClass");
 const chMulticlassDomain = $("chMulticlassDomain");
@@ -347,6 +347,8 @@ function importCharacterFromString() {
   // Normalizza campi mancanti
 if (typeof imported.multiclass !== "boolean") imported.multiclass = false;
 if (!imported.multiclassClassKey) imported.multiclassClassKey = "";
+if (!("multiclassPick" in ch)) ch.multiclassPick = "";
+if (ch.multiclassPick !== "spec" && ch.multiclassPick !== "mast") ch.multiclassPick = "";
 
 // compat vecchia: se esiste multiclassDomain string, butta via e riparti
 if (imported.multiclassDomain && imported.multiclassDomainIdx == null) {
@@ -778,22 +780,21 @@ if (activeChar.mixed) {
     updateCommunityAncestryZoomButtons();
 
 
-    // === Multiclasse: sblocco a livello 5 ===
+
+// === Multiclasse (nuova UI): consentita solo da lvl 5 ===
 const lvl = Number(activeChar.level) || 1;
 const canMulticlass = lvl >= 5;
 
-optMulticlass.disabled = !canMulticlass;
-
 if (!canMulticlass) {
   activeChar.multiclass = false;
+  activeChar.multiclassPick = ""; // "spec" | "mast" | ""
   activeChar.multiclassClassKey = "";
   activeChar.multiclassDomainIdx = null;
   multiclassBox.classList.add("hidden");
+} else {
+  multiclassBox.classList.toggle("hidden", !activeChar.multiclass);
 }
 
-optMulticlass.checked = !!activeChar.multiclass;
-if (activeChar.multiclass) multiclassBox.classList.remove("hidden");
-else multiclassBox.classList.add("hidden");
 
 
     // Subclass depends on class
@@ -849,7 +850,8 @@ renderSubclassCardsBox();
 
     const lvl = Number(ch.level);
 
-    const mkLine = ({title, card, mode, enabled, checked, onChange}) => {
+    const mkLine = ({title, card, mode, enabled, checked, onChange, mcChecked, mcDisabled, onMcChange}) => {
+
       const line = document.createElement("div");
       line.className = "subline" + (!enabled ? " disabled" : "");
 
@@ -907,25 +909,55 @@ left.appendChild(thumbWrap);
         badge.textContent = "Sempre";
         right.appendChild(badge);
       } else {
-        const label = document.createElement("label");
-        label.className = "check";
-        const cb = document.createElement("input");
-        cb.type = "checkbox";
-        cb.checked = !!checked;
-        cb.disabled = !enabled;
-        cb.onchange = () => onChange(cb.checked);
-        const span = document.createElement("span");
-        span.textContent = "Includi";
-        label.appendChild(cb);
-        label.appendChild(span);
-        right.appendChild(label);
+        // === Includi ===
+const label = document.createElement("label");
+label.className = "check";
 
-        if (!enabled) {
-          const note = document.createElement("span");
-          note.className = "muted small";
-          note.textContent = `Richiede lvl ${mode === "spec" ? specMin : mastMin}`;
-          right.appendChild(note);
-        }
+const cb = document.createElement("input");
+cb.type = "checkbox";
+cb.checked = !!checked;
+
+// se la riga non è sbloccata -> disabled
+// se multiclasse su questa riga è attiva -> disabled
+cb.disabled = !enabled || !!mcChecked;
+
+cb.onchange = () => onChange(cb.checked);
+
+const span = document.createElement("span");
+span.textContent = "Includi";
+
+label.appendChild(cb);
+label.appendChild(span);
+right.appendChild(label);
+
+// se NON sbloccata, mostra "Richiede..."
+if (!enabled) {
+  const note = document.createElement("span");
+  note.className = "muted small";
+  note.textContent = `Richiede lvl ${mode === "spec" ? specMin : mastMin}`;
+  right.appendChild(note);
+}
+
+// se sbloccata e mode è spec/mast -> mostra checkbox Multiclasse
+if (enabled && (mode === "spec" || mode === "mast")) {
+  const mcLabel = document.createElement("label");
+  mcLabel.className = "check";
+
+  const mcCb = document.createElement("input");
+  mcCb.type = "checkbox";
+  mcCb.checked = !!mcChecked;
+  mcCb.disabled = !!mcDisabled;
+
+  mcCb.onchange = () => onMcChange(mcCb.checked);
+
+  const mcSpan = document.createElement("span");
+  mcSpan.textContent = "Multiclasse";
+
+  mcLabel.appendChild(mcCb);
+  mcLabel.appendChild(mcSpan);
+  right.appendChild(mcLabel);
+}
+
       }
 
       line.appendChild(left);
@@ -943,31 +975,93 @@ left.appendChild(thumbWrap);
 
     // Specialization
     const specEnabled = lvl >= specMin;
-    subclassCards.appendChild(mkLine({
-      title: "Specializzazione",
-      card: specCard,
-      mode: "spec",
-      enabled: specEnabled,
-      checked: ch.subclassPicks.specialization,
-      onChange: (v) => {
-        ch.subclassPicks.specialization = v;
-        saveState();
+
+subclassCards.appendChild(mkLine({
+  title: "Specializzazione",
+  card: specCard,
+  mode: "spec",
+  enabled: specEnabled,
+
+  checked: ch.subclassPicks.specialization,
+  onChange: (v) => {
+    ch.subclassPicks.specialization = v;
+    saveState();
+  },
+
+  mcChecked: ch.multiclass && ch.multiclassPick === "spec",
+  mcDisabled: ch.multiclass && ch.multiclassPick === "mast", // se l’altro è attivo, questo è bloccato
+
+  onMcChange: (v) => {
+    // se attivi multiclass su spec: forza Includi spec a false
+    if (v) {
+      ch.subclassPicks.specialization = false;
+      ch.multiclass = true;
+      ch.multiclassPick = "spec";
+      multiclassBox.classList.remove("hidden");
+    } else {
+      // spegnimento multiclass solo se era quello attivo
+      if (ch.multiclassPick === "spec") {
+        ch.multiclass = false;
+        ch.multiclassPick = "";
+        ch.multiclassClassKey = "";
+        ch.multiclassDomainIdx = null;
+        multiclassBox.classList.add("hidden");
       }
-    }));
+    }
+
+    pruneSelectedDomainToEligible(ch);
+    saveState();
+    renderSubclassCardsBox();
+    renderDomainCards();
+    updateCountsAndPrintLink();
+    renderDomainFilters(ch);
+  }
+}));
+
 
     // Mastery
     const mastEnabled = lvl >= mastMin;
-    subclassCards.appendChild(mkLine({
-      title: "Maestria",
-      card: mastCard,
-      mode: "mast",
-      enabled: mastEnabled,
-      checked: ch.subclassPicks.mastery,
-      onChange: (v) => {
-        ch.subclassPicks.mastery = v;
-        saveState();
+
+subclassCards.appendChild(mkLine({
+  title: "Maestria",
+  card: mastCard,
+  mode: "mast",
+  enabled: mastEnabled,
+
+  checked: ch.subclassPicks.mastery,
+  onChange: (v) => {
+    ch.subclassPicks.mastery = v;
+    saveState();
+  },
+
+  mcChecked: ch.multiclass && ch.multiclassPick === "mast",
+  mcDisabled: ch.multiclass && ch.multiclassPick === "spec",
+
+  onMcChange: (v) => {
+    if (v) {
+      ch.subclassPicks.mastery = false;
+      ch.multiclass = true;
+      ch.multiclassPick = "mast";
+      multiclassBox.classList.remove("hidden");
+    } else {
+      if (ch.multiclassPick === "mast") {
+        ch.multiclass = false;
+        ch.multiclassPick = "";
+        ch.multiclassClassKey = "";
+        ch.multiclassDomainIdx = null;
+        multiclassBox.classList.add("hidden");
       }
-    }));
+    }
+
+    pruneSelectedDomainToEligible(ch);
+    saveState();
+    renderSubclassCardsBox();
+    renderDomainCards();
+    updateCountsAndPrintLink();
+    renderDomainFilters(ch);
+  }
+}));
+
   }
 
   function renderDomainFilters(ch) {
@@ -1333,7 +1427,7 @@ function setDomainView(view) {
         ancestryId: "",
         mixed: false,
 mixedAncestryId: "",
-multiclass: false,
+multiclassPick: "",
 multiclassClassKey: "",
 multiclassDomainIdx: null,
 
@@ -1422,27 +1516,7 @@ chMulticlassClass.onchange = () => {
   updateCountsAndPrintLink();
 };
 
-optMulticlass.onchange = () => {
-  if (!activeChar) return;
 
-  activeChar.multiclass = !!optMulticlass.checked;
-
-  if (!activeChar.multiclass) {
-    // reset completo multiclasse
-    activeChar.multiclassClassKey = "";
-    activeChar.multiclassDomainIdx = null;
-    multiclassBox.classList.add("hidden");
-  } else {
-    multiclassBox.classList.remove("hidden");
-  }
-
-  // 🔪 rimuove eventuali carte ora illegali
-  pruneSelectedDomainToEligible(activeChar);
-
-  saveState();
-  renderDomainCards();
-  updateCountsAndPrintLink();
-};
 
 
 
@@ -1565,23 +1639,29 @@ updateVaultBonusUI();
     };
 const onLevelChanged = () => {
   if (!activeChar) return;
+const lvl = Number(activeChar.level) || 1;
+
+// se scendi sotto 5: multiclass OFF
+if (lvl < 5) {
+  activeChar.multiclass = false;
+  activeChar.multiclassPick = "";
+  activeChar.multiclassClassKey = "";
+  activeChar.multiclassDomainIdx = null;
+  multiclassBox.classList.add("hidden");
+}
+
+// se scendi sotto 8 e avevi pick "mast", lo spengo (per coerenza col tuo requisito)
+if (lvl < 8 && activeChar.multiclassPick === "mast") {
+  activeChar.multiclass = false;
+  activeChar.multiclassPick = "";
+  activeChar.multiclassClassKey = "";
+  activeChar.multiclassDomainIdx = null;
+  multiclassBox.classList.add("hidden");
+}
 
   activeChar.level = Number(chLevel.value) || 1;
 
-  // === Multiclasse: sblocco a livello 5 + auto-spegnimento ===
-  const canMulticlass = activeChar.level >= 5;
-
-  if (optMulticlass) optMulticlass.disabled = !canMulticlass;
-
-  if (!canMulticlass) {
-    activeChar.multiclass = false;
-    activeChar.multiclassClassKey = "";
-    activeChar.multiclassDomainIdx = null;
-    if (multiclassBox) multiclassBox.classList.add("hidden");
-  }
-
-  if (optMulticlass) optMulticlass.checked = !!activeChar.multiclass;
-
+ 
   // resto logica livello
   clampSubclassPicksByLevel(activeChar);
   updateVaultBonusUI();

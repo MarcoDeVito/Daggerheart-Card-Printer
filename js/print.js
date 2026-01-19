@@ -57,6 +57,16 @@ if (!rulesRes.ok) throw new Error(`Impossibile caricare ${rulesPath} (HTTP ${rul
 
     const classDef = rules.classes[ch.classKey];
     const subDef = classDef?.subclasses?.[ch.subclassKey];
+    // Fallback: se la sottoclasse non esiste più nelle rules,
+// evita di rompere la stampa
+if (!subDef) {
+  console.warn(
+    "[PRINT] Subclass non trovata:",
+    ch.classKey,
+    ch.subclassKey
+  );
+}
+
 
     const specMin = rules.meta.subclassUnlocks.specializationMinLevel;
     const mastMin = rules.meta.subclassUnlocks.masteryMinLevel;
@@ -103,13 +113,37 @@ optBack.onchange = () => {
     if (ch.mixed) pushUnique(ch.mixedAncestryId);
 
 
-    // Subclass base sempre
-    if (subDef?.cards?.base) pushUnique(subDef.cards.base);
+ const lvl = Number(ch.level);
 
-    // Optional subclass (con controllo livello)
-    const lvl = Number(ch.level);
-    if (ch.subclassPicks?.specialization && lvl >= specMin) pushUnique(subDef.cards.specialization);
-    if (ch.subclassPicks?.mastery && lvl >= mastMin) pushUnique(subDef.cards.mastery);
+// Subclass base sempre 
+
+  pushUnique(subDef.cards.base);
+
+
+// Specializzazione
+if (
+  subDef &&
+  subDef.cards &&
+  subDef.cards.specialization &&
+  ch.subclassPicks?.specialization &&
+  lvl >= specMin &&
+  !(ch.multiclass && ch.multiclassPick === "spec")
+) {
+  pushUnique(subDef.cards.specialization);
+}
+
+// Maestria
+if (
+  subDef &&
+  subDef.cards &&
+  subDef.cards.mastery &&
+  ch.subclassPicks?.mastery &&
+  lvl >= mastMin &&
+  !(ch.multiclass && ch.multiclassPick === "mast")
+) {
+  pushUnique(subDef.cards.mastery);
+}
+
 
     // 2) Domain selected, ordinato per: ordine domini classe -> level -> id
     const selected = new Set(Array.isArray(ch.selectedCardIds) ? ch.selectedCardIds : []);
