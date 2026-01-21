@@ -565,6 +565,7 @@ input,select{
   body{background:#fff}
  .printedcardborder{
     border:0px solid var(--border);
+    border-radius: 0px;
   }
 
   .sheet{ overflow: visible !important; }
