@@ -2,8 +2,8 @@ import json
 import re
 from pathlib import Path
 
-CARDS_PATH = Path("cards.json")
-TEMPLATES_PATH = Path("templates.json")
+CARDS_PATH = Path("cardsITA.json")
+TEMPLATES_PATH = Path("templates.it.json")
 
 OUT_TEMPLATES = Path("templates_with_realcardid.json")
 OUT_REPORT = Path("match_report.json")

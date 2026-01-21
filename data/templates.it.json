@@ -8,8 +8,7 @@
       "description": "I clank sono esseri meccanici senzienti costruiti con\ndiversi materiali, tra cui metallo, legno e pietra.",
       "content": "**_Scopo Preciso:_** Decidete chi vi ha creato e per quale scopo. Alla creazione del personaggio, scegliete una delle vostre Esperienze che meglio si allinea con tale finalità e guadagnate bonus +1 permanente a essa.\n\n**_Efficiente:_** Quando effettuate un riposo breve, potete scegliere una mossa di riposo lungo invece che una mossa di riposo breve.",
       "artist": "Mat Wilma",
-      "cardId": "DH Core 056/270",
-      "realcardid": "056"
+      "cardId": "DH Core 056/270"
     },
     {
       "id": "ancestry-drakona",
@@ -19,8 +18,7 @@
       "description": "I drakona assomigliano a draghi senza ali in forma umanoide e possiedono un potente soffio elementale.",
       "content": "**_Scaglie_**: Le scaglie fungono da protezione naturale. Quando subite danni Gravi, potete **marcare uno Stress** per subire 1 Punto Ferita in meno.\n\n**_Soffio Elementale:_** Scegliete un elemento per il vostro Soffio Elementale (come elettricità, fuoco o ghiaccio). Potete rivolgere il vostro soffio contro un bersaglio o un gruppo di bersagli entro distanza Prossima, trattandolo come un'arma basata sull'Istinto che infligge **d8** danni magici applicando la vostra Competenza.",
       "artist": "Mat Wilma",
-      "cardId": "DH Core 057/270",
-      "realcardid": "057"
+      "cardId": "DH Core 057/270"
     },
     {
       "id": "ancestry-dwarf",
@@ -30,8 +28,7 @@
       "description": "I nani sono facilmente riconoscibili come umanoidi di bassa statura con ossatura quadrata, muscolatura densa e hanno folto pelo corporeo.",
       "content": "I nani sono facilmente riconoscibili come umanoidi di bassa statura con ossatura quadrata, muscolatura densa e hanno folto pelo corporeo.\n**_Pelle Dura:_** Quando subite un danno Minore, potete **marcare 2 Stress** invece di subire un Punto Ferita.\n\n**_Resistenza Aumentata:_** **Spendete 3 Speranze** per dimezzare i danni fisici in arrivo.",
       "artist": "Mat Wilma",
-      "cardId": "DH Core 058/270",
-      "realcardid": "058"
+      "cardId": "DH Core 058/270"
     },
     {
       "id": "ancestry-elf",
@@ -41,8 +38,7 @@
       "description": "Gli elfi sono in genere umanoidi alti, con orecchie a punta e sensi molto acuti.",
       "content": "**_Reazione Istintiva:_** **Marcate uno Stress** per ottenere vantaggio in un tiro reazione.\n\n**_Dormiveglia:_** Durante un riposo, potete cadere in trance per scegliere una mossa di interludio aggiuntiva.",
       "artist": "Mat Wilma",
-      "cardId": "DH Core 059/270",
-      "realcardid": "059"
+      "cardId": "DH Core 059/270"
     },
     {
       "id": "ancestry-faerie",
@@ -52,8 +48,7 @@
       "description": "I fatati sono creature umanoidi alate con tratti da insetto.",
       "content": "**_Portafortuna:_** Una volta per sessione, dopo che voi o un alleato consenziente entro distanza Ravvicinata effettuate un tiro azione, potete **spendere 3 Speranze** per rilanciare i Dadi Dualità.\n\n**_Ali:_** Potete volare. Mentre siete in volo, potete **marcare uno Stress** dopo che un avversario ha effettuato un attacco nei vostri confronti per ottenere bonus +2 alla vostra Evasione contro quell'attacco.",
       "artist": "Anthony Jones",
-      "cardId": "DH Core 060/270",
-      "realcardid": "060"
+      "cardId": "DH Core 060/270"
     },
     {
       "id": "ancestry-firbolg",
@@ -63,8 +58,7 @@
       "description": "I firbolg sono umanoidi dai tratti bovini, riconoscibili per il naso largo e le orecchie lunghe e cadenti.",
       "content": "**_Carica:_** Quando riuscite in un Tiro Agilità per spostarvi da distanza Lontana o Remota a distanza di Mischia con uno o più bersagli, potete **marcare uno Stress** per infliggere **1d12** danni fisici a tutti i bersagli entro distanza di Mischia.\n\n**_Irremovibile:_** Quando dovreste marcare uno Stress, tirate un **d6**. Con un risultato di 6, non dovete marcarlo.",
       "artist": "Anthony Jones",
-      "cardId": "DH Core 061/270",
-      "realcardid": "061"
+      "cardId": "DH Core 061/270"
     },
     {
       "id": "ancestry-fungril",
@@ -74,8 +68,7 @@
       "description": "I fungril assomigliano a funghi umanoidi.",
       "content": "**_Cerchio dei Fungril:_** Effettuate un **Tiro Istinto (12)** per utilizzare la vostra struttura micellare per comunicare con altri fungril. In caso di successo, potete comunicare a qualsiasi distanza.\n\n**_Connessione con i Morti:_** Toccando un cadavere morto di recente, potete **marcare uno Stress** per estrarre dal cadavere un ricordo legato a un'emozione o sensazione specifica a vostra scelta.",
       "artist": "Anthony Jones",
-      "cardId": "DH Core 062/270",
-      "realcardid": "062"
+      "cardId": "DH Core 062/270"
     },
     {
       "id": "ancestry-faun",
@@ -85,8 +78,7 @@
       "description": "I fauni assomigliano a capre, pecore, stambecchi o camosci umanoidi con corna ricurve, pupille quadrate e zoccoli fessi.",
       "content": "**_Balzo Caprino:_** Potete saltare entro qualsiasi punto a distanza Ravvicinata come se usaste un normale movimento, il che vi consente di superare ostacoli, saltare attraverso spazi vuoti o scalare barriere con facilità.\n\n**_Calcio:_** Quando riuscite a sferrare un attacco contro un bersaglio in Mischia, potete **marcare uno Stress** per scalciare via il bersaglio o voi stessi, infliggendo **2d6** danni aggiuntivi e spostando voi o il bersaglio in qualsiasi punto entro una distanza Prossima.",
       "artist": "Jessketchin",
-      "cardId": "DH Core 063/270",
-      "realcardid": "063"
+      "cardId": "DH Core 063/270"
     },
     {
       "id": "ancestry-galapa",
@@ -96,8 +88,7 @@
       "description": "I galapa assomigliano a tartarughe antropomorfe con grandi gusci a cupola in cui possono rinchiudersi.",
       "content": "**_Guscio:_** Guadagnate un bonus alle soglie di danno pari alla vostra Competenza.\n\n**_Rinchiudersi:_** **Marcate uno Stress** per ritrarvi nel vostro guscio. Quando siete nel guscio, guadagnate resistenza ai danni fisici, ma avete svantaggio ai tiri azione e non potete muovervi.",
       "artist": "Jessketchin",
-      "cardId": "DH Core 064/270",
-      "realcardid": "064"
+      "cardId": "DH Core 064/270"
     },
     {
       "id": "ancestry-giant",
@@ -107,8 +98,7 @@
       "description": "I giganti sono umanoidi imponenti con spalle larghe, braccia lunghe e da uno a tre occhi.",
       "content": "**_Resistenza:_** Guadagnate una casella aggiuntiva nei Punti Ferita alla creazione del personaggio.\n\n**_Raggiungere:_** Potete considerare qualsiasi arma, abilità, incantesimo o altra caratteristica che abbia una portata di Mischia come se avesse invece una portata Prossima.",
       "artist": "Juan S. Almencion",
-      "cardId": "DH Core 065/270",
-      "realcardid": "065"
+      "cardId": "DH Core 065/270"
     },
     {
       "id": "ancestry-goblin",
@@ -118,8 +108,7 @@
       "description": "I goblin sono piccoli umanoidi facilmente riconoscibili per i loro grandi occhi e le ampie orecchie membranose.",
       "content": "**_Piè Fermo:_** Ignorate qualsiasi svantaggio sui Tiri Agilità.\n\n**_Senso del Pericolo:_** Una volta per riposo, **marcate uno Stress** per costringere un avversario a ripetere un attacco contro di voi o contro un alleato entro una distanza Prossima.",
       "artist": "Anthony Jones",
-      "cardId": "DH Core 066/270",
-      "realcardid": "066"
+      "cardId": "DH Core 066/270"
     },
     {
       "id": "ancestry-halfling",
@@ -129,8 +118,7 @@
       "description": "Gli halfling sono umanoidi di piccole dimensioni, con grandi piedi pelosi e orecchie prominenti e arrotondate.",
       "content": "**_Quadrifoglio:_** All'inizio di ogni sessione, tutti i membri del gruppo di cui fate parte (voi compresi) ottengono una Speranza.\n\n**_Bussola Interna:_** Quando ottenete un 1 sul Dado Speranza, potete rilanciarlo.",
       "artist": "Anthony Jones",
-      "cardId": "DH Core 067/270",
-      "realcardid": "067"
+      "cardId": "DH Core 067/270"
     },
     {
       "id": "ancestry-human",
@@ -140,8 +128,7 @@
       "description": "Gli umani sono facilmente riconoscibili per le loro mani abili, le orecchie arrotondate e una struttura corporea naturalmente adatta a essere resistente.",
       "content": "**_Vigore:_** Guadagnate una casella Stress aggiuntiva alla creazione del personaggio.\n\n**_Versatilità:_** Quando fallite un tiro che utilizza una delle vostre Esperienze, potete **marcare uno Stress** per ripetere il tiro.",
       "artist": "Fernanda Suarez",
-      "cardId": "DH Core 068/270",
-      "realcardid": "068"
+      "cardId": "DH Core 068/270"
     },
     {
       "id": "ancestry-infernis",
@@ -151,8 +138,7 @@
       "description": "Gli infernis sono umanoidi che possiedono denti canini affilati, orecchie a punta e corna. Sono i discendenti dei demoni delle Cerchie Infere.",
       "content": "**_Senzapaura:_** Quando tirate con Paura, potete **marcare 2 Stress** per trasformarlo in un tiro con Speranza.\n\n**_Volto Spaventoso:_** Avete vantaggio ai tiri per intimidire le creature ostili.",
       "artist": "Mat Wilma",
-      "cardId": "DH Core 069/270",
-      "realcardid": "069"
+      "cardId": "DH Core 069/270"
     },
     {
       "id": "ancestry-katari",
@@ -162,8 +148,7 @@
       "description": "I katàri sono umanoidi felini con artigli retrattili, pupille a fessura verticale e orecchie alte e triangolari.",
       "content": "**_Istinti Felini:_** Quando effettuate un Tiro Agilità, potete **spendere 2 Speranze** per rilanciare il Dado Speranza.\n\n**_Artigli Retrattili:_** Effettuate un **Tiro Agilità** per graffiare un bersaglio in Mischia. In caso di successo, il bersaglio diventa temporaneamente _Vulnerabile_.",
       "artist": "Hendry Iwanaga",
-      "cardId": "DH Core 070/270",
-      "realcardid": "070"
+      "cardId": "DH Core 070/270"
     },
     {
       "id": "ancestry-orc",
@@ -173,8 +158,7 @@
       "description": "Gli orchi sono umanoidi facilmente riconoscibili per i loro tratti spigolosi e per le zanne simili a quelle di un cinghiale che sporgono dalla mascella inferiore.",
       "content": "**_Robusto:_** Quando vi resta 1 Punto Ferita, gli attacchi nei vostri confronti hanno svantaggio.\n\n**_Zanne:_** Quando riuscite in un attacco contro un bersaglio in Mischia, potete **spendere una Speranza** per sventrare il bersaglio con le zanne, infliggendo **1d6** danni extra.",
       "artist": "Simon Pape",
-      "cardId": "DH Core 071/270",
-      "realcardid": "071"
+      "cardId": "DH Core 071/270"
     },
     {
       "id": "ancestry-ribbet",
@@ -184,8 +168,7 @@
       "description": "I ribbet assomigliano a rane antropomorfe con occhi sporgenti e mani e piedi palmati.",
       "content": "**_Anfibio:_** Potete respirare e muovervi naturalmente sott'acqua.\n\n**_Lingualunga:_** Potete usare la lingua lunga per afferrare oggetti entro una distanza Ravvicinata. **Marcate uno Stress** per usare la lingua come un'arma Ravvicinata basata su Astuzia che infligge **d12** danni fisici applicando la vostra Competenza.",
       "artist": "Leesha Hannigan",
-      "cardId": "DH Core 072/270",
-      "realcardid": "072"
+      "cardId": "DH Core 072/270"
     },
     {
       "id": "ancestry-simiah",
@@ -195,8 +178,7 @@
       "description": "I simiah assomigliano a scimmie antropomorfe con arti lunghi e piedi prensili.",
       "content": "**_Scalatore Naturale:_** Avete vantaggio sui Tiri Agilità che riguardano l'equilibrio e l'arrampicata.\n\n**_Scioltezza:_** Guadagnate bonus +1 permanente all'Evasione alla creazione del personaggio.",
       "artist": "Jessketchin",
-      "cardId": "",
-      "realcardid": "055"
+      "cardId": ""
     }
   ],
   "community": [
@@ -208,8 +190,7 @@
       "description": "Far parte di una comunità privilegiata significa essere abituati a una vita di eleganza, opulenza e prestigio all'interno delle alte sfere della società.",
       "content": "**_Privilegio:_** Avete vantaggio nei tiri per interagire con la nobiltà, contrattare un prezzo o sfruttare la vostra reputazione per ottenere ciò che volete.",
       "artist": "Julia Metzger",
-      "cardId": "DH Core 073/270",
-      "realcardid": "073"
+      "cardId": "DH Core 073/270"
     },
     {
       "id": "community-loreborne",
@@ -219,8 +200,7 @@
       "description": "Far parte di una comunità di eruditi significa appartenere a una cultura che dà priorità alla conoscenza e alle capacità politiche.",
       "content": "**_Acculturato:_** Avete vantaggio ai tiri che riguardano la storia, la cultura o l'orientamento politico di un individuo o di una regione.",
       "artist": "Juan Gutierrez",
-      "cardId": "DH Core 074/270",
-      "realcardid": "074"
+      "cardId": "DH Core 074/270"
     },
     {
       "id": "community-orderborne",
@@ -230,8 +210,7 @@
       "description": "Far parte di una comunità austera significa provenire da una cultura che si concentra sulla disciplina o sulla fede e che sostiene con forza una serie di principi che riflettono la propria esperienza.",
       "content": "**_Dedizione:_** Annotate tre detti o valori che la vostra educazione vi ha trasmesso. Una volta per riposo, quando descrivete come incarnate questi principi attraverso l'azione che state compiendo, potete tirare un **d20** come dado Speranza.",
       "artist": "Rafater",
-      "cardId": "DH Core 075/270",
-      "realcardid": "075"
+      "cardId": "DH Core 075/270"
     },
     {
       "id": "community-ridgeborne",
@@ -241,8 +220,7 @@
       "description": "Far parte di una comunità montanara significa chiamare casa le cime rocciose e i dirupi aguzzi delle alte vette.",
       "content": "**_Costanza:_** Avete vantaggio ai tiri per attraversare scogliere e sporgenze pericolose, orientarvi in ambienti difficili e sfruttare le vostre conoscenze di sopravvivenza.",
       "artist": "Daarken",
-      "cardId": "DH Core 076/270",
-      "realcardid": "076"
+      "cardId": "DH Core 076/270"
     },
     {
       "id": "community-seaborne",
@@ -252,8 +230,7 @@
       "description": "Far parte di una comunità marittima significa vivere su o vicino a un grande specchio d'acqua.",
       "content": "**_Sentire la Marea:_** Potete percepire il flusso e il riflusso della vita. Quando tirate con Paura, posizionate un gettone sulla carta comunità. Potete posizionare un numero massimo di gettoni pari al vostro livello. Prima di effettuare un tiro azione, potete spendere un numero qualsiasi di questi gettoni per ottenere bonus +1 al tiro per ogni gettone speso. Alla fine di ogni sessione, rimuovete tutti i gettoni non spesi.",
       "artist": "Sam Key",
-      "cardId": "DH Core 077/270",
-      "realcardid": "077"
+      "cardId": "DH Core 077/270"
     },
     {
       "id": "community-slyborne",
@@ -263,8 +240,7 @@
       "description": "Far parte di una comunità dei bassifondi significa appartenere a un gruppo che opera al di fuori della legge e che comprende ogni sorta di criminali, truffatori e artisti del raggiro.",
       "content": "**_Furfante:_** Avete vantaggio ai tiri per negoziare con i criminali, per riconoscere le menzogne o per trovare un posto sicuro dove nascondervi.",
       "artist": "Paul Scott Canavan",
-      "cardId": "DH Core 078/270",
-      "realcardid": "078"
+      "cardId": "DH Core 078/270"
     },
     {
       "id": "community-underborne",
@@ -274,22 +250,18 @@
       "description": "Far parte di una comunità sotterranea significa appartenere a una società che si è sviluppata sotto la superficie.",
       "content": "**_Vivere nel Crepuscolo:_** Quando vi trovate in un'area in penombra o nell'oscurità, avete vantaggio ai tiri per nascondersi, indagare o percepire i dettagli.",
       "artist": "Irina Nordsol",
-      "cardId": "DH Core 079/270",
-      "realcardid": "079"
+      "cardId": "DH Core 079/270"
     },
     {
       "id": "community-wanderborne",
       "type": "COMMUNITY",
       "name": "Nomade",
       "image": "/v1/card-header-images/community/wanderborne.webp",
-      "thumbnailImageStyle": {
-        "objectPosition": "left"
-      },
+      "thumbnailImageStyle": { "objectPosition": "left" },
       "description": "Far parte di una comunità nomade significa aver condotto una vita errante, rinunciando a una casa permanente e sperimentando un'ampia varietà di culture.",
       "content": "**_Sacca da Viaggio:_** Aggiungete una Sacca da Viaggio al vostro inventario. Una volta per sessione, potete **spendere una Speranza** per rovistare nella sacca in cerca di un oggetto comune utile per la situazione. Discutete con il GM per scoprire quale oggetto state per estrarre.",
       "artist": "Paul Scott Canavan",
-      "cardId": "DH Core 080/270",
-      "realcardid": "080"
+      "cardId": "DH Core 080/270"
     },
     {
       "id": "community-wildborne",
@@ -299,8 +271,7 @@
       "description": "Far parte di una comunità forestale significa vivere nel profondo dei boschi.",
       "content": "**_Piè Leggero:_** Il vostro movimento è naturalmente silenzioso. Avete vantaggio ai tiri per muovervi senza essere uditi.",
       "artist": "Andreas Rocha",
-      "cardId": "DH Core 081/270",
-      "realcardid": "081"
+      "cardId": "DH Core 081/270"
     }
   ],
   "subclass": [
@@ -315,10 +286,7 @@
         "specialization": "**_Aiuto Incantato:_** Potete potenziare la magia altrui grazie alla vostra essenza. Quando Aiutate un Alleato con un Tiro Incantesimo, potete tirare un **d8** come dado vantaggio. Una volta per riposo lungo, dopo che un alleato ha effettuato un Tiro Incantesimo con il vostro aiuto, potete scambiare i risultati dei suoi Dadi Dualità.",
         "mastery": "**_Infusione Arcana:_** Potete raccogliere energia magica per potenziare le vostre capacità. Quando subite un danno magico, diventate _Infusi_. In alternativa, potete **spendere 2 Speranze** per diventare _Infusi_. Quando effettuate con successo un attacco che infligge danni magici mentre siete _Infusi_, potete rilasciare tale condizione per ottenere bonus +10 al tiro di danno o bonus +3 alla Difficoltà del tiro reazione che il bersaglio deve superare per contrastare l'incantesimo. La condizione di _Infusione_ si interrompe al prossimo riposo lungo."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "INSTINCT",
       "primaryDomain": "ARCANA",
       "secondaryDomain": "MIDNIGHT",
@@ -337,10 +305,7 @@
         "specialization": "**_Scudo della Natura:_** Potete invocare il vostro elemento per proteggervi dai danni. Quando un tiro attacco contro di voi ha successo, potete **marcare uno Stress** e descrivere come usate il vostro elemento per difendervi. Quando lo fate, tirate un **d6** e aggiungete il risultato alla vostra Evasione contro l'attacco.",
         "mastery": "**_Trascendenza:_** Una volta per riposo lungo, potete trasformarvi in una manifestazione fisica del vostro elemento. Quando lo fate, descrivete la vostra trasformazione e ottenete a vostra scelta due dei seguenti benefici, fino al riposo successivo:\n- Bonus +4 alla soglia di danno Grave\n- Bonus +1 a un tratto del personaggio a scelta\n- Bonus +1 alla Competenza\n- Bonus +2 all'Evasione"
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "INSTINCT",
       "primaryDomain": "ARCANA",
       "secondaryDomain": "MIDNIGHT",
@@ -395,10 +360,7 @@
         "specialization": "**_Eloquente:_** Le vostre parole toccanti aumentano il morale. Una volta per sessione, quando incoraggiate un alleato, potete scegliere una delle seguenti opzioni:\n- Permettere di trovare un oggetto o uno strumento comune di cui ha bisogno.\n- Aiutare un Alleato senza spendere Speranza.\n- Assegnare una mossa aggiuntiva in un interludio durante il prossimo riposo.",
         "mastery": "**_Poesia Epica:_** Il Dado A Raccolta aumenta a **d10**. Inoltre, quando Aiutate un Alleato, potete narrare il momento come se steste scrivendo la storia del suo eroismo in un libro di memorie. Quando lo fate, tirate un **d10** come dado vantaggio."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "PRESENCE",
       "primaryDomain": "GRACE",
       "secondaryDomain": "CODEX",
@@ -417,10 +379,7 @@
         "specialization": "**_Maestro:_** Le vostre canzoni accendono il coraggio di chi le ascolta. Quando assegnate un Dado A Raccolta a un alleato, questo può guadagnare una Speranza o rimuovere uno Stress.",
         "mastery": "**_Virtuoso:_** Siete tra i più grandi musicisti mai vissuti e la vostra abilità è illimitata. Potete eseguire ogni canzone del privilegio \"Musico Eccezionale\" due volte invece di una sola per riposo lungo."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "PRESENCE",
       "primaryDomain": "GRACE",
       "secondaryDomain": "CODEX",
@@ -439,10 +398,7 @@
         "specialization": "**_Aura Elementale:_** Una volta per riposo, mentre _Incanalate_, potete ammantarvi di un'aura corrispondente al vostro elemento. L'aura colpisce i bersagli entro distanza Ravvicinata finché non smettete di _Incanalare_.\n- **_Fuoco:_** Quando un avversario subisce 1 o più Punti Ferita, deve marcare anche uno Stress.\n- **_Terra:_** Gli alleati ottengono bonus +1 alla Forza.\n- **_Acqua:_** Quando un avversario vi infligge un danno, potete **marcare uno Stress** per spostarlo ovunque entro una distanza Prossima da dove si trova.\n- **_Aria:_** Quando voi o un alleato subite danni da un attacco non in Mischia, riducete i danni di **1d8**.",
         "mastery": "**_Dominio Elementale:_** Incarnate ulteriormente il vostro elemento. Mentre _Incanalate_, ottenete il beneficio corrispondente:\n- **_Fuoco:_** Bonus +1 alla Competenza per gli attacchi e gli incantesimi che infliggono danni.\n- **_Terra:_** Quando subite Punti Ferita, tirate un **d6** per ogni Punto Ferita subito. Per ogni risultato di 6, riducete di 1 il numero di Punti Ferita subiti.\n- **_Acqua:_** Quando un attacco contro di voi ha successo, potete **marcare uno Stress** per rendere l'attaccante temporaneamente _Vulnerabile_.\n- **_Aria:_** Guadagnate bonus +1 all'Evasione e potete volare."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "INSTINCT",
       "primaryDomain": "SAGE",
       "secondaryDomain": "ARCANA",
@@ -461,10 +417,7 @@
         "specialization": "**_Onda Rigenerante:_** Con il privilegio \"Rigenerazione\" potete bersagliare creature entro distanza Prossima.\n\n**_Protezione del Guardiano:_** Una volta per riposo lungo, **spendete 2 Speranze** per curare 2 Punti Ferita a **1d4** alleati a distanza Ravvicinata.",
         "mastery": "**Difensore:** La vostra trasformazione animale incarna uno spirito protettore della guarigione e del rinnovamento. Quando siete in Forma Bestiale e un alleato entro distanza Ravvicinata subisce 2 o più Punti Ferita, potete **marcare uno Stress** per ridurre di 1 il numero di Punti Ferita subiti."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "INSTINCT",
       "primaryDomain": "SAGE",
       "secondaryDomain": "ARCANA",
@@ -519,10 +472,7 @@
         "specialization": "**_Predatore Furtivo:_** Quando il vostro Focus compie un attacco contro di voi, ottenete bonus +2 alla vostra Evasione contro tale attacco.",
         "mastery": "**_Predatore Dominante:_** Prima di effettuare un tiro attacco contro il vostro Focus, potete **spendere una Speranza**. Se l'attacco ha successo, rimuovete una Paura dalla riserva di Paura del GM."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "AGILITY",
       "primaryDomain": "BONE",
       "secondaryDomain": "SAGE",
@@ -541,10 +491,7 @@
         "specialization": "**_Addestramento Intensivo:_** Scegliete un'ulteriore opzione di aumento di livello per il vostro compagno.\n\n**_Uniti nella Battaglia:_** Quando un avversario vi attacca mentre si trova in Mischia con il vostro compagno, guadagnate bonus +2 alla vostra Evasione contro l'attacco.",
         "mastery": "**_Addestramento Avanzato:_** Scegliete due opzioni di aumento di livello aggiuntive per il compagno.\n\n**_Amico Fedele:_** Una volta per riposo lungo, quando il danno di un attacco marcherebbe l'ultimo Stress del vostro compagno oppure subireste il vostro ultimo Punto Ferita, ed entrambi siete entro distanza Prossima, voi o il vostro compagno potete accorrere al fianco dell'altro e marcare quello Stress o subire quel danno."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "AGILITY",
       "primaryDomain": "BONE",
       "secondaryDomain": "SAGE",
@@ -563,10 +510,7 @@
         "specialization": "**_Amici Ovunque:_** Una volta per sessione, è possibile chiamare brevemente in aiuto un contatto dalla dubbia fama. Scegliete uno dei seguenti benefici e descrivete cosa lo spinga ad aiutarvi in questo momento:\n- Vi fornisce 1 manciata d'oro, uno strumento unico o un oggetto normale che la situazione richiede.\n- Al prossimo tiro azione, il suo aiuto concede bonus +3 al risultato del Dado Speranza o Paura.\n- La prossima volta che infliggete un danno, attaccherà a distanza lo stesso bersaglio da una posizione nascosta, aggiungendo **2d8** al vostro tiro per i danni.",
         "mastery": "**_Supporto Fidato:_** Potete utilizzare il privilegio \"Amici Ovunque\" tre volte per sessione. Le seguenti opzioni si aggiungono all'elenco dei benefici che potete scegliere quando utilizzate questo privilegio:\n- Quando subite 1 o più Punti Ferita, può accorrere per proteggervi, riducendo di 1 i Punti Ferita subiti.\n- Quando effettuate un Tiro Presenza in una conversazione, vi sostiene. Potete tirare un **d20** come Dado Speranza."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "FINESSE",
       "primaryDomain": "MIDNIGHT",
       "secondaryDomain": "GRACE",
@@ -585,10 +529,7 @@
         "specialization": "**_Nube di Tenebra:_** Effettuate un **Tiro Incantesimo (15)**. Se riuscite, create una nube oscura temporanea che copre ogni cosa fino a distanza Ravvicinata. Chiunque si trovi all'interno di questa nube non può vedere al di fuori di essa, e chiunque si trovi al di fuori di essa non può vedere al suo interno. Siete considerati _Ammantati_ da qualsiasi avversario per il quale la nube blocca la linea di vista.\n\n**_Adrenalina:_** Quando siete _Vulnerabili_, aggiungete il vostro livello ai tiri dei danni.",
         "mastery": "**_Ombra Sfuggente:_** Guadagnate bonus +1 permanente all'Evasione. Potete usare il vostro privilegio \"Passo d'Ombra\" per muovervi fino a distanza Remota.\n\n**_Svanire:_** **Marcate uno Stress** per diventare _Ammantati_ in qualsiasi momento. Quando vi _Ammantate_ con questo privilegio, eliminate automaticamente la condizione di _Trattenuto_, se presente. Rimanete _Ammantati_ in questo modo finché non tirate con Paura o fino al prossimo riposo."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "FINESSE",
       "primaryDomain": "MIDNIGHT",
       "secondaryDomain": "GRACE",
@@ -607,10 +548,7 @@
         "specialization": "**_Volto Celeste:_** Il vostro volto soprannaturale incute timore e paura. Quando siete in volo, avete vantaggio sui Tiri Presenza. Quando avete successo con Speranza in un Tiro Presenza, potete rimuovere una Paura dalla riserva di Paura del GM invece di guadagnare Speranza.",
         "mastery": "**_Ascendente:_** Guadagnate bonus +4 permanente alla soglia dei danni Gravi.\n\n**_Potere degli Dèi:_** Quando siete in volo grazie al privilegio \"Ali di Luce\", infliggete **1d12** danni extra invece di 1d8."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "STRENGTH",
       "primaryDomain": "SPLENDOR",
       "secondaryDomain": "VALOR",
@@ -629,10 +567,7 @@
         "specialization": "**_Devoto:_** Quando tirate i Dadi Preghiera, potete tirare un dado aggiuntivo e scartare il risultato più basso. Inoltre, potete usare il privilegio \"Tocco Ristoratore\" due volte invece di una per riposo lungo.",
         "mastery": "**_Risonanza Celestiale:_** Quando tirate i danni per la vostra \"Arma Animata\", se i risultati dei dadi coincidono, raddoppiate il valore di ogni dado corrispondente. Ad esempio, se ottenete due 5, questi contano come due 10."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "STRENGTH",
       "primaryDomain": "SPLENDOR",
       "secondaryDomain": "VALOR",
@@ -651,10 +586,7 @@
         "specialization": "**_Esperto:_** Prendete una carta dominio aggiuntiva del vostro livello o di livello inferiore da un dominio a cui avete accesso.\n\n**_Memoria Perfetta:_** Una volta per riposo, quando richiamate una carta dominio nella vostra riserva, potete ridurre di 1 il suo Costo di Richiamo.",
         "mastery": "**_Brillante:_** Prendete una carta dominio aggiuntiva del vostro livello o di livello inferiore da un dominio a cui avete accesso.\n\n**_Padronanza Affinata:_** Quando Utilizzate un'Esperienza, tirate un **d6**. Con un risultato di 5 o superiore, potete utilizzarla senza spendere Speranza."
       },
-      "hideSpellcastTraitOn": [
-        "specialization",
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["specialization", "mastery"],
       "spellcastTrait": "KNOWLEDGE",
       "primaryDomain": "CODEX",
       "secondaryDomain": "SPLENDOR",
@@ -673,9 +605,7 @@
         "specialization": "**_Evoca Scudo:_** Potete evocare una barriera protettiva di magia. Finché avete almeno 2 Speranze, aggiungete la vostra Competenza alla vostra Evasione.\n\n**_Alimentato dalla Paura:_** Il danno magico addizionale della caratteristica \"Affronta la Tua Paura\" aumenta a **2d10**.",
         "mastery": "**_Prosperare nel Caos:_** Quando un attacco va a segno, potete **marcare uno Stress** dopo aver tirato i danni per costringere il bersaglio a subire un Punto Ferita aggiuntivo.\n\n**_Non Conoscerai la Paura:_** Il danno magico extra della caratteristica \"Affronta la Tua Paura\" aumenta a **3d10**."
       },
-      "hideSpellcastTraitOn": [
-        "mastery"
-      ],
+      "hideSpellcastTraitOn": ["mastery"],
       "spellcastTrait": "KNOWLEDGE",
       "primaryDomain": "CODEX",
       "secondaryDomain": "SPLENDOR",
@@ -696,8 +626,7 @@
       "level": 1,
       "primaryDomain": "ARCANA",
       "recallCost": 0,
-      "domainType": "SPELL",
-      "realcardid": "082"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-unleash-chaos",
@@ -710,8 +639,7 @@
       "level": 1,
       "primaryDomain": "ARCANA",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "083"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-wall-walk",
@@ -720,15 +648,12 @@
       "name": "Camminare sui Muri",
       "content": "**Spendete una Speranza** per consentire a una creatura che potete toccare di arrampicarsi su muri e soffitti con la stessa facilità con cui cammina sul terreno. Questo effetto dura fino alla fine della scena o finché non lanciate nuovamente Camminare sui Muri.",
       "image": "/v1/card-header-images/domains/arcana/wall-walk.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -40px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -40px)" },
       "artist": "Julia Metzger",
       "level": 1,
       "primaryDomain": "ARCANA",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "084"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-cinder-grasp",
@@ -741,8 +666,7 @@
       "level": 2,
       "primaryDomain": "ARCANA",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "085"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-floating-eye",
@@ -755,8 +679,7 @@
       "level": 2,
       "primaryDomain": "ARCANA",
       "recallCost": 0,
-      "domainType": "SPELL",
-      "realcardid": "086"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-counterspell",
@@ -769,8 +692,7 @@
       "level": 3,
       "primaryDomain": "ARCANA",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "087"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-flight",
@@ -779,15 +701,12 @@
       "name": "Volare",
       "content": "Effettuate un **Tiro Incantesimo (15)**. In caso di successo, mettete su questa carta un numero di gettoni pari al valore di Agilità (minimo 1). Quando effettuate un tiro azione in volo, rimuovete un gettone da questa carta. Dopo che l'azione che consuma l'ultimo gettone è stata risolta, scendete a terra direttamente sotto di voi.",
       "image": "/v1/card-header-images/domains/arcana/flight.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -20px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -20px)" },
       "artist": "Samantha Kung",
       "level": 3,
       "primaryDomain": "ARCANA",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "088"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-blink-out",
@@ -800,8 +719,7 @@
       "level": 4,
       "primaryDomain": "ARCANA",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "089"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-preservation-blast",
@@ -814,8 +732,7 @@
       "level": 4,
       "primaryDomain": "ARCANA",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "090"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-chain-lightning",
@@ -828,8 +745,7 @@
       "level": 5,
       "primaryDomain": "ARCANA",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "091"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-premonition",
@@ -842,8 +758,7 @@
       "level": 5,
       "primaryDomain": "ARCANA",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "092"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-rift-walker",
@@ -856,8 +771,7 @@
       "level": 6,
       "primaryDomain": "ARCANA",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "093"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-telekinesis",
@@ -870,8 +784,7 @@
       "level": 6,
       "primaryDomain": "ARCANA",
       "recallCost": 0,
-      "domainType": "SPELL",
-      "realcardid": "094"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-arcana-touched",
@@ -884,8 +797,7 @@
       "level": 7,
       "primaryDomain": "ARCANA",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "095"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-cloaking-blast",
@@ -894,15 +806,12 @@
       "name": "Esplosione Ammantante",
       "content": "Quando effettuate con successo un **Tiro Incantesimo** per lanciare un incantesimo diverso, potete **spendere una Speranza** per diventare _Ammantati_. Mentre siete _Ammantati_, rimanete invisibili se restate fermi fino a quando un avversario si sposta dove normalmente vi vedrebbe. Quando vi muovete nella linea di vista di un avversario o effettuate un attacco, non siete più _Ammantati_.",
       "image": "/v1/card-header-images/domains/arcana/cloaking-blast.webp",
-      "imageOverrides": {
-        "flipX": true
-      },
+      "imageOverrides": { "flipX": true },
       "artist": "Henry Peters",
       "level": 7,
       "primaryDomain": "ARCANA",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "096"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-arcane-reflection",
@@ -915,8 +824,7 @@
       "level": 8,
       "primaryDomain": "ARCANA",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "097"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-confusing-aura",
@@ -929,8 +837,7 @@
       "level": 8,
       "primaryDomain": "ARCANA",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "098"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-earthquake",
@@ -943,8 +850,7 @@
       "level": 9,
       "primaryDomain": "ARCANA",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "099"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-sensory-projection",
@@ -957,8 +863,7 @@
       "level": 9,
       "primaryDomain": "ARCANA",
       "recallCost": 0,
-      "domainType": "SPELL",
-      "realcardid": "100"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-adjust-reality",
@@ -971,8 +876,7 @@
       "level": 10,
       "primaryDomain": "ARCANA",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "101"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-falling-sky",
@@ -985,8 +889,7 @@
       "level": 10,
       "primaryDomain": "ARCANA",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "102"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-get-back-up",
@@ -999,8 +902,7 @@
       "level": 1,
       "primaryDomain": "BLADE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "103"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-not-good-enough",
@@ -1013,8 +915,7 @@
       "level": 1,
       "primaryDomain": "BLADE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "104"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-whirlwind",
@@ -1027,8 +928,7 @@
       "level": 1,
       "primaryDomain": "BLADE",
       "recallCost": 0,
-      "domainType": "ABILITY",
-      "realcardid": "105"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-a-soldiers-bond",
@@ -1041,8 +941,7 @@
       "level": 2,
       "primaryDomain": "BLADE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "106"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-reckless",
@@ -1055,8 +954,7 @@
       "level": 2,
       "primaryDomain": "BLADE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "107"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-scramble",
@@ -1065,15 +963,12 @@
       "name": "Mischiare le Carte",
       "content": "Una volta per riposo, quando una creatura entro distanza di Mischia sta per infliggervi danno, potete evitare l'attacco e muovervi in sicurezza oltre la distanza di Mischia del nemico.",
       "image": "/v1/card-header-images/domains/blade/scramble.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -25px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -25px)" },
       "artist": "Ilya Royz",
       "level": 3,
       "primaryDomain": "BLADE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "108"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-versatile-fighter",
@@ -1086,8 +981,7 @@
       "level": 3,
       "primaryDomain": "BLADE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "109"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-deadly-focus",
@@ -1100,8 +994,7 @@
       "level": 4,
       "primaryDomain": "BLADE",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "110"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-fortified-armor",
@@ -1114,8 +1007,7 @@
       "level": 4,
       "primaryDomain": "BLADE",
       "recallCost": 0,
-      "domainType": "ABILITY",
-      "realcardid": "111"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-champions-edge",
@@ -1128,8 +1020,7 @@
       "level": 5,
       "primaryDomain": "BLADE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "112"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-vitality",
@@ -1142,8 +1033,7 @@
       "level": 5,
       "primaryDomain": "BLADE",
       "recallCost": 0,
-      "domainType": "ABILITY",
-      "realcardid": "113"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-battle-hardened",
@@ -1156,8 +1046,7 @@
       "level": 6,
       "primaryDomain": "BLADE",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "114"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-rage-up",
@@ -1170,8 +1059,7 @@
       "level": 6,
       "primaryDomain": "BLADE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "115"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-blade-touched",
@@ -1184,8 +1072,7 @@
       "level": 7,
       "primaryDomain": "BLADE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "116"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-glancing-blow",
@@ -1198,8 +1085,7 @@
       "level": 7,
       "primaryDomain": "BLADE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "117"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-battle-cry",
@@ -1212,8 +1098,7 @@
       "level": 8,
       "primaryDomain": "BLADE",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "118"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-frenzy",
@@ -1226,8 +1111,7 @@
       "level": 8,
       "primaryDomain": "BLADE",
       "recallCost": 3,
-      "domainType": "ABILITY",
-      "realcardid": "119"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-gore-and-glory",
@@ -1240,8 +1124,7 @@
       "level": 9,
       "primaryDomain": "BLADE",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "120"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-reapers-strike",
@@ -1254,8 +1137,7 @@
       "level": 9,
       "primaryDomain": "BLADE",
       "recallCost": 3,
-      "domainType": "ABILITY",
-      "realcardid": "121"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-battle-monster",
@@ -1268,8 +1150,7 @@
       "level": 10,
       "primaryDomain": "BLADE",
       "recallCost": 0,
-      "domainType": "ABILITY",
-      "realcardid": "122"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-onslaught",
@@ -1282,8 +1163,7 @@
       "level": 10,
       "primaryDomain": "BLADE",
       "recallCost": 3,
-      "domainType": "ABILITY",
-      "realcardid": "123"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-deft-maneuvers",
@@ -1296,8 +1176,7 @@
       "level": 1,
       "primaryDomain": "BONE",
       "recallCost": 0,
-      "domainType": "ABILITY",
-      "realcardid": "124"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-i-see-it-coming",
@@ -1310,8 +1189,7 @@
       "level": 1,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "125"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-untouchable",
@@ -1324,8 +1202,7 @@
       "level": 1,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "126"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-ferocity",
@@ -1338,8 +1215,7 @@
       "level": 2,
       "primaryDomain": "BONE",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "127"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-strategic-approach",
@@ -1352,8 +1228,7 @@
       "level": 2,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "128"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-brace",
@@ -1366,8 +1241,7 @@
       "level": 3,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "129"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-tactician",
@@ -1380,8 +1254,7 @@
       "level": 3,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "130"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-boost",
@@ -1394,8 +1267,7 @@
       "level": 4,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "131"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-redirect",
@@ -1408,8 +1280,7 @@
       "level": 4,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "132"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-know-thy-enemy",
@@ -1422,8 +1293,7 @@
       "level": 5,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "133"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-signature-move",
@@ -1436,8 +1306,7 @@
       "level": 5,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "134"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-rapid-riposte",
@@ -1450,8 +1319,7 @@
       "level": 6,
       "primaryDomain": "BONE",
       "recallCost": 0,
-      "domainType": "ABILITY",
-      "realcardid": "135"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-recovery",
@@ -1464,8 +1332,7 @@
       "level": 6,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "136"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-bone-touched",
@@ -1474,15 +1341,12 @@
       "name": "Padronanza delle Ossa",
       "content": "Quando 4 o più carte dominio nella vostra dotazione appartengono al dominio delle Ossa, ottenete i seguenti benefici:\n- Bonus +1 all'Agilità\n- Una volta per riposo, potete **spendere 3 Speranze** per far fallire un attacco che vi avrebbe colpito.",
       "image": "/v1/card-header-images/domains/bone/bone-touched.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -35px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -35px)" },
       "artist": "Samantha Kung",
       "level": 7,
       "primaryDomain": "BONE",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "137"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-cruel-precision",
@@ -1491,15 +1355,12 @@
       "name": "Precisione Crudele",
       "content": "Quando effettuate con successo un attacco con un'arma, ottenete un bonus al tiro di danno pari al vostro bonus di Astuzia o Agilità.",
       "image": "/v1/card-header-images/domains/bone/cruel-precision.webp",
-      "imageOverrides": {
-        "scaleX": -1
-      },
+      "imageOverrides": { "scaleX": -1 },
       "artist": "Maxime Minard",
       "level": 7,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "138"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-breaking-blow",
@@ -1512,8 +1373,7 @@
       "level": 8,
       "primaryDomain": "BONE",
       "recallCost": 3,
-      "domainType": "ABILITY",
-      "realcardid": "139"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-wrangle",
@@ -1526,8 +1386,7 @@
       "level": 8,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "140"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-on-the-brink",
@@ -1540,8 +1399,7 @@
       "level": 9,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "141"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-splintering-strike",
@@ -1554,8 +1412,7 @@
       "level": 9,
       "primaryDomain": "BONE",
       "recallCost": 3,
-      "domainType": "ABILITY",
-      "realcardid": "142"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-deathrun",
@@ -1564,15 +1421,12 @@
       "name": "Corsa di Morte",
       "content": "**Spendete 3 Speranze** per correre in linea retta attraverso il campo di battaglia fino a un punto entro distanza Lontana, attaccando tutti gli avversari entro portata della vostra arma lungo il percorso. Scegliete l'ordine in cui infliggete danno ai bersagli che avete colpito. Per il primo, tirate il danno dell'arma con bonus +1 alla vostra Competenza. Quindi rimuovete un dado dal tiro di danno e infliggete il danno rimanente al bersaglio successivo. Continuate a rimuovere un dado per ogni bersaglio colpito fino a quando non avete più dadi di danno o avversari. Non potete colpire lo stesso avversario più di una volta per attacco.",
       "image": "/v1/card-header-images/domains/bone/deathrun.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -35px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -35px)" },
       "artist": "Letícia Freitas",
       "level": 10,
       "primaryDomain": "BONE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "143"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-swift-step",
@@ -1585,8 +1439,7 @@
       "level": 10,
       "primaryDomain": "BONE",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "144"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-book-of-ava",
@@ -1599,8 +1452,7 @@
       "level": 1,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "GRIMOIRE",
-      "realcardid": "145"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-book-of-illiat",
@@ -1613,8 +1465,7 @@
       "level": 1,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "GRIMOIRE",
-      "realcardid": "146"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-book-of-tyfar",
@@ -1627,8 +1478,7 @@
       "level": 1,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "GRIMOIRE",
-      "realcardid": "147"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-book-of-sitil",
@@ -1641,8 +1491,7 @@
       "level": 2,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "GRIMOIRE",
-      "realcardid": "148"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-book-of-vagras",
@@ -1655,8 +1504,7 @@
       "level": 2,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "GRIMOIRE",
-      "realcardid": "149"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-book-of-korvax",
@@ -1665,15 +1513,12 @@
       "name": "Tomo di Korvax",
       "content": "**_Levitazione:_** Effettuate un **Tiro Incantesimo** per sollevare temporaneamente in aria un bersaglio che potete vedere e spostarlo entro distanza Ravvicinata dalla sua posizione di partenza.\n\n**_Smentire:_** **Spendete una Speranza** per costringere un bersaglio entro distanza di Mischia a effettuare un **Tiro Reazione (15)**. In caso di fallimento, questi dimentica l'ultimo minuto della vostra conversazione.\n\n**_Cerchio Runico:_** **Marcate uno Stress** per creare un cerchio magico temporaneo sul terreno dove vi trovate. Tutti gli avversari che si trovano o entrano a distanza di Mischia subiscono **2d12+4** danni magici e vengono respinti indietro a distanza Prossima.",
       "image": "/v1/card-header-images/domains/codex/book-of-korvax.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -40px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -40px)" },
       "artist": "Rick Hefner",
       "level": 3,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "GRIMOIRE",
-      "realcardid": "150"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-book-of-norai",
@@ -1686,8 +1531,7 @@
       "level": 3,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "GRIMOIRE",
-      "realcardid": "151"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-book-of-exota",
@@ -1696,15 +1540,12 @@
       "name": "Tomo di Exota",
       "content": "**_Ripudiare:_** Potete interrompere un effetto magico in atto. Effettuate un tiro reazione usando il vostro tratto da Incantatore. Una volta per riposo, in caso di successo, l'effetto si interrompe e tutte le conseguenze vengono evitate.\n\n**_Creare Costrutto:_** **Spendete una Speranza** per scegliere un gruppo di oggetti intorno a voi e creare un costrutto animato che obbedisce a comandi di base. Effettuate un **Tiro Incantesimo** per dargli ordini. Se necessario, condivide la vostra Evasione e i vostri tratti e i suoi attacchi infliggono **2d10+3** danni fisici. Potete mantenere solo un costrutto alla volta e questo si disintegra quando subisce danni.",
       "image": "/v1/card-header-images/domains/codex/book-of-exota.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -60px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -60px)" },
       "artist": "Laura Galli",
       "level": 4,
       "primaryDomain": "CODEX",
       "recallCost": 3,
-      "domainType": "GRIMOIRE",
-      "realcardid": "152"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-book-of-grynn",
@@ -1717,8 +1558,7 @@
       "level": 4,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "GRIMOIRE",
-      "realcardid": "153"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-manifest-wall",
@@ -1731,8 +1571,7 @@
       "level": 5,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "154"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-teleport",
@@ -1741,15 +1580,12 @@
       "name": "Teletrasporto",
       "content": "Una volta per ogni riposo lungo, potete teletrasportare istantaneamente voi stessi e un numero qualsiasi di bersagli consenzienti entro distanza Ravvicinata in un luogo in cui siete già stati. Scegliete una delle seguenti opzioni, quindi effettuate un **Tiro Incantesimo (16)**:\n- Se conoscete molto bene il luogo, ottenete bonus +3.\n- Se avete visitato spesso il luogo, ottenete bonus +1.\n- Se avete visitato il luogo raramente, non ottenete alcun modificatore.\n- Se ci siete stati solo una volta, ottenete penalità –2.\n\nSe l'operazione ha esito positivo, apparirete nel punto che intendevate raggiungere. In caso contrario apparirete fuori rotta, a una distanza proporzionata all'entità del fallimento.",
       "image": "/v1/card-header-images/domains/codex/teleport.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -60px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -60px)" },
       "artist": "Henry Peters",
       "level": 5,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "155"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-banish",
@@ -1758,15 +1594,12 @@
       "name": "Esilio",
       "content": "Effettuate un **Tiro Incantesimo** contro un bersaglio entro distanza Ravvicinata. In caso di successo, tirate un numero di **d20** pari al vostro tratto da Incantatore. Il bersaglio deve effettuare un tiro reazione contro una Difficoltà pari al vostro risultato più alto. In caso di successo, il bersaglio marca uno Stress ma non viene esiliato. In caso di fallimento, una volta per riposo, viene invece esiliato da questo regno.\n\nQuando i PG tirano con Paura, la Difficoltà ottiene penalità –1 e il bersaglio effettua un secondo tiro reazione. In caso di successo, riesce a tornare dall'esilio.",
       "image": "/v1/card-header-images/domains/codex/banish.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -60px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -60px)" },
       "artist": "Bear Frymire",
       "level": 6,
       "primaryDomain": "CODEX",
       "recallCost": 0,
-      "domainType": "SPELL",
-      "realcardid": "156"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-sigil-of-retribution",
@@ -1779,8 +1612,7 @@
       "level": 6,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "157"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-book-of-homet",
@@ -1789,15 +1621,12 @@
       "name": "Tomo di Homet",
       "content": "**_Oltrepasso:_** Effettuate un **Tiro Incantesimo (13)**. Una volta per riposo, in caso di successo, voi e tutte le creature che vi toccano potete oltrepassare un muro o una porta entro distanza Ravvicinata. L'effetto termina quando tutti si trovano dall'altra parte.\n\n**_Portale Dimensionale:_** Effettuate un **Tiro Incantesimo (14)**. Una volta per ogni riposo lungo, se il tiro ha esito positivo, aprite un portale verso un luogo in un'altra dimensione o piano dell'esistenza in cui siete già stati. Il portale rimane aperto fino al vostro prossimo riposo.",
       "image": "/v1/card-header-images/domains/codex/book-of-homet.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -40px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -40px)" },
       "artist": "Geoffrey Ernault",
       "level": 7,
       "primaryDomain": "CODEX",
       "recallCost": 0,
-      "domainType": "GRIMOIRE",
-      "realcardid": "158"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-codex-touched",
@@ -1810,8 +1639,7 @@
       "level": 7,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "159"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-book-of-vyola",
@@ -1824,8 +1652,7 @@
       "level": 8,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "GRIMOIRE",
-      "realcardid": "160"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-safe-haven",
@@ -1838,8 +1665,7 @@
       "level": 8,
       "primaryDomain": "CODEX",
       "recallCost": 3,
-      "domainType": "SPELL",
-      "realcardid": "161"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-book-of-ronin",
@@ -1848,15 +1674,12 @@
       "name": "Tomo di Ronin",
       "content": "**_Trasformazione:_** Effettuate un **Tiro Incantesimo (15)**. In caso di successo, vi trasformate in un oggetto inanimato non più grande del doppio della vostra taglia normale. Potete rimanere in questa forma finché non subite danni.\n\n**_Spossatezza Eterna:_** Una volta per riposo lungo, effettuate un **Tiro Incantesimo** contro un bersaglio entro distanza Ravvicinata. In caso di successo, il bersaglio diventa permanentemente _Vulnerabile_. Non può liberarsi di questa condizione in alcun modo.",
       "image": "/v1/card-header-images/domains/codex/book-of-ronin.webp",
-      "imageOverrides": {
-        "transform": "translate(0, -40px)"
-      },
+      "imageOverrides": { "transform": "translate(0, -40px)" },
       "artist": "Jenny Tan",
       "level": 9,
       "primaryDomain": "CODEX",
       "recallCost": 4,
-      "domainType": "GRIMOIRE",
-      "realcardid": "162"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-disintegration-wave",
@@ -1869,8 +1692,7 @@
       "level": 9,
       "primaryDomain": "CODEX",
       "recallCost": 4,
-      "domainType": "SPELL",
-      "realcardid": "163"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-book-of-yarrow",
@@ -1883,8 +1705,7 @@
       "level": 10,
       "primaryDomain": "CODEX",
       "recallCost": 2,
-      "domainType": "GRIMOIRE",
-      "realcardid": "164"
+      "domainType": "GRIMOIRE"
     },
     {
       "id": "domain-transcendent-union",
@@ -1897,8 +1718,7 @@
       "level": 10,
       "primaryDomain": "CODEX",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "165"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-deft-deceiver",
@@ -1911,8 +1731,7 @@
       "level": 1,
       "primaryDomain": "GRACE",
       "recallCost": 0,
-      "domainType": "ABILITY",
-      "realcardid": "166"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-enrapture",
@@ -1925,8 +1744,7 @@
       "level": 1,
       "primaryDomain": "GRACE",
       "recallCost": 0,
-      "domainType": "SPELL",
-      "realcardid": "167"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-inspirational-words",
@@ -1939,8 +1757,7 @@
       "level": 1,
       "primaryDomain": "GRACE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "168"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-tell-no-lies",
@@ -1953,8 +1770,7 @@
       "level": 2,
       "primaryDomain": "GRACE",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "169"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-troublemaker",
@@ -1967,8 +1783,7 @@
       "level": 2,
       "primaryDomain": "GRACE",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "170"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-hypnotic-shimmer",
@@ -1981,8 +1796,7 @@
       "level": 3,
       "primaryDomain": "GRACE",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "171"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-invisibility",
@@ -1995,8 +1809,7 @@
       "level": 3,
       "primaryDomain": "GRACE",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "172"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-soothing-speech",
@@ -2009,8 +1822,7 @@
       "level": 4,
       "primaryDomain": "GRACE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "173"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-through-your-eyes",
@@ -2023,8 +1835,7 @@
       "level": 4,
       "primaryDomain": "GRACE",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "174"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-thought-delver",
@@ -2037,8 +1848,7 @@
       "level": 5,
       "primaryDomain": "GRACE",
       "recallCost": 2,
-      "domainType": "SPELL",
-      "realcardid": "175"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-words-of-discord",
@@ -2051,8 +1861,7 @@
       "level": 5,
       "primaryDomain": "GRACE",
       "recallCost": 1,
-      "domainType": "SPELL",
-      "realcardid": "176"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-never-upstaged",
@@ -2065,8 +1874,7 @@
       "level": 6,
       "primaryDomain": "GRACE",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "177"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-share-the-burden",
@@ -2079,8 +1887,7 @@
       "level": 6,
       "primaryDomain": "GRACE",
       "recallCost": 0,
-      "domainType": "SPELL",
-      "realcardid": "178"
+      "domainType": "SPELL"
     },
     {
       "id": "domain-endless-charisma",
@@ -2093,8 +1900,7 @@
       "level": 7,
       "primaryDomain": "GRACE",
       "recallCost": 1,
-      "domainType": "ABILITY",
-      "realcardid": "179"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-grace-touched",
@@ -2107,8 +1913,7 @@
       "level": 7,
       "primaryDomain": "GRACE",
       "recallCost": 2,
-      "domainType": "ABILITY",
-      "realcardid": "180"
+      "domainType": "ABILITY"
     },
     {
       "id": "domain-astral-projection",
@@ -2121,8 +1926,7 @@
       "recallCost": 0,
       "artist": "Dominik Mayer",
       "artId": "DH635",
-      "image": "/v1/card-header-images/domains/grace/astral-projection.webp",
-      "realcardid": "181"
+      "image": "/v1/card-header-images/domains/grace/astral-projection.webp"
     },
     {
       "id": "domain-mass-enrapture",
@@ -2135,8 +1939,7 @@
       "recallCost": 3,
       "artist": "Daarken",
       "artId": "DH636",
-      "image": "/v1/card-header-images/domains/grace/mass-enrapture.webp",
-      "realcardid": "182"
+      "image": "/v1/card-header-images/domains/grace/mass-enrapture.webp"
     },
     {
       "id": "domain-copycat",
@@ -2149,8 +1952,7 @@
       "recallCost": 3,
       "artist": "Cybercatbug",
       "artId": "DH637",
-      "image": "/v1/card-header-images/domains/grace/copycat.webp",
-      "realcardid": "183"
+      "image": "/v1/card-header-images/domains/grace/copycat.webp"
     },
     {
       "id": "domain-master-of-the-craft",
@@ -2163,8 +1965,7 @@
       "recallCost": 0,
       "artist": "Anthony Jones",
       "artId": "DH402",
-      "image": "/v1/card-header-images/domains/grace/master-of-the-craft.webp",
-      "realcardid": "184"
+      "image": "/v1/card-header-images/domains/grace/master-of-the-craft.webp"
     },
     {
       "id": "domain-encore",
@@ -2177,8 +1978,7 @@
       "recallCost": 1,
       "artist": "Mat Wilma",
       "artId": "DH638",
-      "image": "/v1/card-header-images/domains/grace/encore.webp",
-      "realcardid": "185"
+      "image": "/v1/card-header-images/domains/grace/encore.webp"
     },
     {
       "id": "domain-notorious",
@@ -2191,8 +1991,7 @@
       "recallCost": 0,
       "artist": "Arturo G. González",
       "artId": "DH639",
-      "image": "/v1/card-header-images/domains/grace/notorious.webp",
-      "realcardid": "186"
+      "image": "/v1/card-header-images/domains/grace/notorious.webp"
     },
     {
       "id": "domain-pick-and-pull",
@@ -2205,8 +2004,7 @@
       "recallCost": 0,
       "artist": "Benjamin Ee",
       "artId": "DH111",
-      "image": "/v1/card-header-images/domains/midnight/pick-and-pull.webp",
-      "realcardid": "187"
+      "image": "/v1/card-header-images/domains/midnight/pick-and-pull.webp"
     },
     {
       "id": "domain-rain-of-blades",
@@ -2219,8 +2017,7 @@
       "recallCost": 1,
       "artist": "Linda Lithén",
       "artId": "DH110",
-      "image": "/v1/card-header-images/domains/midnight/rain-of-blades.webp",
-      "realcardid": "188"
+      "image": "/v1/card-header-images/domains/midnight/rain-of-blades.webp"
     },
     {
       "id": "domain-uncanny-disguise",
@@ -2233,8 +2030,7 @@
       "recallCost": 0,
       "artist": "Linda Lithén",
       "artId": "DH126",
-      "image": "/v1/card-header-images/domains/midnight/uncanny-disguise.webp",
-      "realcardid": "189"
+      "image": "/v1/card-header-images/domains/midnight/uncanny-disguise.webp"
     },
     {
       "id": "domain-midnight-spirit",
@@ -2247,8 +2043,7 @@
       "recallCost": 1,
       "artist": "Reiko Murakami",
       "artId": "DH125",
-      "image": "/v1/card-header-images/domains/midnight/midnight-spirit.webp",
-      "realcardid": "190"
+      "image": "/v1/card-header-images/domains/midnight/midnight-spirit.webp"
     },
     {
       "id": "domain-shadowbind",
@@ -2261,8 +2056,7 @@
       "recallCost": 0,
       "artist": "Adam Barker",
       "artId": "DH419",
-      "image": "/v1/card-header-images/domains/midnight/shadowbind.webp",
-      "realcardid": "191"
+      "image": "/v1/card-header-images/domains/midnight/shadowbind.webp"
     },
     {
       "id": "domain-chokehold",
@@ -2275,8 +2069,7 @@
       "recallCost": 1,
       "artist": "Anthony Jones",
       "artId": "DH640",
-      "image": "/v1/card-header-images/domains/midnight/chokehold.webp",
-      "realcardid": "192"
+      "image": "/v1/card-header-images/domains/midnight/chokehold.webp"
     },
     {
       "id": "domain-veil-of-night",
@@ -2289,8 +2082,7 @@
       "recallCost": 1,
       "artist": "Joshua Rodriguez",
       "artId": "DH437",
-      "image": "/v1/card-header-images/domains/midnight/veil-of-night.webp",
-      "realcardid": "193"
+      "image": "/v1/card-header-images/domains/midnight/veil-of-night.webp"
     },
     {
       "id": "domain-stealth-expertise",
@@ -2303,8 +2095,7 @@
       "recallCost": 0,
       "artist": "Carlos C Díaz",
       "artId": "DH641",
-      "image": "/v1/card-header-images/domains/midnight/stealth-expertise.webp",
-      "realcardid": "194"
+      "image": "/v1/card-header-images/domains/midnight/stealth-expertise.webp"
     },
     {
       "id": "domain-glyph-of-nightfall",
@@ -2317,8 +2108,7 @@
       "recallCost": 1,
       "artist": "Anthony Jones",
       "artId": "DH642",
-      "image": "/v1/card-header-images/domains/midnight/glyph-of-nightfall.webp",
-      "realcardid": "195"
+      "image": "/v1/card-header-images/domains/midnight/glyph-of-nightfall.webp"
     },
     {
       "id": "domain-hush",
@@ -2331,8 +2121,7 @@
       "recallCost": 1,
       "artist": "Laura Galli",
       "artId": "DH449",
-      "image": "/v1/card-header-images/domains/midnight/hush.webp",
-      "realcardid": "196"
+      "image": "/v1/card-header-images/domains/midnight/hush.webp"
     },
     {
       "id": "domain-phantom-retreat",
@@ -2345,8 +2134,7 @@
       "recallCost": 2,
       "artist": "José Muñoz",
       "artId": "DH420",
-      "image": "/v1/card-header-images/domains/midnight/phantom-retreat.webp",
-      "realcardid": "197"
+      "image": "/v1/card-header-images/domains/midnight/phantom-retreat.webp"
     },
     {
       "id": "domain-dark-whispers",
@@ -2359,8 +2147,7 @@
       "recallCost": 0,
       "artist": "Jenny Tan",
       "artId": "DH500",
-      "image": "/v1/card-header-images/domains/midnight/dark-whispers.webp",
-      "realcardid": "198"
+      "image": "/v1/card-header-images/domains/midnight/dark-whispers.webp"
     },
     {
       "id": "domain-mass-disguise",
@@ -2373,8 +2160,7 @@
       "recallCost": 0,
       "artist": "Anthony Jones",
       "artId": "DH447",
-      "image": "/v1/card-header-images/domains/midnight/mass-disguise.webp",
-      "realcardid": "199"
+      "image": "/v1/card-header-images/domains/midnight/mass-disguise.webp"
     },
     {
       "id": "domain-midnight-touched",
@@ -2387,8 +2173,7 @@
       "recallCost": 2,
       "artist": "Joshua Rodriguez",
       "artId": "DH643",
-      "image": "/v1/card-header-images/domains/midnight/midnight-touched.webp",
-      "realcardid": "200"
+      "image": "/v1/card-header-images/domains/midnight/midnight-touched.webp"
     },
     {
       "id": "domain-vanishing-dodge",
@@ -2401,8 +2186,7 @@
       "recallCost": 1,
       "artist": "Arturo G. González",
       "artId": "DH644",
-      "image": "/v1/card-header-images/domains/midnight/vanishing-dodge.webp",
-      "realcardid": "201"
+      "image": "/v1/card-header-images/domains/midnight/vanishing-dodge.webp"
     },
     {
       "id": "domain-shadowhunter",
@@ -2415,8 +2199,7 @@
       "recallCost": 2,
       "artist": "Samantha Kung",
       "artId": "DH673",
-      "image": "/v1/card-header-images/domains/midnight/shadowhunter.webp",
-      "realcardid": "202"
+      "image": "/v1/card-header-images/domains/midnight/shadowhunter.webp"
     },
     {
       "id": "domain-spellcharge",
@@ -2429,8 +2212,7 @@
       "recallCost": 1,
       "artist": "Geoffrey Ernault",
       "artId": "DH514",
-      "image": "/v1/card-header-images/domains/midnight/spellcharge.webp",
-      "realcardid": "203"
+      "image": "/v1/card-header-images/domains/midnight/spellcharge.webp"
     },
     {
       "id": "domain-night-terror",
@@ -2443,8 +2225,7 @@
       "recallCost": 2,
       "artist": "Anthony Jones",
       "artId": "DH414",
-      "image": "/v1/card-header-images/domains/midnight/night-terror.webp",
-      "realcardid": "204"
+      "image": "/v1/card-header-images/domains/midnight/night-terror.webp"
     },
     {
       "id": "domain-twilight-toll",
@@ -2457,8 +2238,7 @@
       "recallCost": 1,
       "artist": "Rafater",
       "artId": "DH674",
-      "image": "/v1/card-header-images/domains/midnight/twilight-toll.webp",
-      "realcardid": "205"
+      "image": "/v1/card-header-images/domains/midnight/twilight-toll.webp"
     },
     {
       "id": "domain-eclipse",
@@ -2471,8 +2251,7 @@
       "recallCost": 2,
       "artist": "Arturo G. González",
       "artId": "DH645",
-      "image": "/v1/card-header-images/domains/midnight/eclipse.webp",
-      "realcardid": "206"
+      "image": "/v1/card-header-images/domains/midnight/eclipse.webp"
     },
     {
       "id": "domain-specter-of-the-dark",
@@ -2485,8 +2264,7 @@
       "recallCost": 1,
       "artist": "Alex Konstad",
       "artId": "DH521",
-      "image": "/v1/card-header-images/domains/midnight/specter-of-the-dark.webp",
-      "realcardid": "207"
+      "image": "/v1/card-header-images/domains/midnight/specter-of-the-dark.webp"
     },
     {
       "id": "domain-gifted-tracker",
@@ -2499,8 +2277,7 @@
       "recallCost": 0,
       "artist": "Ernanda Souza",
       "artId": "DH113",
-      "image": "/v1/card-header-images/domains/sage/gifted-tracker.webp",
-      "realcardid": "208"
+      "image": "/v1/card-header-images/domains/sage/gifted-tracker.webp"
     },
     {
       "id": "domain-nature's-tongue",
@@ -2513,8 +2290,7 @@
       "recallCost": 0,
       "artist": "Simon Pape",
       "artId": "DH114",
-      "image": "/v1/card-header-images/domains/sage/natures-tongue.webp",
-      "realcardid": "209"
+      "image": "/v1/card-header-images/domains/sage/natures-tongue.webp"
     },
     {
       "id": "domain-vicious-entangle",
@@ -2527,8 +2303,7 @@
       "recallCost": 1,
       "artist": "Leesha Hannigan",
       "artId": "DH112",
-      "image": "/v1/card-header-images/domains/sage/vicious-entangle.webp",
-      "realcardid": "210"
+      "image": "/v1/card-header-images/domains/sage/vicious-entangle.webp"
     },
     {
       "id": "domain-conjure-swarm",
@@ -2541,8 +2316,7 @@
       "recallCost": 1,
       "artist": "Jen Estirdalin Pattison",
       "artId": "DH127",
-      "image": "/v1/card-header-images/domains/sage/conjure-swarm.webp",
-      "realcardid": "211"
+      "image": "/v1/card-header-images/domains/sage/conjure-swarm.webp"
     },
     {
       "id": "domain-natural-familiar",
@@ -2555,8 +2329,7 @@
       "recallCost": 1,
       "artist": "Leesha Hannigan",
       "artId": "DH126",
-      "image": "/v1/card-header-images/domains/sage/natural-familiar.webp",
-      "realcardid": "212"
+      "image": "/v1/card-header-images/domains/sage/natural-familiar.webp"
     },
     {
       "id": "domain-corrosive-projectile",
@@ -2569,8 +2342,7 @@
       "recallCost": 1,
       "artist": "Anthony Jones",
       "artId": "DH407",
-      "image": "/v1/card-header-images/domains/sage/corrosive-projectile.webp",
-      "realcardid": "213"
+      "image": "/v1/card-header-images/domains/sage/corrosive-projectile.webp"
     },
     {
       "id": "domain-towering-stalk",
@@ -2583,8 +2355,7 @@
       "recallCost": 1,
       "artist": "Anthony Avon",
       "artId": "DH540",
-      "image": "/v1/card-header-images/domains/sage/towering-stalk.webp",
-      "realcardid": "214"
+      "image": "/v1/card-header-images/domains/sage/towering-stalk.webp"
     },
     {
       "id": "domain-death-grip",
@@ -2597,8 +2368,7 @@
       "recallCost": 1,
       "artist": "Arturo G. González",
       "artId": "DH646",
-      "image": "/v1/card-header-images/domains/sage/death-grip.webp",
-      "realcardid": "215"
+      "image": "/v1/card-header-images/domains/sage/death-grip.webp"
     },
     {
       "id": "domain-healing-field",
@@ -2611,8 +2381,7 @@
       "recallCost": 2,
       "artist": "Bear Frymire",
       "artId": "DH647",
-      "image": "/v1/card-header-images/domains/sage/healing-field.webp",
-      "realcardid": "216"
+      "image": "/v1/card-header-images/domains/sage/healing-field.webp"
     },
     {
       "id": "domain-thorn-skin",
@@ -2625,8 +2394,7 @@
       "recallCost": 1,
       "artist": "Jack Jones",
       "artId": "DH411",
-      "image": "/v1/card-header-images/domains/sage/thorn-skin.webp",
-      "realcardid": "217"
+      "image": "/v1/card-header-images/domains/sage/thorn-skin.webp"
     },
     {
       "id": "domain-wild-fortress",
@@ -2639,8 +2407,7 @@
       "recallCost": 1,
       "artist": "Bear Frymire",
       "artId": "DH648",
-      "image": "/v1/card-header-images/domains/sage/wild-fortress.webp",
-      "realcardid": "218"
+      "image": "/v1/card-header-images/domains/sage/wild-fortress.webp"
     },
     {
       "id": "domain-conjured-steeds",
@@ -2653,8 +2420,7 @@
       "recallCost": 0,
       "artist": "Juan S. Almencion",
       "artId": "DH519",
-      "image": "/v1/card-header-images/domains/sage/conjured-steeds.webp",
-      "realcardid": "219"
+      "image": "/v1/card-header-images/domains/sage/conjured-steeds.webp"
     },
     {
       "id": "domain-forager",
@@ -2667,8 +2433,7 @@
       "recallCost": 1,
       "artist": "Anthony Jones",
       "artId": "DH530",
-      "image": "/v1/card-header-images/domains/sage/forager.webp",
-      "realcardid": "220"
+      "image": "/v1/card-header-images/domains/sage/forager.webp"
     },
     {
       "id": "domain-sage-touched",
@@ -2681,8 +2446,7 @@
       "recallCost": 2,
       "artist": "Juan S. Almencion",
       "artId": "DH649",
-      "image": "/v1/card-header-images/domains/sage/sage-touched.webp",
-      "realcardid": "221"
+      "image": "/v1/card-header-images/domains/sage/sage-touched.webp"
     },
     {
       "id": "domain-wild-surge",
@@ -2695,8 +2459,7 @@
       "recallCost": 2,
       "artist": "Ryan Christian Rodero",
       "artId": "DH400",
-      "image": "/v1/card-header-images/domains/sage/wild-surge.webp",
-      "realcardid": "222"
+      "image": "/v1/card-header-images/domains/sage/wild-surge.webp"
     },
     {
       "id": "domain-forest-sprites",
@@ -2709,8 +2472,7 @@
       "recallCost": 2,
       "artist": "Ilya Royz",
       "artId": "DH501",
-      "image": "/v1/card-header-images/domains/sage/forest-sprites.webp",
-      "realcardid": "223"
+      "image": "/v1/card-header-images/domains/sage/forest-sprites.webp"
     },
     {
       "id": "domain-rejuvenation-barrier",
@@ -2723,8 +2485,7 @@
       "recallCost": 1,
       "artist": "Bear Frymire",
       "artId": "DH650",
-      "image": "/v1/card-header-images/domains/sage/rejuvenation-barrier.webp",
-      "realcardid": "224"
+      "image": "/v1/card-header-images/domains/sage/rejuvenation-barrier.webp"
     },
     {
       "id": "domain-fane-of-the-wilds",
@@ -2737,8 +2498,7 @@
       "recallCost": 2,
       "artist": "Anthony Avon",
       "artId": "DH448",
-      "image": "/v1/card-header-images/domains/sage/fane-of-the-wilds.webp",
-      "realcardid": "225"
+      "image": "/v1/card-header-images/domains/sage/fane-of-the-wilds.webp"
     },
     {
       "id": "domain-plant-dominion",
@@ -2751,8 +2511,7 @@
       "recallCost": 1,
       "artist": "Anthony Jones",
       "artId": "DH520",
-      "image": "/v1/card-header-images/domains/sage/plant-dominion.webp",
-      "realcardid": "226"
+      "image": "/v1/card-header-images/domains/sage/plant-dominion.webp"
     },
     {
       "id": "domain-force-of-nature",
@@ -2765,8 +2524,7 @@
       "recallCost": 2,
       "artist": "Carlos C Díaz",
       "artId": "DH651",
-      "image": "/v1/card-header-images/domains/sage/force-of-nature.webp",
-      "realcardid": "227"
+      "image": "/v1/card-header-images/domains/sage/force-of-nature.webp"
     },
     {
       "id": "domain-tempest",
@@ -2779,8 +2537,7 @@
       "recallCost": 2,
       "artist": "Samantha Kung",
       "artId": "DH431",
-      "image": "/v1/card-header-images/domains/sage/tempest.webp",
-      "realcardid": "228"
+      "image": "/v1/card-header-images/domains/sage/tempest.webp"
     },
     {
       "id": "domain-bolt-beacon",
@@ -2793,8 +2550,7 @@
       "recallCost": 1,
       "artist": "Anthony Jones",
       "artId": "DH307",
-      "image": "/v1/card-header-images/domains/splendor/bolt-beacon.webp",
-      "realcardid": "229"
+      "image": "/v1/card-header-images/domains/splendor/bolt-beacon.webp"
     },
     {
       "id": "domain-mending-touch",
@@ -2807,8 +2563,7 @@
       "recallCost": 1,
       "artist": "Suzanne Helmigh",
       "artId": "DH301",
-      "image": "/v1/card-header-images/domains/splendor/mending-touch.webp",
-      "realcardid": "230"
+      "image": "/v1/card-header-images/domains/splendor/mending-touch.webp"
     },
     {
       "id": "domain-reassurance",
@@ -2821,8 +2576,7 @@
       "recallCost": 0,
       "artist": "Sam Key",
       "artId": "DH116",
-      "image": "/v1/card-header-images/domains/splendor/reassurance.webp",
-      "realcardid": "231"
+      "image": "/v1/card-header-images/domains/splendor/reassurance.webp"
     },
     {
       "id": "domain-final-words",
@@ -2835,8 +2589,7 @@
       "recallCost": 1,
       "artist": "Bear Frymire",
       "artId": "DH306",
-      "image": "/v1/card-header-images/domains/splendor/final-words.webp",
-      "realcardid": "232"
+      "image": "/v1/card-header-images/domains/splendor/final-words.webp"
     },
     {
       "id": "domain-healing-hands",
@@ -2849,8 +2602,7 @@
       "recallCost": 1,
       "artist": "Samantha Kung",
       "artId": "DH316",
-      "image": "/v1/card-header-images/domains/splendor/healing-hands.webp",
-      "realcardid": "233"
+      "image": "/v1/card-header-images/domains/splendor/healing-hands.webp"
     },
     {
       "id": "domain-second-wind",
@@ -2863,8 +2615,7 @@
       "recallCost": 2,
       "artist": "Mauro Alocci",
       "artId": "DH443",
-      "image": "/v1/card-header-images/domains/splendor/second-wind.webp",
-      "realcardid": "234"
+      "image": "/v1/card-header-images/domains/splendor/second-wind.webp"
     },
     {
       "id": "domain-voice-of-reason",
@@ -2877,8 +2628,7 @@
       "recallCost": 1,
       "artist": "Stanislav Sherbakov",
       "artId": "DH403",
-      "image": "/v1/card-header-images/domains/splendor/voice-of-reason.webp",
-      "realcardid": "235"
+      "image": "/v1/card-header-images/domains/splendor/voice-of-reason.webp"
     },
     {
       "id": "domain-divination",
@@ -2891,8 +2641,7 @@
       "recallCost": 1,
       "artist": "Diana Bakieva",
       "artId": "DH422",
-      "image": "/v1/card-header-images/domains/splendor/divination.webp",
-      "realcardid": "236"
+      "image": "/v1/card-header-images/domains/splendor/divination.webp"
     },
     {
       "id": "domain-life-ward",
@@ -2905,8 +2654,7 @@
       "recallCost": 1,
       "artist": "Simon Pape",
       "artId": "DH652",
-      "image": "/v1/card-header-images/domains/splendor/life-ward.webp",
-      "realcardid": "237"
+      "image": "/v1/card-header-images/domains/splendor/life-ward.webp"
     },
     {
       "id": "domain-shape-material",
@@ -2919,8 +2667,7 @@
       "recallCost": 1,
       "artist": "Ilya Royz",
       "artId": "DH653",
-      "image": "/v1/card-header-images/domains/splendor/shape-material.webp",
-      "realcardid": "238"
+      "image": "/v1/card-header-images/domains/splendor/shape-material.webp"
     },
     {
       "id": "domain-smite",
@@ -2933,8 +2680,7 @@
       "recallCost": 2,
       "artist": "Geoffrey Ernault",
       "artId": "DH314",
-      "image": "/v1/card-header-images/domains/splendor/smite.webp",
-      "realcardid": "239"
+      "image": "/v1/card-header-images/domains/splendor/smite.webp"
     },
     {
       "id": "domain-restoration",
@@ -2947,8 +2693,7 @@
       "recallCost": 2,
       "artist": "Mat Wilma",
       "artId": "DH654",
-      "image": "/v1/card-header-images/domains/splendor/restoration.webp",
-      "realcardid": "240"
+      "image": "/v1/card-header-images/domains/splendor/restoration.webp"
     },
     {
       "id": "domain-zone-of-protection",
@@ -2961,8 +2706,7 @@
       "recallCost": 2,
       "artist": "Anthony Jones",
       "artId": "DH655",
-      "image": "/v1/card-header-images/domains/splendor/zone-of-protection.webp",
-      "realcardid": "241"
+      "image": "/v1/card-header-images/domains/splendor/zone-of-protection.webp"
     },
     {
       "id": "domain-healing-strike",
@@ -2975,8 +2719,7 @@
       "recallCost": 1,
       "artist": "Juan S. Almencion",
       "artId": "DH451",
-      "image": "/v1/card-header-images/domains/splendor/healing-strike.webp",
-      "realcardid": "242"
+      "image": "/v1/card-header-images/domains/splendor/healing-strike.webp"
     },
     {
       "id": "domain-splendor-touched",
@@ -2989,8 +2732,7 @@
       "recallCost": 2,
       "artist": "Daarken",
       "artId": "DH656",
-      "image": "/v1/card-header-images/domains/splendor/splendor-touched.webp",
-      "realcardid": "243"
+      "image": "/v1/card-header-images/domains/splendor/splendor-touched.webp"
     },
     {
       "id": "domain-shield-aura",
@@ -3003,8 +2745,7 @@
       "recallCost": 2,
       "artist": "Danil Luzin",
       "artId": "DH445",
-      "image": "/v1/card-header-images/domains/splendor/shield-aura.webp",
-      "realcardid": "244"
+      "image": "/v1/card-header-images/domains/splendor/shield-aura.webp"
     },
     {
       "id": "domain-stunning-sunlight",
@@ -3017,8 +2758,7 @@
       "recallCost": 2,
       "artist": "Anthony Jones",
       "artId": "DH417",
-      "image": "/v1/card-header-images/domains/splendor/stunning-sunlight.webp",
-      "realcardid": "245"
+      "image": "/v1/card-header-images/domains/splendor/stunning-sunlight.webp"
     },
     {
       "id": "domain-overwhelming-aura",
@@ -3031,8 +2771,7 @@
       "recallCost": 2,
       "artist": "Eliot Baum",
       "artId": "DH440",
-      "image": "/v1/card-header-images/domains/splendor/overwhelming-aura.webp",
-      "realcardid": ""
+      "image": "/v1/card-header-images/domains/splendor/overwhelming-aura.webp"
     },
     {
       "id": "domain-salvation-beam",
@@ -3045,8 +2784,7 @@
       "recallCost": 2,
       "artist": "Daarken",
       "artId": "DH657",
-      "image": "/v1/card-header-images/domains/splendor/salvation-beam.webp",
-      "realcardid": "247"
+      "image": "/v1/card-header-images/domains/splendor/salvation-beam.webp"
     },
     {
       "id": "domain-invigoration",
@@ -3059,8 +2797,7 @@
       "recallCost": 3,
       "artist": "Jenny Tan",
       "artId": "DH658",
-      "image": "/v1/card-header-images/domains/splendor/invigoration.webp",
-      "realcardid": "248"
+      "image": "/v1/card-header-images/domains/splendor/invigoration.webp"
     },
     {
       "id": "domain-resurrection",
@@ -3073,8 +2810,7 @@
       "recallCost": 2,
       "artist": "Dominik Mayer",
       "artId": "DH510",
-      "image": "/v1/card-header-images/domains/splendor/resurrection.webp",
-      "realcardid": "249"
+      "image": "/v1/card-header-images/domains/splendor/resurrection.webp"
     },
     {
       "id": "domain-bare-bones",
@@ -3087,8 +2823,7 @@
       "recallCost": 0,
       "artist": "Simon Pape",
       "artId": "DH318",
-      "image": "/v1/card-header-images/domains/valor/bare-bones.webp",
-      "realcardid": "250"
+      "image": "/v1/card-header-images/domains/valor/bare-bones.webp"
     },
     {
       "id": "domain-forceful-push",
@@ -3101,8 +2836,7 @@
       "recallCost": 0,
       "artist": "Mat Wilma",
       "artId": "DH130",
-      "image": "/v1/card-header-images/domains/valor/forceful-push.webp",
-      "realcardid": "251"
+      "image": "/v1/card-header-images/domains/valor/forceful-push.webp"
     },
     {
       "id": "domain-i-am-your-shield",
@@ -3115,8 +2849,7 @@
       "recallCost": 1,
       "artist": "Juan S. Almencion",
       "artId": "DH700",
-      "image": "/v1/card-header-images/domains/valor/i-am-your-shield.webp",
-      "realcardid": "252"
+      "image": "/v1/card-header-images/domains/valor/i-am-your-shield.webp"
     },
     {
       "id": "domain-body-basher",
@@ -3129,8 +2862,7 @@
       "recallCost": 1,
       "artist": "Ilya Royz",
       "artId": "DH659",
-      "image": "/v1/card-header-images/domains/valor/body-basher.webp",
-      "realcardid": "253"
+      "image": "/v1/card-header-images/domains/valor/body-basher.webp"
     },
     {
       "id": "domain-bold-presence",
@@ -3143,8 +2875,7 @@
       "recallCost": 0,
       "artist": "Bear Frymire",
       "artId": "DH527",
-      "image": "/v1/card-header-images/domains/valor/bold-presence.webp",
-      "realcardid": "254"
+      "image": "/v1/card-header-images/domains/valor/bold-presence.webp"
     },
     {
       "id": "domain-critical-inspiration",
@@ -3157,8 +2888,7 @@
       "recallCost": 1,
       "artist": "Suzanne Helmigh",
       "artId": "DH429",
-      "image": "/v1/card-header-images/domains/valor/critical-inspiration.webp",
-      "realcardid": "255"
+      "image": "/v1/card-header-images/domains/valor/critical-inspiration.webp"
     },
     {
       "id": "domain-lean-on-me",
@@ -3171,8 +2901,7 @@
       "recallCost": 1,
       "artist": "Jenny Tan",
       "artId": "DH660",
-      "image": "/v1/card-header-images/domains/valor/lean-on-me.webp",
-      "realcardid": "256"
+      "image": "/v1/card-header-images/domains/valor/lean-on-me.webp"
     },
     {
       "id": "domain-goad-them-on",
@@ -3185,8 +2914,7 @@
       "recallCost": 1,
       "artist": "Anthony Jones",
       "artId": "DH661",
-      "image": "/v1/card-header-images/domains/valor/goad-them-on.webp",
-      "realcardid": "257"
+      "image": "/v1/card-header-images/domains/valor/goad-them-on.webp"
     },
     {
       "id": "domain-support-tank",
@@ -3199,8 +2927,7 @@
       "recallCost": 2,
       "artist": "James Green",
       "artId": "DH444",
-      "image": "/v1/card-header-images/domains/valor/support-tank.webp",
-      "realcardid": "258"
+      "image": "/v1/card-header-images/domains/valor/support-tank.webp"
     },
     {
       "id": "domain-armorer",
@@ -3213,8 +2940,7 @@
       "recallCost": 1,
       "artist": "Alex Konstad",
       "artId": "DH528",
-      "image": "/v1/card-header-images/domains/valor/armorer.webp",
-      "realcardid": "259"
+      "image": "/v1/card-header-images/domains/valor/armorer.webp"
     },
     {
       "id": "domain-rousing-strike",
@@ -3227,8 +2953,7 @@
       "recallCost": 1,
       "artist": "Ilya Royz",
       "artId": "DH662",
-      "image": "/v1/card-header-images/domains/valor/rousing-strike.webp",
-      "realcardid": "260"
+      "image": "/v1/card-header-images/domains/valor/rousing-strike.webp"
     },
     {
       "id": "domain-inevitable",
@@ -3241,8 +2966,7 @@
       "recallCost": 1,
       "artist": "Ivan Koltovich",
       "artId": "DH418",
-      "image": "/v1/card-header-images/domains/valor/inevitable.webp",
-      "realcardid": "261"
+      "image": "/v1/card-header-images/domains/valor/inevitable.webp"
     },
     {
       "id": "domain-rise-up",
@@ -3255,8 +2979,7 @@
       "recallCost": 2,
       "artist": "Ana Amaral",
       "artId": "DH663",
-      "image": "/v1/card-header-images/domains/valor/rise-up.webp",
-      "realcardid": "262"
+      "image": "/v1/card-header-images/domains/valor/rise-up.webp"
     },
     {
       "id": "domain-shrug-it-off",
@@ -3269,8 +2992,7 @@
       "recallCost": 1,
       "artist": "Rafater",
       "artId": "DH664",
-      "image": "/v1/card-header-images/domains/valor/shrug-it-off.webp",
-      "realcardid": "263"
+      "image": "/v1/card-header-images/domains/valor/shrug-it-off.webp"
     },
     {
       "id": "domain-valor-touched",
@@ -3283,8 +3005,7 @@
       "recallCost": 1,
       "artist": "Daarken",
       "artId": "DH665",
-      "image": "/v1/card-header-images/domains/valor/valor-touched.webp",
-      "realcardid": "264"
+      "image": "/v1/card-header-images/domains/valor/valor-touched.webp"
     },
     {
       "id": "domain-full-surge",
@@ -3297,8 +3018,7 @@
       "recallCost": 1,
       "artist": "Mike Azevedo",
       "artId": "DH523",
-      "image": "/v1/card-header-images/domains/valor/full-surge.webp",
-      "realcardid": "265"
+      "image": "/v1/card-header-images/domains/valor/full-surge.webp"
     },
     {
       "id": "domain-ground-pound",
@@ -3311,8 +3031,7 @@
       "recallCost": 2,
       "artist": "Rafater",
       "artId": "DH666",
-      "image": "/v1/card-header-images/domains/valor/ground-pound.webp",
-      "realcardid": "266"
+      "image": "/v1/card-header-images/domains/valor/ground-pound.webp"
     },
     {
       "id": "domain-hold-the-line",
@@ -3325,8 +3044,7 @@
       "recallCost": 1,
       "artist": "Laura Galli ",
       "artId": "DH090",
-      "image": "/v1/card-header-images/domains/valor/hold-the-line.webp",
-      "realcardid": "267"
+      "image": "/v1/card-header-images/domains/valor/hold-the-line.webp"
     },
     {
       "id": "domain-lead-by-example",
@@ -3339,8 +3057,7 @@
       "recallCost": 3,
       "artist": "Jenny Tan",
       "artId": "DH667",
-      "image": "/v1/card-header-images/domains/valor/lead-by-example.webp",
-      "realcardid": "268"
+      "image": "/v1/card-header-images/domains/valor/lead-by-example.webp"
     },
     {
       "id": "domain-unbreakable",
@@ -3353,8 +3070,7 @@
       "recallCost": 4,
       "artist": "Luísa Costa",
       "artId": "DH668",
-      "image": "/v1/card-header-images/domains/valor/unbreakable.webp",
-      "realcardid": "269"
+      "image": "/v1/card-header-images/domains/valor/unbreakable.webp"
     },
     {
       "id": "domain-unyielding-armor",
@@ -3367,8 +3083,7 @@
       "recallCost": 1,
       "artist": "Samantha Kung",
       "artId": "DH669",
-      "image": "/v1/card-header-images/domains/valor/unyielding-armor.webp",
-      "realcardid": "270"
+      "image": "/v1/card-header-images/domains/valor/unyielding-armor.webp"
     }
   ]
 }

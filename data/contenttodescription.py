@@ -1,10 +1,10 @@
 import json
 from pathlib import Path
 
-CARDS_PATH = Path("cards.json")
+CARDS_PATH = Path("cardsITA.json")
 TEMPLATES_PATH = Path("templates_with_realcardid.json")
 
-OUT_CARDS = Path("cards_with_descriptions.json")
+OUT_CARDS = Path("cardsITA_with_descriptions.json")
 
 
 def load_json(path: Path):

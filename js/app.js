@@ -1245,7 +1245,8 @@ const raw = String(card.description || "");
 const safe = escapeHtml(raw)
   .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
   .replace(/_(.+?)_/g, "<em>$1</em>")
-  .replaceAll("•","<br>•");
+  .replaceAll("•","<br>•")
+  .replaceAll("\n\n","<br>");
 bodyDescription.innerHTML = safe;
 
 
