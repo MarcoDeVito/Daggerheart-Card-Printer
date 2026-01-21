@@ -924,7 +924,7 @@ cb.disabled = !enabled || !!mcChecked;
 cb.onchange = () => onChange(cb.checked);
 
 const span = document.createElement("span");
-span.textContent = "Includi";
+span.textContent = "Prendi";
 
 label.appendChild(cb);
 label.appendChild(span);

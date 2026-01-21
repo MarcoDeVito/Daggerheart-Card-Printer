@@ -262,6 +262,7 @@ function makeSheet(cards, { crop, bleedOn, isBack = false }) {
 
     if (card) {
       const img = document.createElement("img");
+      img.classList.add("printedcardborder");
       img.alt = "";
       img.src = card.isBack ? card.backSrc : card.front;
       wrap.appendChild(img);
