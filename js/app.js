@@ -71,7 +71,7 @@ const chMulticlassDomain = $("chMulticlassDomain");
 
 
 
-
+new ClipboardJS('.btn');
   let catalog = null; // cards.json
   let rules = null;   // rules.json
 
@@ -308,6 +308,10 @@ function exportActiveCharacter() {
 
   const encoded = b64EncodeUnicode(JSON.stringify(payload));
 
+  const  copia = document.querySelector("#copyPG");
+ copia.setAttribute("data-clipboard-text", encoded);
+ copia.click();
+ window.
   window.prompt(
     "Copia questa stringa per importare il personaggio su un altro browser:",
     encoded
