@@ -293,6 +293,31 @@ function zoomStep(delta) {
   zoomShowCurrent();
 }
 
+
+function exportCharacterById(charId) {
+  const ch = findChar(charId);
+  if (!ch) return;
+
+  const payload = {
+    type: "DHCP_CHAR",
+    v: 1,
+    exportedAt: new Date().toISOString(),
+    character: structuredClone(ch) // <-- oggetto, non stringa
+  };
+
+  const encoded = b64EncodeUnicode(JSON.stringify(payload));
+
+  const copia = document.querySelector("#copyPG");
+  copia.setAttribute("data-clipboard-text", encoded);
+  copia.click();
+
+  window.prompt(
+    "Copia questa stringa per importare il personaggio su un altro browser:",
+    encoded
+  );
+}
+
+
 function exportActiveCharacter() {
   if (!activeChar) {
     alert("Seleziona prima un personaggio da esportare.");
@@ -311,7 +336,6 @@ function exportActiveCharacter() {
   const  copia = document.querySelector("#copyPG");
  copia.setAttribute("data-clipboard-text", encoded);
  copia.click();
- window.
   window.prompt(
     "Copia questa stringa per importare il personaggio su un altro browser:",
     encoded
@@ -410,6 +434,8 @@ function b64DecodeUnicode(b64) {
   function findChar(id) {
     return state.characters.find(c => c.id === id) || null;
   }
+
+
 
   function deleteCharacterById(charId) {
   const ch = findChar(charId);
@@ -603,6 +629,13 @@ function countSelectedDomainNonSpecial(selectedIds) {
       btnOpen.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
       btnOpen.onclick = () => setActiveChar(ch.id);
 
+      const btnShare = document.createElement("button");
+      btnShare.className = "btn";
+      btnShare.type = "button";
+      btnShare.title = "Esporta personaggio";
+      btnShare.innerHTML = '<i class="fa-solid fa-share-nodes fa-lg"></i>';
+      btnShare.onclick = () => exportCharacterById(ch.id);
+
       
       const btnDup = document.createElement("button");
       btnDup.className = "btn";
@@ -625,6 +658,7 @@ btnDel.onclick = () => deleteCharacterById(ch.id);
 
       actions.appendChild(btnOpen);
       actions.appendChild(btnDup);
+      actions.appendChild(btnShare);
       actions.appendChild(btnDel);
 
       row.appendChild(main);
