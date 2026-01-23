@@ -563,7 +563,7 @@ input,select{
 @media print{
   .no-print{display:none !important}
   body{background:#fff}
- .printedcardborder{
+ .printedcardborderhidable{
     border:0px solid var(--border);
     border-radius: 0px;
   }
