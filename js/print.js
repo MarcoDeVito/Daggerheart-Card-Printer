@@ -229,22 +229,23 @@
     }
     
     // Build back sheets (same number of cards, repeated back image)
-    if (printOpt.addBackSheets) {
-      const backSrc = catalog.meta.backImage;
-      const backCards = finalCards.map(() => ({ isBack: true, backSrc }));
-      const backSheets = chunk(backCards, 9);
-      for (const sheetCards of backSheets) {
-        pages.appendChild(makeSheet(sheetCards, { crop: printOpt.cropMarks, bleedOn: printOpt.bleedOn, isBack: true }));
-      }
-      if (printOpt.cropMarks) {
-        let cardBorder = document.querySelectorAll(".printedcardborder");
-        for (let i = 0; i < cardBorder.length; i++) {
-          cardBorder[i].classList.add("printedcardborderhidable");
-          //cardBorder[i].classList.remove("printedcardborder");
+if (printOpt.addBackSheets) {
+  const backSrc = catalog.meta.backImage;
+  const backCards = finalCards.map(() => ({ isBack: true, backSrc }));
+  const backSheets = chunk(backCards, 9);
+  for (const sheetCards of backSheets) {
+    pages.appendChild(
+      makeSheet(sheetCards, { crop: printOpt.cropMarks, bleedOn: printOpt.bleedOn, isBack: true })
+    );
+  }
+}
 
-        }
-      }
-    }
+if (printOpt.cropMarks) {
+  const cardBorder = document.querySelectorAll(".printedcardborder");
+  for (let i = 0; i < cardBorder.length; i++) {
+    cardBorder[i].classList.add("printedcardborderhidable");
+  }
+}
   }
   
   function makeSheet(cards, { crop, bleedOn, isBack = false }) {
