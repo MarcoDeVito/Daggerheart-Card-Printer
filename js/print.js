@@ -69,18 +69,23 @@
       );
     }
     
-    
+   
+
     const specMin = rules.meta.subclassUnlocks.specializationMinLevel;
     const mastMin = rules.meta.subclassUnlocks.masteryMinLevel;
     
-    const printOpt = state.print || { bleedOn: true, cropMarks: true, addBackSheets: true };
+    const printOpt = state.print || { bleedOn: true, cropMarks: true, addBackSheets: true, unique: false };
+    state.print ||= { bleedOn: true, cropMarks: true, addBackSheets: true, unique: false };
+
     const optBleed = document.getElementById("optBleed");
     const optCrop  = document.getElementById("optCrop");
     const optBack  = document.getElementById("optBack");
+    const optUnique  = document.getElementById("optUnique");
     
     optBleed.checked = !!printOpt.bleedOn;
     optCrop.checked  = !!printOpt.cropMarks;
     optBack.checked  = !!printOpt.addBackSheets;
+    optUnique.checked  = !!printOpt.unique;
     
     optBleed.onchange = () => {
       state.print.bleedOn = optBleed.checked;
@@ -100,6 +105,12 @@
       location.reload();
     };
     
+    optUnique.onchange = () => {
+      state.print.unique = optUnique.checked;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      location.reload();
+    };
+    
     // Set CSS var for bleed
     document.documentElement.style.setProperty("--bleedOn", printOpt.bleedOn ? "1" : "0");
     
@@ -110,16 +121,20 @@
     };
     
     // 1) Mandatory in ordine fisso
+    if (!printOpt.unique){
     pushUnique(ch.communityId);
     pushUnique(ch.ancestryId);
     if (ch.mixed) pushUnique(ch.mixedAncestryId);
     
-    
+    }
     const lvl = Number(ch.level);
     
     // Subclass base sempre 
     
-    pushUnique(subDef.cards.base);
+    if (!printOpt.unique)
+      
+    {
+        pushUnique(subDef.cards.base);
     
     
     // Specializzazione
@@ -145,7 +160,7 @@
     ) {
       pushUnique(subDef.cards.mastery);
     }
-    
+  }
     
     // 2) Domain selected, ordinato per: ordine domini classe -> level -> id
     const selected = new Set(Array.isArray(ch.selectedCardIds) ? ch.selectedCardIds : []);

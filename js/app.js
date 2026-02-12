@@ -76,6 +76,7 @@ new ClipboardJS('.btn');
   let rules = null;   // rules.json
 
   let state = loadState();
+  if (!state.print) state.print = { bleedOn: false, cropMarks: true, addBackSheets: true, unique: false };
   if (!state.ui) state.ui = { domainView: "grid", language: "eng" };
   if (state.ui.language !== "eng" && state.ui.language !== "ita") state.ui.language = "eng";
 
