@@ -20,6 +20,7 @@
 }
 
 
+
 @font-face {
   font-family: "IvyMode";
   src:
@@ -30,6 +31,35 @@
   font-display: swap;
 }
 
+/* Floating print button */
+.btnPrintFloating{
+  position: fixed;
+  bottom: 20px;
+  right: max(20px, calc((100vw - 1200px) / 2 + 20px));
+  z-index: 999;
+
+  padding: 14px 18px;
+  font-size: 20px;
+  border-radius: 14px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+/* Hover più "cliccabile" */
+.btnPrintFloating:hover{
+  transform: translateY(-2px);
+}
+.btnPrintFloating.disabled{
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+@media (max-width: 700px){
+  .btnPrintFloating{
+    right: 12px;
+    bottom: 12px;
+  }
+}
 
 .printedcardborder{
   border: #969696 solid 1px;
