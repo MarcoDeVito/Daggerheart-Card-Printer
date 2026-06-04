@@ -40,7 +40,8 @@
       document.body.innerHTML = "Personaggio non trovato.";
       return;
     }
-    
+    document.title = `Stampa Carte - ${ch.name || "PG"} lvl ${ch.level}`;
+
     const cardsPath = (lang === "ita") ? "data/cardsITA.json" : "data/cards.json";
     const rulesPath = (lang === "ita") ? "data/rulesITA.json" : "data/rules.json";
     
