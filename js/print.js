@@ -191,7 +191,7 @@
     .filter((c) => {
       const cardLvl = Number(c.level);
       
-      if (c.domain === "dragonslayer") return cardLvl <= lvl;
+      if (c.domain === "Transformation") return cardLvl <= lvl;
       if (baseDomains.has(c.domain)) return cardLvl <= lvl;
       if (mcDomain && c.domain === mcDomain) return cardLvl <= mcMaxLvl;
       

@@ -100,7 +100,6 @@ new ClipboardJS('.btn');
 
   let zoomList = [];       // lista carte visibili (oggetti card)
   let zoomIndex = -1;      // indice corrente dentro zoomList
-  let zoomOnCardChange = null; // callback opzionale per select Community/Ancestry
 
 
   function ensureZoomModal() {
@@ -177,7 +176,6 @@ new ClipboardJS('.btn');
 
   zoomAllowToggle = true;
 zoomHideNav = false;
-zoomOnCardChange = null;
 
 if (zoomModalPrevBtn) zoomModalPrevBtn.classList.remove("hidden");
 if (zoomModalNextBtn) zoomModalNextBtn.classList.remove("hidden");
@@ -225,37 +223,12 @@ function openZoomModalSingleCard(cardId) {
 }
 
 
-function openZoomModalChoice(cardId, kind, onCardChange) {
-  ensureZoomModal();
-
-  zoomList = getCardsByKind(kind)
-    .slice()
-    .sort((a, b) => a.name.localeCompare(b.name, "it", { sensitivity: "base" }));
-
-  if (!zoomList.length) return;
-
-  zoomIndex = zoomList.findIndex(card => card.id === cardId);
-  if (zoomIndex < 0) zoomIndex = 0;
-
-  zoomAllowToggle = false;
-  zoomHideNav = false;
-  zoomOnCardChange = typeof onCardChange === "function" ? onCardChange : null;
-
-  if (zoomModalPrevBtn) zoomModalPrevBtn.classList.remove("hidden");
-  if (zoomModalNextBtn) zoomModalNextBtn.classList.remove("hidden");
-
-  zoomModalEl.classList.add("open");
-  zoomShowCurrent();
-}
-
-
   function closeZoomModal() {
   if (!zoomModalEl) return;
   zoomModalEl.classList.remove("open");
   if (zoomModalImgEl) zoomModalImgEl.src = "";
   zoomList = [];
   zoomIndex = -1;
-  zoomOnCardChange = null;
 }
 
 function isCardSelected(ch, cardId) {
@@ -278,12 +251,8 @@ function setModalSelectedUI() {
 
 function setZoomNavDisabled() {
   if (!zoomModalPrevBtn || !zoomModalNextBtn) return;
-
-  // Con almeno due carte le frecce restano sempre attive:
-  // dalla prima si torna all'ultima e dall'ultima si riparte dalla prima.
-  const disableNav = zoomList.length <= 1;
-  zoomModalPrevBtn.disabled = disableNav;
-  zoomModalNextBtn.disabled = disableNav;
+  zoomModalPrevBtn.disabled = zoomIndex <= 0;
+  zoomModalNextBtn.disabled = zoomIndex >= zoomList.length - 1;
 }
 
 
@@ -295,10 +264,6 @@ function zoomShowCurrent() {
   zoomModalImgEl.src = card.front || card.thumb || card.back || "";
   setZoomNavDisabled();
   setModalSelectedUI();
-
-  if (zoomOnCardChange) {
-    zoomOnCardChange(card);
-  }
 }
 
 
@@ -323,12 +288,9 @@ function toggleZoomSelection() {
 
 
 function zoomStep(delta) {
-  if (!zoomList.length) return;
-
-  // Navigazione circolare:
-  // precedente sulla prima carta -> ultima carta
-  // successiva sull'ultima carta -> prima carta
-  zoomIndex = (zoomIndex + delta + zoomList.length) % zoomList.length;
+  const next = zoomIndex + delta;
+  if (next < 0 || next >= zoomList.length) return;
+  zoomIndex = next;
   zoomShowCurrent();
 }
 
@@ -1566,18 +1528,7 @@ btnLangENG.onclick = async () => {
   btnZoomAncestryMix2.addEventListener("click", (e) => {
     e.preventDefault();
     if (!activeChar || !activeChar.mixed || !activeChar.mixedAncestryId) return;
-
-    openZoomModalChoice(activeChar.mixedAncestryId, "ancestry", (card) => {
-      if (!activeChar || !activeChar.mixed) return;
-
-      activeChar.mixedAncestryId = card.id;
-      chAncestryMix2.value = card.id;
-
-      saveState();
-      updateCountsAndPrintLink();
-      renderCharList();
-      updateCommunityAncestryZoomButtons();
-    });
+    openZoomModalSingleCard(activeChar.mixedAncestryId);
   });
 }
 
@@ -1632,18 +1583,7 @@ btnZoomCommunity.onclick = (e) => {
   e.preventDefault();
   const id = chCommunity.value;
   if (!id) return;
-
-  openZoomModalChoice(id, "community", (card) => {
-    if (!activeChar) return;
-
-    activeChar.communityId = card.id;
-    chCommunity.value = card.id;
-
-    saveState();
-    updateCountsAndPrintLink();
-    renderCharList();
-    updateCommunityAncestryZoomButtons();
-  });
+  openZoomModalSingleCard(id);
 };
 optVaultB2.onchange = () => {
   if (!activeChar) return;
@@ -1675,24 +1615,9 @@ optVaultB8.onchange = () => {
 btnZoomAncestry.onclick = (e) => {
   e.preventDefault();
   const id = activeChar?.ancestryId;
+
   if (!id) return;
-
-  openZoomModalChoice(id, "ancestry", (card) => {
-    if (!activeChar) return;
-
-    activeChar.ancestryId = card.id;
-
-    if (activeChar.mixed) {
-      chAncestryMix1.value = card.id;
-    } else {
-      chAncestry.value = card.id;
-    }
-
-    saveState();
-    updateCountsAndPrintLink();
-    renderCharList();
-    updateCommunityAncestryZoomButtons();
-  });
+  openZoomModalSingleCard(id);
 };
 
 
