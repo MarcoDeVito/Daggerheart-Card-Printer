@@ -513,6 +513,18 @@ function b64DecodeUnicode(b64) {
     return catalog.cards.filter(c => c.kind === kind);
   }
 
+  function isTransformationCard(card) {
+    const domain = String(card?.domain || "").trim().toLowerCase();
+
+    return (
+      Number(card?.level) === -1 ||
+      domain === "transformation" ||
+      domain === "transformations" ||
+      domain === "trasformazione" ||
+      domain === "trasformazioni"
+    );
+  }
+
   function getClassDef(classKey) {
     return rules.classes[classKey] || null;
   }
@@ -596,8 +608,8 @@ function pruneSelectedDomainToEligible(ch) {
     .filter(c => {
       const cardLvl = Number(c.level);
 
-      // Transformation sempre ok col limite "normale"
-      if (c.domain === "Transformation") return cardLvl <= lvl;
+      // Le carte speciali sono sempre disponibili.
+      if (isTransformationCard(c)) return true;
 
       // domini base: limite normale
       if (baseDomains.has(c.domain)) return cardLvl <= lvl;
@@ -614,7 +626,7 @@ function pruneSelectedDomainToEligible(ch) {
 
 function isTransformationCardId(cardId) {
   const card = getCardById(cardId);
-  return card && card.kind === "domain" && card.domain === "Transformation";
+  return !!(card && card.kind === "domain" && isTransformationCard(card));
 }
 
 function countSelectedDomainNonSpecial(selectedIds) {
@@ -623,7 +635,7 @@ function countSelectedDomainNonSpecial(selectedIds) {
     const card = getCardById(id);
     if (!card) continue;
     if (card.kind !== "domain") continue;
-    if (card.domain === "Transformation") continue; // <- NON conta
+    if (isTransformationCard(card)) continue; // le carte speciali non contano
     n++;
   }
   return n;
@@ -1162,8 +1174,8 @@ if (ch.multiclass && mcDomain && !classDef.domains.includes(mcDomain)) {
   filterDomain.appendChild(opt);
 }
       const special = document.createElement("option");
-      special.value = "Transformation"
-      special.textContent = "Carte Speciali";
+      special.value = "__transformations__";
+      special.textContent = "Trasformazioni";
       filterDomain.appendChild(special);
 
   }
@@ -1274,11 +1286,20 @@ domainHint.textContent = `Domini classe: ${classDef.domains.join(" + ")} — Car
     const q = (search.value || "").trim().toLowerCase();
     const domFilter = filterDomain.value || "";
 
-    visibleDomainCards = eligible.filter(c => {
-      if (domFilter && c.domain !== domFilter) return false;
-      if (!q) return true;
-      return (c.name || "").toLowerCase().includes(q) || c.id.includes(q);
-    });
+    visibleDomainCards = eligible
+      .filter(c => {
+        if (domFilter === "__transformations__") {
+          if (!isTransformationCard(c)) return false;
+        } else if (domFilter) {
+          if (c.domain !== domFilter) return false;
+        } else if (isTransformationCard(c)) {
+          return false;
+        }
+
+        if (!q) return true;
+        return (c.name || "").toLowerCase().includes(q) || c.id.includes(q);
+      })
+      .sort((a, b) => a.id.localeCompare(b.id));
 
     domainGrid.innerHTML = "";
     domainEmpty.classList.add("hidden");
@@ -1430,10 +1451,27 @@ bodyDescription.innerHTML = safe;
 
   const eligibleSelected = eligible.filter(c => selected.has(c.id));
 
+  const selectedTransformations = catalog.cards.filter(c =>
+    c.kind === "domain" &&
+    selected.has(c.id) &&
+    isTransformationCard(c)
+  );
+
+  for (const card of selectedTransformations) {
+    if (!eligibleSelected.some(c => c.id === card.id)) {
+      eligibleSelected.push(card);
+    }
+  }
+
   const domainOrder = new Map();
   (classDef?.domains || []).forEach((d, i) => domainOrder.set(d, i));
 
   eligibleSelected.sort((a, b) => {
+    const aSpecial = isTransformationCard(a);
+    const bSpecial = isTransformationCard(b);
+
+    if (aSpecial !== bSpecial) return aSpecial ? 1 : -1;
+
     const da = domainOrder.has(a.domain) ? domainOrder.get(a.domain) : 999;
     const db = domainOrder.has(b.domain) ? domainOrder.get(b.domain) : 999;
     if (da !== db) return da - db;
