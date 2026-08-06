@@ -8,6 +8,7 @@
   const editorForm = $("editor");
 
   const btnNewChar = $("btnNewChar");
+  const btnRandomChar = $("btnRandomChar");
   const btnDeleteChar = $("btnDeleteChar");
   const btnPrint = $("btnPrint");
 
@@ -474,6 +475,53 @@ function b64DecodeUnicode(b64) {
     return state.characters.find(c => c.id === id) || null;
   }
 
+  function randomItem(items) {
+    if (!Array.isArray(items) || items.length === 0) return null;
+    return items[Math.floor(Math.random() * items.length)];
+  }
+
+  function createRandomCharacter() {
+    const communities = getCardsByKind("community");
+    const ancestries = getCardsByKind("ancestry");
+    const classEntries = Object.entries(rules?.classes || {}).filter(([, def]) =>
+      def && def.subclasses && Object.keys(def.subclasses).length > 0
+    );
+
+    const community = randomItem(communities);
+    const ancestry = randomItem(ancestries);
+    const classEntry = randomItem(classEntries);
+
+    if (!community || !ancestry || !classEntry) {
+      alert("Impossibile creare il personaggio casuale: mancano Community, Ancestry, Classi o Sottoclassi nei dati caricati.");
+      return;
+    }
+
+    const [classKey, classDef] = classEntry;
+    const subclassKey = randomItem(Object.keys(classDef.subclasses));
+    if (!subclassKey) return;
+
+    const id = uid();
+    const ch = {
+      id,
+      name: "PG Casuale",
+      level: 1,
+      classKey,
+      subclassKey,
+      communityId: community.id,
+      ancestryId: ancestry.id,
+      mixed: false,
+      mixedAncestryId: "",
+      multiclassPick: "",
+      multiclassClassKey: "",
+      multiclassDomainIdx: null,
+      subclassPicks: { specialization: false, mastery: false },
+      domainVaultBonuses: { b2: false, b5: false, b8: false },
+      selectedCardIds: []
+    };
+
+    state.characters.push(ch);
+    setActiveChar(id);
+  }
 
 
   function deleteCharacterById(charId) {
@@ -647,7 +695,7 @@ function countSelectedDomainNonSpecial(selectedIds) {
     if (state.characters.length === 0) {
       const div = document.createElement("div");
       div.className = "empty";
-      div.innerHTML = 'Nessun personaggio. Clicca <i class="fa-solid fa-user-plus"></i>';
+      div.innerHTML = 'Nessun personaggio. Clicca <i class="fa-solid fa-user-plus"></i> o <i class="fa-solid fa-dice"></i>';
       elCharList.appendChild(div);
       return;
     }
@@ -1555,6 +1603,7 @@ multiclassDomainIdx: null,
       state.characters.push(ch);
       setActiveChar(id);
     };
+    btnRandomChar.onclick = createRandomCharacter;
     btnExportChar.onclick = exportActiveCharacter;
     btnImportChar.onclick = importCharacterFromString;
 
