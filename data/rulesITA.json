@@ -6,136 +6,328 @@
     }
   },
   "classes": {
+    "assassin": {
+      "label": "Assassino",
+      "domains": [
+        "Lame",
+        "Mezzanotte"
+      ],
+      "subclasses": {
+        "call_of_the_brave": {
+          "label": "Gilda dei Carnefici",
+          "cards": {
+            "base": "HF001",
+            "specialization": "HF002",
+            "mastery": "HF003"
+          }
+        },
+        "call_of_the_slayer": {
+          "label": "Gilda degli Avvelenatori",
+          "cards": {
+            "base": "HF004",
+            "specialization": "HF005",
+            "mastery": "HF006"
+          }
+        }
+      }
+    },
     "bard": {
       "label": "Bardo",
-      "domains": ["Grazia", "Codice"],
+      "domains": [
+        "Grazia",
+        "Codice"
+      ],
       "subclasses": {
         "troubadour": {
           "label": "Trovatore",
-          "cards": { "base": "001", "specialization": "002", "mastery": "003" }
+          "cards": {
+            "base": "001",
+            "specialization": "002",
+            "mastery": "003"
+          }
         },
         "wordsmith": {
           "label": "Oratore",
-          "cards": { "base": "004", "specialization": "005", "mastery": "006" }
+          "cards": {
+            "base": "004",
+            "specialization": "005",
+            "mastery": "006"
+          }
+        }
+      }
+    },
+    "brawler": {
+      "label": "Lottatore",
+      "domains": [
+        "Valore",
+        "Ossa"
+      ],
+      "subclasses": {
+        "juggernaut": {
+          "label": "Juggernaut",
+          "cards": {
+            "base": "HF007",
+            "specialization": "HF008",
+            "mastery": "HF009"
+          }
+        },
+        "martial_artist": {
+          "label": "Artista Marziale",
+          "cards": {
+            "base": "HF010",
+            "specialization": "HF011",
+            "mastery": "HF012"
+          }
         }
       }
     },
     "druid": {
       "label": "Druido",
-      "domains": ["Saggezza", "Arcano"],
+      "domains": [
+        "Saggezza",
+        "Arcano"
+      ],
       "subclasses": {
         "warden_of_elements": {
           "label": "Custode degli Elementi",
-          "cards": { "base": "007", "specialization": "008", "mastery": "009" }
+          "cards": {
+            "base": "007",
+            "specialization": "008",
+            "mastery": "009"
+          }
         },
         "warden_of_renewal": {
           "label": "Custode del Rinnovamento",
-          "cards": { "base": "010", "specialization": "011", "mastery": "012" }
+          "cards": {
+            "base": "010",
+            "specialization": "011",
+            "mastery": "012"
+          }
         }
       }
     },
-
     "guardian": {
       "label": "Guardiano",
-      "domains": ["Lame", "Valore"],
+      "domains": [
+        "Lame",
+        "Valore"
+      ],
       "subclasses": {
         "stalwart": {
           "label": "Valoroso",
-          "cards": { "base": "013", "specialization": "014", "mastery": "015" }
+          "cards": {
+            "base": "013",
+            "specialization": "014",
+            "mastery": "015"
+          }
         },
         "vengeance": {
           "label": "Vendicatore",
-          "cards": { "base": "016", "specialization": "017", "mastery": "018" }
+          "cards": {
+            "base": "016",
+            "specialization": "017",
+            "mastery": "018"
+          }
         }
       }
     },
-
     "ranger": {
       "label": "Ranger",
-      "domains": ["Ossa", "Saggezza"],
+      "domains": [
+        "Ossa",
+        "Saggezza"
+      ],
       "subclasses": {
         "beastbound": {
           "label": "Ferale",
-          "cards": { "base": "019", "specialization": "020", "mastery": "021" }
+          "cards": {
+            "base": "019",
+            "specialization": "020",
+            "mastery": "021"
+          }
         },
         "wayfinder": {
           "label": "Apripista",
-          "cards": { "base": "022", "specialization": "023", "mastery": "024" }
+          "cards": {
+            "base": "022",
+            "specialization": "023",
+            "mastery": "024"
+          }
         }
       }
     },
-
     "rogue": {
       "label": "Fuorilegge",
-      "domains": ["Mezzanotte", "Grazia"],
+      "domains": [
+        "Mezzanotte",
+        "Grazia"
+      ],
       "subclasses": {
         "nightwalker": {
           "label": "Ombra Notturna",
-          "cards": { "base": "025", "specialization": "026", "mastery": "027" }
+          "cards": {
+            "base": "025",
+            "specialization": "026",
+            "mastery": "027"
+          }
         },
         "syndicate": {
           "label": "Ladro",
-          "cards": { "base": "028", "specialization": "029", "mastery": "030" }
+          "cards": {
+            "base": "028",
+            "specialization": "029",
+            "mastery": "030"
+          }
         }
       }
     },
-
     "seraph": {
       "label": "Consacrato",
-      "domains": ["Splendore", "Valore"],
+      "domains": [
+        "Splendore",
+        "Valore"
+      ],
       "subclasses": {
         "divine_wielder": {
           "label": "Emissario Divino",
-          "cards": { "base": "031", "specialization": "032", "mastery": "033" }
+          "cards": {
+            "base": "031",
+            "specialization": "032",
+            "mastery": "033"
+          }
         },
         "winged_sentinel": {
           "label": "Sentinella Alata",
-          "cards": { "base": "034", "specialization": "035", "mastery": "036" }
+          "cards": {
+            "base": "034",
+            "specialization": "035",
+            "mastery": "036"
+          }
         }
       }
     },
-
     "sorcerer": {
       "label": "Stregone",
-      "domains": ["Arcano", "Mezzanotte"],
+      "domains": [
+        "Arcano",
+        "Mezzanotte"
+      ],
       "subclasses": {
         "elemental_origin": {
           "label": "Potere Elementale",
-          "cards": { "base": "037", "specialization": "038", "mastery": "039" }
+          "cards": {
+            "base": "037",
+            "specialization": "038",
+            "mastery": "039"
+          }
         },
         "primal_origin": {
           "label": "Potere Primordiale",
-          "cards": { "base": "040", "specialization": "041", "mastery": "042" }
+          "cards": {
+            "base": "040",
+            "specialization": "041",
+            "mastery": "042"
+          }
         }
       }
     },
-
+    "warlock": {
+      "label": "Warlock",
+      "domains": [
+        "Terrore",
+        "Grazia"
+      ],
+      "subclasses": {
+        "pact_of_the_endless": {
+          "label": "Patto dell’Infinito",
+          "cards": {
+            "base": "HF013",
+            "specialization": "HF014",
+            "mastery": "HF015"
+          }
+        },
+        "pact_of_the_wrathful": {
+          "label": "Patto dell’Ira",
+          "cards": {
+            "base": "HF016",
+            "specialization": "HF017",
+            "mastery": "HF018"
+          }
+        }
+      }
+    },
     "warrior": {
       "label": "Guerriero",
-      "domains": ["Lame", "Ossa"],
+      "domains": [
+        "Lame",
+        "Ossa"
+      ],
       "subclasses": {
         "call_of_the_brave": {
           "label": "Chiamata del Coraggio",
-          "cards": { "base": "043", "specialization": "044", "mastery": "045" }
+          "cards": {
+            "base": "043",
+            "specialization": "044",
+            "mastery": "045"
+          }
         },
         "call_of_the_slayer": {
           "label": "Chiamata dello Sterminatore",
-          "cards": { "base": "046", "specialization": "047", "mastery": "048" }
+          "cards": {
+            "base": "046",
+            "specialization": "047",
+            "mastery": "048"
+          }
         }
       }
     },
-
+    "witch": {
+      "label": "Strega",
+      "domains": [
+        "Saggezza",
+        "Terrore"
+      ],
+      "subclasses": {
+        "hedge": {
+          "label": "Strega Liminale",
+          "cards": {
+            "base": "HF019",
+            "specialization": "HF020",
+            "mastery": "HF021"
+          }
+        },
+        "moon": {
+          "label": "Strega Lunare",
+          "cards": {
+            "base": "HF022",
+            "specialization": "HF023",
+            "mastery": "HF024"
+          }
+        }
+      }
+    },
     "wizard": {
       "label": "Mago",
-      "domains": ["Codice", "Splendore"],
+      "domains": [
+        "Codice",
+        "Splendore"
+      ],
       "subclasses": {
         "school_of_knowledge": {
           "label": "Scuola della Conoscenza",
-          "cards": { "base": "049", "specialization": "050", "mastery": "051" }
+          "cards": {
+            "base": "049",
+            "specialization": "050",
+            "mastery": "051"
+          }
         },
         "school_of_war": {
           "label": "Scuola della Guerra",
-          "cards": { "base": "052", "specialization": "053", "mastery": "054" }
+          "cards": {
+            "base": "052",
+            "specialization": "053",
+            "mastery": "054"
+          }
         }
       }
     }

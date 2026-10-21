@@ -16,6 +16,330 @@
       "description": "TRATTO DA INCANTATORE: PRESENZA Musico Eccezionale: Descrivete il modo in cui vi esibite per gli altri. È possibile eseguire ogni canzone una sola volta per riposo lungo: • Canzone Popolare: Voi e tutti gli alleati a distanza Ravvicinata recuperate un Punto Ferita. • Canto Epico: Rendete temporaneamente Vulnerabile un bersaglio a distanza Ravvicinata. • Ballata: Voi e tutti gli alleati a distanza Ravvicinata guadagnate una Speranza."
     },
     {
+      "id": "HF001",
+      "kind": "subclass",
+      "name": "Gilda dei Carnefici",
+      "front": "assets/frontITA/HF001.webp",
+      "thumb": "assets/thumbsITA/HF001.webp",
+      "tags": [],
+      "description": "TRATTO DA INCANTATORE: AGILITÀ Primo Colpo: La prima volta che in una scena colpite un bersaglio, infliggete il doppio dei danni. Imboscata: Il privilegio “Marchiare a Morte” utilizza d6 invece di d4."
+    },
+    {
+      "id": "HF002",
+      "kind": "subclass",
+      "name": "Gilda dei Carnefici",
+      "front": "assets/frontITA/HF002.webp",
+      "thumb": "assets/thumbsITA/HF002.webp",
+      "tags": [],
+      "description": "Colpo Mortale: Quando infliggete danno Grave a una creatura, potete marcare uno Stress per costringerla a subire un Punto Ferita aggiuntivo. Posa dello Scorpione: Ottenete un bonus di +2 all’Evasione contro gli attacchi sferrati da una creatura che è Marchiata a Morte."
+    },
+    {
+      "id": "HF003",
+      "kind": "subclass",
+      "name": "Gilda dei Carnefici",
+      "front": "assets/frontITA/HF003.webp",
+      "thumb": "assets/thumbsITA/HF003.webp",
+      "tags": [],
+      "description": "Colpo Preciso: Una volta per ogni Riposo lungo, quando fallite un attacco, potete spendere una Speranza per trasformarlo in un successo. Colpo alle Spalle: Il privilegio “Marchiare a Morte” utilizza d8 invece di d6."
+    },
+    {
+      "id": "HF004",
+      "kind": "subclass",
+      "name": "Gilda degli Avvelenatori",
+      "front": "assets/frontITA/HF004.webp",
+      "thumb": "assets/thumbsITA/HF004.webp",
+      "tags": [],
+      "description": "TRATTO DA INCANTATORE: CONOSCENZA Composti Tossici: Marcate uno Stress per posizionare 1d4+1 gettoni su questa carta. Quando effettuate con successo un attacco con un’arma, potete spendere un gettone per affliggere il bersaglio con un veleno scelto tra i seguenti: • Petalo Spettrale: Il bersaglio diventa temporaneamente Vulnerabile. • Spora del Sepolcro: Il bersaglio deve anche marcare uno Stress. • Erba della Sanguisuga: Infliggete 1d6 danni aggiuntivi con questo attacco. Quando effettuate un Riposo lungo, rimuovete tutti i gettoni non spesi."
+    },
+    {
+      "id": "HF005",
+      "kind": "subclass",
+      "name": "Gilda degli Avvelenatori",
+      "front": "assets/frontITA/HF005.webp",
+      "thumb": "assets/thumbsITA/HF005.webp",
+      "tags": [],
+      "description": "Compendio dei Veleni: Conoscete anche questi veleni: • Viticcio della Mezzanotte: Il bersaglio ha svantaggio ai tiri d’attacco finché non marca uno Stress per rimuovere questa condizione. • Radice della Gorgone: Il bersaglio diventa temporaneamente Trattenuto. Zanne Gemelle: Quando un bersaglio Marchiato a Morte viene afflitto da un veleno, potete spendere un gettone aggiuntivo per infliggere anche l’effetto di un secondo veleno tra quelli che conoscete."
+    },
+    {
+      "id": "HF006",
+      "kind": "subclass",
+      "name": "Gilda degli Avvelenatori",
+      "front": "assets/frontITA/HF006.webp",
+      "thumb": "assets/thumbsITA/HF006.webp",
+      "tags": [],
+      "description": "Venomante: Conoscete anche questi veleni: • Seme della Rovina: Il bersaglio subisce una penalità di −3 alle proprie soglie di danno fino alla fine della scena. Questo effetto non è cumulativo. • Foglia della Paura: Infliggete danni aggiuntivi pari al risultato del vostro Dado Paura in questo attacco. • Spina Cadaverica: Il bersaglio subisce svantaggio ai tiri di reazione fino alla fine della scena. Benedizione della Vipera: Siete immune ai veleni e alle altre tossine."
+    },
+    {
+      "id": "HF007",
+      "kind": "subclass",
+      "name": "Juggernaut",
+      "front": "assets/frontITA/HF007.webp",
+      "thumb": "assets/thumbsITA/HF007.webp",
+      "tags": [],
+      "description": "Rude: Ottenete un bonus permanente di +3 alla soglia di danno Grave. Sopraffare: Quando un attacco contro un bersaglio ha successo, potete spendere una Speranza per scaraventarlo a distanza Ravvicinata o per costringerlo a marcare uno Stress."
+    },
+    {
+      "id": "HF008",
+      "kind": "subclass",
+      "name": "Juggernaut",
+      "front": "assets/frontITA/HF008.webp",
+      "thumb": "assets/thumbsITA/HF008.webp",
+      "tags": [],
+      "description": "Circondato: Quando attaccate con un’arma da Mischia, potete spendere un numero qualsiasi di Speranze per attaccare un egual numero di creature aggiuntive entro distanza di Mischia. Occhio per Occhio: Una volta per riposo, quando un avversario entro distanza di Mischia vi fa perdere un qualsiasi numero di Punti Ferita, potete marcare uno Stress per costringerlo a subire lo stesso numero di Punti Ferita."
+    },
+    {
+      "id": "HF009",
+      "kind": "subclass",
+      "name": "Juggernaut",
+      "front": "assets/frontITA/HF009.webp",
+      "thumb": "assets/thumbsITA/HF009.webp",
+      "tags": [],
+      "description": "Ebrezza della Lotta: Quando ottenete un successo critico con un attacco con un’arma da Mischia, guadagnate una Speranza aggiuntiva, rimuovete uno Stress aggiuntivo e ottenete un bonus di +1 alla Competenza per quell’attacco. Non è Ancora Finita: Quando subite un danno Grave, potete guadagnare una Speranza o rimuovere uno Stress."
+    },
+    {
+      "id": "HF010",
+      "kind": "subclass",
+      "name": "Artista Marziale",
+      "front": "assets/frontITA/HF010.webp",
+      "thumb": "assets/thumbsITA/HF010.webp",
+      "tags": [],
+      "description": "Postura del Combattente: Potete incanalare la vostra determinazione per assumere pose marziali che vi garantiscono benefici in combattimento. Prendete la scheda delle Pose Marziali e scegliete due Pose Marziali dal rango 1. Ogni volta che il personaggio sale di livello, scegliete una posa aggiuntiva tra quelle del suo rango o di rango inferiore."
+    },
+    {
+      "id": "HF011",
+      "kind": "subclass",
+      "name": "Artista Marziale",
+      "front": "assets/frontITA/HF011.webp",
+      "thumb": "assets/thumbsITA/HF011.webp",
+      "tags": [],
+      "description": "Guardia Alta: Quando siete il bersaglio di un attacco, potete spendere un Focus per ottenere un bonus all’Evasione pari al vostro rango contro quell’attacco. Cannone Spirituale: Spendete un Focus per effettuare un Tiro Istinto contro un avversario a distanza Lontana. In caso di successo, infliggete d20+3 danni magici utilizzando la vostra Competenza."
+    },
+    {
+      "id": "HF012",
+      "kind": "subclass",
+      "name": "Artista Marziale",
+      "front": "assets/frontITA/HF012.webp",
+      "thumb": "assets/thumbsITA/HF012.webp",
+      "tags": [],
+      "description": "Oltre il Limite: Una volta per riposo, potete compiere un’impresa atletica incredibile, come correre sull’acqua, saltare da un tetto all’altro a grande distanza o scalare un edificio senza bisogno di tirare i dadi. Quando lo fate, ottenete una Speranza ed eliminate uno Stress. Seguire la Corrente: Potete marcare uno Stress invece di spendere un Focus per passare a una diversa Posa Marziale. Inoltre, potete spendere un Focus invece di marcare uno Stress per iniziare una Combinazione di Colpi."
+    },
+    {
+      "id": "HF013",
+      "kind": "subclass",
+      "name": "Patto dell’Infinito",
+      "front": "assets/frontITA/HF013.webp",
+      "thumb": "assets/thumbsITA/HF013.webp",
+      "tags": [],
+      "description": "TRATTO DA INCANTATORE: PRESENZA Mantello del Patrono: Spendete un Favore per ammantarvi dell’aspetto terrificante del Patrono, che permane finché non subite un danno Grave o la scena non termina. Finché l’effetto è attivo, ottenete un bonus alle soglie di danno pari al rango e vantaggio ai tiri azione per intimidire un bersaglio. Abbraccio del Senzamorte: Una volta per riposo, spendete un numero qualsiasi di Favori per tirare lo stesso numero di Dadi del Patrono. Per ogni risultato pari o superiore a 4, recuperate un Punto Ferita."
+    },
+    {
+      "id": "HF014",
+      "kind": "subclass",
+      "name": "Patto dell’Infinito",
+      "front": "assets/frontITA/HF014.webp",
+      "thumb": "assets/thumbsITA/HF014.webp",
+      "tags": [],
+      "description": "Invocazione Straziante: Quando un avversario prende di mira voi o un alleato entro distanza Prossima con un attacco, potete spendere un Favore per infliggergli svantaggio al tiro. Se l’avversario fallisce il tiro, deve anche marcare uno Stress. Assorbimento del Danno: Una volta per riposo, potete spendere un Favore per dimezzare il danno subito."
+    },
+    {
+      "id": "HF015",
+      "kind": "subclass",
+      "name": "Patto dell’Infinito",
+      "front": "assets/frontITA/HF015.webp",
+      "thumb": "assets/thumbsITA/HF015.webp",
+      "tags": [],
+      "description": "Egida Oscura: Una volta per Riposo lungo, quando subireste dei danni, potete spendere un Favore invece di subire Punti Ferita. Prosciugare: Quando un avversario attacca voi o un alleato entro distanza Prossima, potete spendere un Favore per Prosciugare la sua energia vitale. Quando lo fate, l’avversario deve marcare uno Stress e voi potete rimuoverne uno. Mentre è Prosciugato, il bersaglio usa un d12 invece di un d20 per i tiri attacco (compresi quelli con vantaggio o svantaggio) finché non fallisce un tiro."
+    },
+    {
+      "id": "HF016",
+      "kind": "subclass",
+      "name": "Patto dell’Ira",
+      "front": "assets/frontITA/HF016.webp",
+      "thumb": "assets/thumbsITA/HF016.webp",
+      "tags": [],
+      "description": "TRATTO DA INCANTATORE: PRESENZA Furia del Patrono: Spendete un Favore per infondere nei vostri attacchi il potere del Patrono finché non infliggete danni Gravi o la scena non termina. Quando tirate per i danni mentre questo effetto è attivo, tirate anche un numero di Dadi del Patrono pari al vostro rango e aggiungete il risultato ai danni inflitti. Vendetta Letale: Quando subite un numero qualsiasi di Punti Ferita a causa di un attacco, potete spendere un Favore per tirare un numero di Dadi del Patrono pari al Favore speso. Per ogni risultato pari o superiore a 4, l’attaccante subisce un Punto Ferita."
+    },
+    {
+      "id": "HF017",
+      "kind": "subclass",
+      "name": "Patto dell’Ira",
+      "front": "assets/frontITA/HF017.webp",
+      "thumb": "assets/thumbsITA/HF017.webp",
+      "tags": [],
+      "description": "Portata Minacciosa: Spendete un Favore per aumentare la portata dell’arma primaria di una categoria (per esempio da Mischia a Prossima o da Prossima a Vicina) fino a un massimo pari alla portata Remota. Questo effetto termina quando riuscite in un attacco con quell’arma. Umilia i Miei Nemici: Quando ottenete un successo con Speranza in un tiro azione contro un bersaglio, potete spendere un numero qualsiasi di Favori per costringere il bersaglio a marcare un egual numero di Stress."
+    },
+    {
+      "id": "HF018",
+      "kind": "subclass",
+      "name": "Patto dell’Ira",
+      "front": "assets/frontITA/HF018.webp",
+      "thumb": "assets/thumbsITA/HF018.webp",
+      "tags": [],
+      "description": "Attacco Terrificante: Spendete un Favore per ripetere il tiro di un numero qualsiasi dei vostri dadi di danno. Potete continuare a spendere Favore per riutilizzare il privilegio sullo stesso tiro. Ira dell’Oltremondo: Una volta per riposo, quando subite danni, potete spendere un numero qualsiasi di Favori per tirare altrettanti Dadi del Patrono e scegliere come bersaglio un numero di creature entro distanza Ravvicinata pari al risultato più alto. Ogni bersaglio perde un Punto Ferita."
+    },
+    {
+      "id": "HF019",
+      "kind": "subclass",
+      "name": "Strega Liminale",
+      "front": "assets/frontITA/HF019.webp",
+      "thumb": "assets/thumbsITA/HF019.webp",
+      "tags": [],
+      "description": "TRATTO DA INCANTATORE: CONOSCENZA Erbe Officinali: Quando voi o un alleato presente nella scena recuperate 1 o più Punti Ferita o Stress grazie all’uso di una scorta, aumentate di 1 il numero di Punti Ferita o Stress recuperati. Talismano Incantato: Una volta per riposo, potete infondere la vostra essenza in un piccolo oggetto. Spendete un numero qualsiasi di Speranze per posizionare un numero uguale di gettoni su questa carta. Quando la persona che possiede il talismano subisce danni, spendete un gettone per ridurre di uno il numero di Punti Ferita che subisce. Rimuovete tutti i gettoni da questa carta quando riposate."
+    },
+    {
+      "id": "HF020",
+      "kind": "subclass",
+      "name": "Strega Liminale",
+      "front": "assets/frontITA/HF020.webp",
+      "thumb": "assets/thumbsITA/HF020.webp",
+      "tags": [],
+      "description": "Camminare Tra i Mondi: Durante un momento di calma, effettuate un Tiro Incantesimo (13). Una volta per riposo, in caso di successo, potete marcare uno Stress per varcare il velo della morte e conversare con qualsiasi spirito nelle vicinanze. Posizionate su questa carta un numero di gettoni pari al vostro tratto da incantatore e rimuovetene uno ogni volta che uno spirito risponde a una domanda. Quando l’ultimo gettone viene rimosso o alla fine della scena, tornate nel Regno dei Mortali nello stesso punto in cui l’avevate lasciato. Malia Vessante: Avete vantaggio agli attacchi contro le creature che avete Maledetto."
+    },
+    {
+      "id": "HF021",
+      "kind": "subclass",
+      "name": "Strega Liminale",
+      "front": "assets/frontITA/HF021.webp",
+      "thumb": "assets/thumbsITA/HF021.webp",
+      "tags": [],
+      "description": "Cerchio di Potere: Una volta per riposo, tracciate attorno a voi un cerchio sul terreno, che delinea un’area che vi circonda a distanza Prossima, e posizionate su questa carta un numero di gettoni pari al vostro tratto da incantatore. Mentre vi trovate all’interno di questo cerchio, voi e i vostri alleati ottenete un bonus di +2 alle soglie di danno, ai tiri attacco e all’Evasione. Rimuovete un gettone ogni volta che voi o un alleato all’interno del cerchio effettuate un tiro attacco o un avversario vi manca. Questo incantesimo dura fino a quando l’ultimo gettone non viene rimosso o finché non uscite dal cerchio."
+    },
+    {
+      "id": "HF022",
+      "kind": "subclass",
+      "name": "Strega Lunare",
+      "front": "assets/frontITA/HF022.webp",
+      "thumb": "assets/thumbsITA/HF022.webp",
+      "tags": [],
+      "description": "TRATTO DA INCANTATORE: ISTINTO Incanto Notturno: Effettuate un Tiro Incantesimo (13) per avvolgervi in un’aura di Incanto. Mentre siete sotto l’effetto dell’Incanto, avete vantaggio ai tiri che sfruttano il vostro aspetto illusorio. Inoltre, gli avversari entro distanza Ravvicinata devono marcare uno Stress per attaccarvi. A meno che voi non marchiate uno Stress per mantenere l’Incanto, questo svanisce quando subite almeno un Punto Ferita o infliggete danni."
+    },
+    {
+      "id": "HF023",
+      "kind": "subclass",
+      "name": "Strega Lunare",
+      "front": "assets/frontITA/HF023.webp",
+      "thumb": "assets/thumbsITA/HF023.webp",
+      "tags": [],
+      "description": "Chiaro di Luna: Una volta per sessione, potete evocare una colonna di luce lunare che illumina l’area entro distanza Ravvicinata fino alla fine della scena. Mentre siete nella luce lunare, voi e i vostri alleati ottenete un bonus di +1 ai tiri Incantesimo e potete vedere attraverso le Illusioni. Ira della Pallida Luce: Quando una creatura Maledetta entro distanza Remota fallisce un attacco, deve marcare uno Stress."
+    },
+    {
+      "id": "HF024",
+      "kind": "subclass",
+      "name": "Strega Lunare",
+      "front": "assets/frontITA/HF024.webp",
+      "thumb": "assets/thumbsITA/HF024.webp",
+      "tags": [],
+      "description": "Fasi Lunari: All’inizio di ogni sessione, tirate un d6 e posizionatelo su questa carta. Ottenete l’effetto corrispondente fino alla fine della sessione. 1 — Nuova: Spendete un punto Speranza per annullare un danno Minore. 2–3 — Crescente: +2 ai tiri di danno. 4 — Piena: +3 alle soglie di danno. 5–6 — Calante: +1 all’Evasione. Una volta per riposo, potete spendere una Speranza per aumentare di uno il valore di questo dado. Se aumentate il valore di un 6, questo diventa un 1."
+    },
+    {
+      "id": "HF025",
+      "kind": "ancestry",
+      "name": "Aetheris",
+      "front": "assets/frontITA/HF025.webp",
+      "thumb": "assets/thumbsITA/HF025.webp",
+      "tags": [],
+      "description": "**_Aura Benedetta:_** Una volta per Riposo lungo, quando un alleato a distanza Ravvicinata effettua un tiro con Paura, potete trasformarlo in un tiro con Speranza.\n\n**_Ali Celestiali:_** Avete ali che vi permettono di volare. Una volta per scena mentre siete in volo, potete **spendere una Speranza** invece di marcare una Casella Armatura."
+    },
+    {
+      "id": "HF026",
+      "kind": "ancestry",
+      "name": "Stirpe della Terra",
+      "front": "assets/frontITA/HF026.webp",
+      "thumb": "assets/thumbsITA/HF026.webp",
+      "tags": [],
+      "description": "**_Pelle di Pietra:_** Ottenete un bonus permanente di +1 al Punteggio di Armatura e alle soglie di danno alla creazione del personaggio.\n\n**_Inamovibile:_** Finché siete a contatto con il suolo, non potete essere sollevati o spostati contro la vostra volontà."
+    },
+    {
+      "id": "HF027",
+      "kind": "ancestry",
+      "name": "Stirpe della Brace",
+      "front": "assets/frontITA/HF027.webp",
+      "thumb": "assets/thumbsITA/HF027.webp",
+      "tags": [],
+      "description": "**_Ignifugo:_** Immunità ai danni causati da fiamme naturali o magiche.\n\n**_Avvampare:_ Marcate uno Stress** per avvolgere l‘arma primaria nelle fiamme fino alla fine della scena. Mentre l’arma è in fiamme, emette una luce brillante e ottenete un bonus di **1d6** ai tiri di Danno con quell’arma."
+    },
+    {
+      "id": "HF028",
+      "kind": "ancestry",
+      "name": "Gnomo",
+      "front": "assets/frontITA/HF028.webp",
+      "thumb": "assets/thumbsITA/HF028.webp",
+      "tags": [],
+      "description": "**_Dita Agili:_** Quando effettuate un Tiro Astuzia, potete **spendere 2 Speranze** per ripetere il tiro del dado Speranza.\n\n**_Passo Sfuggente:_** Una volta per scena, potete teletrasportarvi in un altro punto che possiate vedere entro distanza Lontana."
+    },
+    {
+      "id": "HF029",
+      "kind": "ancestry",
+      "name": "Stirpe del Cielo",
+      "front": "assets/frontITA/HF029.webp",
+      "thumb": "assets/thumbsITA/HF029.webp",
+      "tags": [],
+      "description": "**_Forza della Burrasca:_ Marcate uno Stress** per evocare una raffica di vento che trasporta voi o un alleato fino a distanza Remota. Inoltre, potete sempre controllare la velocità con cui cadete.\n\n**_Occhio del Ciclone:_ Spendete 2 Speranze** per concedere a voi o a un alleato entro distanza di Mischia un bonus di +1 all’Evasione finché non subite un danno Grave o non utilizzate nuovamente questo privilegio."
+    },
+    {
+      "id": "HF030",
+      "kind": "ancestry",
+      "name": "Stirpe della Marea",
+      "front": "assets/frontITA/HF030.webp",
+      "thumb": "assets/thumbsITA/HF030.webp",
+      "tags": [],
+      "description": "**_Anfibio:_** Potete respirare e muovervi naturalmente sott’acqua.\n\n**_Sorgente Vitale:_** Una volta per riposo, quando avete accesso a una piccola quantità d’acqua, potete **marcare uno Stress** per curare un Punto Ferita a voi o a un alleato entro distanza Prossima."
+    },
+    {
+      "id": "HF031",
+      "kind": "community",
+      "name": "Desertica",
+      "front": "assets/frontITA/HF031.webp",
+      "thumb": "assets/thumbsITA/HF031.webp",
+      "tags": [],
+      "description": "**_Oasi:_** Durante un riposo breve, voi o un alleato potete ripetere il tiro di un dado utilizzato per una mossa durante l’Interludio e prendere il risultato più alto."
+    },
+    {
+      "id": "HF032",
+      "kind": "community",
+      "name": "Affrancata",
+      "front": "assets/frontITA/HF032.webp",
+      "thumb": "assets/thumbsITA/HF032.webp",
+      "tags": [],
+      "description": "**_Senza Vincoli:_** Una volta per sessione, quando tirate con Paura, potete invece tirare con Speranza."
+    },
+    {
+      "id": "HF033",
+      "kind": "community",
+      "name": "Artica",
+      "front": "assets/frontITA/HF033.webp",
+      "thumb": "assets/thumbsITA/HF033.webp",
+      "tags": [],
+      "description": "**_Temprata:_** Quando vi riposate, recuperate un Punto Ferita."
+    },
+    {
+      "id": "HF034",
+      "kind": "community",
+      "name": "Rustica",
+      "front": "assets/frontITA/HF034.webp",
+      "thumb": "assets/thumbsITA/HF034.webp",
+      "tags": [],
+      "description": "**_Coesa:_** Una volta per ogni Riposo lungo, potete **spendere un numero qualsiasi di Speranze** per concedere a un alleato entro distanza Lontana lo stesso numero di Speranze."
+    },
+    {
+      "id": "HF035",
+      "kind": "community",
+      "name": "Esule",
+      "front": "assets/frontITA/HF035.webp",
+      "thumb": "assets/thumbsITA/HF035.webp",
+      "tags": [],
+      "description": "**_Nuova Famiglia:_** Una volta per riposo, potete **spendere una Speranza** per utilizzare l’Esperienza di un alleato come se fosse la vostra.\n\nQuando lo fate, descrivete in che modo il tempo trascorso insieme vi ha preparato a questo momento."
+    },
+    {
+      "id": "HF036",
+      "kind": "community",
+      "name": "Marziale",
+      "front": "assets/frontITA/HF036.webp",
+      "thumb": "assets/thumbsITA/HF036.webp",
+      "tags": [],
+      "description": "**_Espressione Coraggiosa:_** Una volta per sessione, quando sareste costretti a marcare uno Stress, potete invece **spendere una Speranza**."
+    },
+    {
       "id": "002",
       "kind": "subclass",
       "name": "Trovatore",
@@ -1660,6 +1984,237 @@
       "description": "Una volta per riposo lungo, **spendete 5 Speranze** per legare con questo incantesimo due o più creature consenzienti. Fino al vostro prossimo riposo, quando una creatura legata da questa unione marcherebbe Stress o subirebbe Punti Ferita, le altre creature così legate possono scegliere chi subisce il danno."
     },
     {
+      "id": "HF043",
+      "kind": "domain",
+      "name": "Folgore avvizzente",
+      "front": "assets/frontITA/HF043.webp",
+      "thumb": "assets/thumbsITA/HF043.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 1,
+      "description": "Effettuate un **Tiro Incantesimo** contro un bersaglio entro distanza Lontana. In caso di successo:\n\n• Se tirate con Speranza, infliggete **d6+1** danni magici applicando la vostra competenza. Se tirate con Paura, infliggete **d10+1** danni magici applicando la vostra competenza.\n• Il prossimo attacco riuscito del bersaglio infligge metà dei danni.\n\nIn caso di fallimento, dovete spendere una Speranza o marcare uno Stress."
+    },
+    {
+      "id": "HF044",
+      "kind": "domain",
+      "name": "Velo liminale",
+      "front": "assets/frontITA/HF044.webp",
+      "thumb": "assets/thumbsITA/HF044.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 1,
+      "description": "Una volta per riposo, potete **marcare uno Stress** per avvolgervi in un campo di energia oscura. Quando lo fate, posizionate su questa carta un numero di gettoni pari alle Paure del GM. Dopo che viene effettuato un tiro attacco contro di voi, potete spendere un numero qualsiasi di gettoni per applicare una penalità di −1 al risultato per ogni gettone speso.\n\nAlla fine della scena, rimuovete tutti i gettoni non spesi."
+    },
+    {
+      "id": "HF045",
+      "kind": "domain",
+      "name": "Voce del terrore",
+      "front": "assets/frontITA/HF045.webp",
+      "thumb": "assets/thumbsITA/HF045.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 1,
+      "description": "Potete parlare magicamente a una creatura che riuscite a vedere, tormentandola con le vostre parole. Effettuate un **Tiro Incantesimo** contro di essa. In caso di successo, la creatura deve marcare uno Stress e rimane paralizzata dal terrore, diventando temporaneamente Trattenuta."
+    },
+    {
+      "id": "HF046",
+      "kind": "domain",
+      "name": "Castigo orribile",
+      "front": "assets/frontITA/HF046.webp",
+      "thumb": "assets/thumbsITA/HF046.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 2,
+      "description": "Quando un alleato entro distanza Ravvicinata subisce danni da un bersaglio che potete vedere, potete effettuare un Tiro Reazione contro il bersaglio utilizzando il vostro tratto da Incantatore. In caso di successo, **marcate uno Stress** per infliggere **d6** danni magici applicando la vostra competenza."
+    },
+    {
+      "id": "HF047",
+      "kind": "domain",
+      "name": "Risucchio d’essenza",
+      "front": "assets/frontITA/HF047.webp",
+      "thumb": "assets/thumbsITA/HF047.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 2,
+      "description": "Effettuate un **Tiro Incantesimo** contro un bersaglio entro distanza Prossima. In caso di successo e una volta per riposo lungo, il bersaglio subisce **d12+4** danni magici applicando la vostra competenza. In caso di successo con Paura, ottenete un bonus +1 alla competenza per questo attacco.\n\nRecuperate un numero di Punti Ferita pari ai Punti Ferita subiti dal bersaglio a causa di questo attacco."
+    },
+    {
+      "id": "HF048",
+      "kind": "domain",
+      "name": "Trauma condiviso",
+      "front": "assets/frontITA/HF048.webp",
+      "thumb": "assets/thumbsITA/HF048.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 3,
+      "description": "Potete trasferire la sofferenza da una creatura a un’altra. Una volta per riposo, una creatura consenziente entro distanza di Mischia può subire un qualsiasi numero di Punti Ferita per curarne altrettanti a un’altra creatura, anch’essa consenziente e sempre entro distanza di Mischia."
+    },
+    {
+      "id": "HF049",
+      "kind": "domain",
+      "name": "Terrorizzare",
+      "front": "assets/frontITA/HF049.webp",
+      "thumb": "assets/thumbsITA/HF049.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 3,
+      "description": "Effettuate un **Tiro Incantesimo** contro un bersaglio entro distanza Ravvicinata. In caso di successo, il bersaglio deve marcare **1d4** Stress e potete costringerlo ad allontanarsi di una categoria di distanza da voi (per esempio, da Prossima a Ravvicinata o da Ravvicinata a Lontana). In caso di successo con Paura, il bersaglio diventa anche temporaneamente Vulnerabile."
+    },
+    {
+      "id": "HF050",
+      "kind": "domain",
+      "name": "Catene della sofferenza",
+      "front": "assets/frontITA/HF050.webp",
+      "thumb": "assets/thumbsITA/HF050.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 4,
+      "description": "**Marcate 2 Stress** per Incatenare temporaneamente un bersaglio entro distanza Ravvicinata. Quando una creatura Incatenata infligge danni, il bersaglio del suo attacco subisce un Punto Ferita in meno rispetto al normale. Non potete Incatenare più di una creatura alla volta."
+    },
+    {
+      "id": "HF051",
+      "kind": "domain",
+      "name": "Evocare orrore",
+      "front": "assets/frontITA/HF051.webp",
+      "thumb": "assets/thumbsITA/HF051.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 4,
+      "description": "Una volta per scena, **marcate uno Stress** per evocare una creatura ultraterrena che infligge **d8+1** danni magici utilizzando il vostro tratto da Incantatore a un bersaglio alla distanza Lontana. Se il bersaglio subisce danni da questo attacco, deve superare un **Tiro Reazione (12)** per contrastare il terrore oppure marcare lo stesso numero di Stress.\n\nDopo aver sferrato l’attacco, la creatura svanisce."
+    },
+    {
+      "id": "HF052",
+      "kind": "domain",
+      "name": "Colpo crudele",
+      "front": "assets/frontITA/HF052.webp",
+      "thumb": "assets/thumbsITA/HF052.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 5,
+      "description": "Quando un bersaglio subisce Punti Ferita a seguito di un vostro attacco, potete **spendere una Speranza** per prosciugarne il potere. Il GM perde una Paura."
+    },
+    {
+      "id": "HF053",
+      "kind": "domain",
+      "name": "Foschia spettrale",
+      "front": "assets/frontITA/HF053.webp",
+      "thumb": "assets/thumbsITA/HF053.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 5,
+      "description": "**Spendete 2 Speranze** per evocare una nebbia inquietante che rende momentaneamente incorporei voi e gli alleati di vostra scelta entro distanza Ravvicinata. Finché una creatura è incorporea, può attraversare oggetti solidi ed è immune ai danni fisici. Torna a essere corporea dopo aver oltrepassato un oggetto solido o aver effettuato un tiro azione. In caso contrario, questo effetto dura fino alla fine della scena."
+    },
+    {
+      "id": "HF054",
+      "kind": "domain",
+      "name": "Fuoco oscuro",
+      "front": "assets/frontITA/HF054.webp",
+      "thumb": "assets/thumbsITA/HF054.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 6,
+      "description": "Una volta per scena, potete **spendere un numero qualsiasi di Speranze** per scegliere come bersagli un numero uguale di avversari entro distanza Ravvicinata. Ogni bersaglio effettua un **Tiro Reazione (15)**. I bersagli che falliscono subiscono **d8+6** danni magici usando il vostro tratto da Incantatore e vengono avvolti da un fuoco oscuro. I bersagli che superano il tiro subiscono metà dei danni."
+    },
+    {
+      "id": "HF055",
+      "kind": "domain",
+      "name": "Sobbalzo di paura",
+      "front": "assets/frontITA/HF055.webp",
+      "thumb": "assets/thumbsITA/HF055.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 6,
+      "description": "Quando infliggete danni magici a un bersaglio, potete **marcare uno Stress** per teletrasportarvi a distanza di Mischia con lui. Quando lo fate, il bersaglio rimane Vulnerabile finché non subisce 1 o più Punti Ferita."
+    },
+    {
+      "id": "HF056",
+      "kind": "domain",
+      "name": "Padronanza del terrore",
+      "front": "assets/frontITA/HF056.webp",
+      "thumb": "assets/thumbsITA/HF056.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 7,
+      "description": "Quando 4 o più carte dominio nella vostra dotazione appartengono al dominio del Terrore, ottenete i seguenti benefici:\n\n• Quando ottenete un successo con Paura, potete **marcare 2 Stress** per impedire al GM di ottenere Paura.\n• Una volta per riposo, quando effettuate un tiro azione, potete ottenere un bonus al tiro pari al totale di Paure del GM."
+    },
+    {
+      "id": "HF057",
+      "kind": "domain",
+      "name": "Muro della fame",
+      "front": "assets/frontITA/HF057.webp",
+      "thumb": "assets/thumbsITA/HF057.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 7,
+      "description": "Effettuate un **Tiro Incantesimo (10)**. In caso di successo, potete **spendere una Speranza** per creare un muro visibile di energia necrotica che si contorce tra due punti entro distanza Lontana. Il muro perdura finché non subite un Punto Ferita o lanciate nuovamente questo incantesimo. Una creatura che si trova all’interno del muro quando appare o che lo oltrepassa deve marcare 2 Stress."
+    },
+    {
+      "id": "HF058",
+      "kind": "domain",
+      "name": "Armata delle tenebre",
+      "front": "assets/frontITA/HF058.webp",
+      "thumb": "assets/thumbsITA/HF058.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 8,
+      "description": "Effettuate un **Tiro Incantesimo (14)**. Una volta per riposo lungo, in caso di successo, potete evocare un gruppo di demoni che vi circondano e si muovono con voi. Posizionate 8 gettoni su questa carta. Quando infliggete danno a un bersaglio entro distanza Prossima, potete spendere un numero qualsiasi di gettoni per aggiungere **1d8** per ogni gettone speso al vostro tiro di danno. Inoltre, quando subite danno, potete spendere un numero qualsiasi di gettoni per ridurlo di **1d8** per ogni gettone speso. Ogni volta che spendete un gettone, un demone agisce obbedendo ai vostri ordini, poi scompare.\n\nQuando vi riposate, eliminate tutti i gettoni non spesi."
+    },
+    {
+      "id": "HF059",
+      "kind": "domain",
+      "name": "Carni innaturali",
+      "front": "assets/frontITA/HF059.webp",
+      "thumb": "assets/thumbsITA/HF059.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 8,
+      "description": "Ottenete un bonus +1 alle soglie di danno per ogni Stress che avete marcato.\n\nInoltre, quando tirate con Paura, potete **spendere 2 Speranze** per cancellare una Casella Armatura."
+    },
+    {
+      "id": "HF060",
+      "kind": "domain",
+      "name": "Dannazione",
+      "front": "assets/frontITA/HF060.webp",
+      "thumb": "assets/thumbsITA/HF060.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 9,
+      "description": "Effettuate un **Tiro Incantesimo** contro un bersaglio entro distanza Lontana. In caso di successo, **marcate un numero qualsiasi di Stress** per tirare altrettanti **d20**, infliggendo danni magici pari al risultato totale. Se questo attacco sconfigge il bersaglio, tutti gli avversari entro distanza Lontana da quest’ultimo devono marcare uno Stress."
+    },
+    {
+      "id": "HF061",
+      "kind": "domain",
+      "name": "Assaporare l’angoscia",
+      "front": "assets/frontITA/HF061.webp",
+      "thumb": "assets/thumbsITA/HF061.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 9,
+      "description": "Quando un avversario entro distanza Ravvicinata subisce un danno Grave, potete rimuovere uno Stress."
+    },
+    {
+      "id": "HF062",
+      "kind": "domain",
+      "name": "Avatar del terrore",
+      "front": "assets/frontITA/HF062.webp",
+      "thumb": "assets/thumbsITA/HF062.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 10,
+      "description": "**Marcate uno Stress** per trasformarvi in un essere che si nutre di terrore. In questa forma ottenete un bonus di **1d6** ai vostri tiri di danno per ogni Paura posseduta dal GM. Inoltre, ottenete una Speranza quando il GM spende una Paura per rendere protagonista un avversario entro distanza Prossima.\n\nFinché siete in questa forma, dovete spendere una Speranza prima di effettuare un tiro azione. Se non potete, ritornate alla vostra forma originale."
+    },
+    {
+      "id": "HF063",
+      "kind": "domain",
+      "name": "Invocare il tormento",
+      "front": "assets/frontITA/HF063.webp",
+      "thumb": "assets/thumbsITA/HF063.webp",
+      "tags": [],
+      "domain": "Terrore",
+      "level": 10,
+      "description": "Infliggete il doppio dei danni ai bersagli che hanno marcato tutto il loro Stress.\n\nInoltre, se un avversario entro distanza Ravvicinata viene sconfitto quando ha marcato tutto il suo Stress, ottenete una Speranza."
+    },
+    {
       "id": "166",
       "kind": "domain",
       "name": "Astuto ingannatore",
@@ -2813,6 +3368,72 @@
       "domain": "Valore",
       "level": 10,
       "description": "Quando dovreste marcare una Casella Armatura, tirate un numero di **d6** pari alla vostra Competenza. Se un dado qualsiasi ottiene un 6, riducete la gravità del danno di una soglia senza marcare una Casella Armatura."
+    },
+    {
+      "id": "HF037",
+      "kind": "domain",
+      "name": "Semidio",
+      "front": "assets/frontITA/HF037.webp",
+      "thumb": "assets/thumbsITA/HF037.webp",
+      "tags": [],
+      "domain": "Trasformazione",
+      "level": -1,
+      "description": "**_Benedetto:_** Ottenete un bonus di +1 ai tiri azione, alle reazioni e ai tiri di danno.\n\n**_Fardello della Divinità:_** Quando fallite un tiro, marcate uno Stress oppure il GM ottiene una Paura."
+    },
+    {
+      "id": "HF038",
+      "kind": "domain",
+      "name": "Fantasma",
+      "front": "assets/frontITA/HF038.webp",
+      "thumb": "assets/thumbsITA/HF038.webp",
+      "tags": [],
+      "domain": "Trasformazione",
+      "level": -1,
+      "description": "**_Qualcosa in Sospeso:_** Concordate con il GM quale scopo o desiderio vi trattiene nel Regno dei Mortali. Quando lo realizzate, attraversate il velo della morte.\n\n**_Effimero:_** Il vostro corpo oscilla tra il mondo materiale e quello immateriale. Siete resistenti al danno fisico, subite il doppio del danno magico e potete **marcare 2 Stress** per oltrepassare momentaneamente un oggetto solido."
+    },
+    {
+      "id": "HF039",
+      "kind": "domain",
+      "name": "Rianimato",
+      "front": "assets/frontITA/HF039.webp",
+      "thumb": "assets/thumbsITA/HF039.webp",
+      "tags": [],
+      "domain": "Trasformazione",
+      "level": -1,
+      "description": "**_Cadavere:_** Durante un riposo, potete curare i Punti Ferita solo avendo accesso ai resti di una creatura recentemente deceduta. Descrivete come vi servite di questi resti per preservare il vostro cadavere.\n\n**_Rifiutare la Tomba:_** Quando scegliete la mossa finale Rischiare Tutto e fallite, potete **perdere permanentemente un Punto Ferita** per avere invece successo. Quando lo fate, utilizzate normalmente il valore del Dado Speranza per recuperare Punti Ferita e Stress. Quando l’ultimo Punto Ferita viene cancellato permanentemente, oltrepassate il velo della morte."
+    },
+    {
+      "id": "HF040",
+      "kind": "domain",
+      "name": "Mutaforma",
+      "front": "assets/frontITA/HF040.webp",
+      "thumb": "assets/thumbsITA/HF040.webp",
+      "tags": [],
+      "domain": "Trasformazione",
+      "level": -1,
+      "description": "**_Cambiare Forma:_** Durante un riposo, potete usare una mossa di Interludio per sostituire la vostra origine attuale con un’altra. Quando lo fate, descrivete come cambia il vostro aspetto.\n\n**_Solo una Maschera:_** Ottenete il beneficio di un solo privilegio tra i due associati all’origine selezionata. Potete utilizzare una Mossa di Interludio per scegliere un altro privilegio di quell’origine."
+    },
+    {
+      "id": "HF041",
+      "kind": "domain",
+      "name": "Vampiro",
+      "front": "assets/frontITA/HF041.webp",
+      "thumb": "assets/thumbsITA/HF041.webp",
+      "tags": [],
+      "domain": "Trasformazione",
+      "level": -1,
+      "description": "**_Canini:_** Effettuate un attacco utilizzando un tratto a scelta per mordere un bersaglio entro distanza di Mischia. In caso di successo, infliggete **d6** danni fisici utilizzando la vostra Competenza.\n\n**_Nutrirsi:_** In caso di attacco “Canini” riuscito contro una creatura in grado di sanguinare, potete **marcare uno Stress** per nutrirvi. Posizionate su questa carta un numero di gettoni pari al numero di Punti Ferita persi dal bersaglio. Potete accumulare fino a un massimo di 6 gettoni. Prima di effettuare un tiro azione, potete spendere un gettone per trasformare il vostro Dado Paura in un **d20**. Quando effettuate un Riposo lungo, rimuovete un gettone. Quando non ci sono gettoni su questa carta, effettuate i tiri azione e reazione con svantaggio."
+    },
+    {
+      "id": "HF042",
+      "kind": "domain",
+      "name": "Licantropo",
+      "front": "assets/frontITA/HF042.webp",
+      "thumb": "assets/thumbsITA/HF042.webp",
+      "tags": [],
+      "domain": "Trasformazione",
+      "level": -1,
+      "description": "**_Forma di Lupo:_** Quando subite 1 o più Punti Ferita, potete **marcare uno Stress** per assumere la Forma di Lupo. Mentre siete in questa forma, ottenete un bonus di **1d10** ai tiri attacco e ai tiri di danno. Quando tirate con Speranza mentre siete in Forma di Lupo, dovete anche marcare uno Stress. La Forma di Lupo dura finché non entrate in “Furia Ululante” o non riposate.\n\n**_Furia Ululante:_** Quando marcate l’ultimo Stress mentre siete in Forma di Lupo, entrate in una fase di furia belluina. Tirate un numero di **d20** pari al vostro rango e infliggete quell’ammontare di danno fisico a tutte le creature entro distanza Prossima, poi uscite dalla Forma di Lupo."
     }
   ]
 }
