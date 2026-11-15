@@ -13,7 +13,7 @@
         "Midnight"
       ],
       "subclasses": {
-        "call_of_the_brave": {
+        "executioners_guild": {
           "label": "Executioners Guild",
           "cards": {
             "base": "HF001",
@@ -21,7 +21,7 @@
             "mastery": "HF003"
           }
         },
-        "call_of_the_slayer": {
+        "poisoners_guild": {
           "label": "Poisoners Guild",
           "cards": {
             "base": "HF004",
